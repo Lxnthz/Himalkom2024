@@ -1,166 +1,233 @@
 import express from 'express';
-import sqlite3 from 'sqlite3';
 import cors from 'cors';
 import session from 'express-session';
+import bcrypt from 'bcrypt';
+import rateLimit from 'express-rate-limit';
+import helmet from 'helmet';
+import dotenv from 'dotenv';
+import { Sequelize, DataTypes } from 'sequelize';
+import AdminJS from 'adminjs';
+import AdminJSExpress from '@adminjs/express';
+import AdminJSSequelize from '@adminjs/sequelize';
+
+
+dotenv.config();
 
 const app = express();
-const port = 5000;
+const port = process.env.PORT || 5000;
 
 app.use(cors());
 app.use(express.json());
 
-const db = new sqlite3.Database(':memory:');
-
-db.serialize(() => {
-  db.run('CREATE TABLE users (id INTEGER PRIMARY KEY AUTOINCREMENT, username TEXT, password TEXT, isAdmin INT)');
-  db.run('CREATE TABLE news (id INTEGER PRIMARY KEY AUTOINCREMENT, title TEXT, content TEXT)');
-  db.run('CREATE TABLE divisions (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT)');
-  db.run('CREATE TABLE members (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, division_id INTEGER, FOREIGN KEY(division_id) REFERENCES divisions(id))');
-  db.run('CREATE TABLE research (id INTEGER PRIMARY KEY AUTOINCREMENT, cover TEXT, title TEXT, date TEXT, link TEXT)');
-  db.run('CREATE TABLE syntax_reports (id INTEGER PRIMARY KEY AUTOINCREMENT, cover TEXT, title TEXT, year INTEGER)');
-
-  const stmt = db.prepare('INSERT INTO users (username, password, isAdmin) VALUES (?, ?, ?)');
-  stmt.run('admin', 'adminpass', 1);
-  stmt.finalize();
-});
-
-app.use(session({
-  secret: 'your_secret_key',
-  resave: false,
-  saveUninitialized: true,
+// Custom Helmet configuration to allow inline scripts for AdminJS
+app.use(helmet({
+  contentSecurityPolicy: {
+    directives: {
+      defaultSrc: ["'self'"],
+      scriptSrc: ["'self'", "'unsafe-inline'"], 
+      styleSrc: ["'self'", "'unsafe-inline'"],  
+      imgSrc: ["'self'", "data:"],
+      connectSrc: ["'self'"],
+      fontSrc: ["'self'", "https:", "data:"],
+      objectSrc: ["'none'"],
+      mediaSrc: ["'self'"],
+      frameSrc: ["'self'"]
+    }
+  }
 }));
 
-function requireAdmin(req, res, next) {
-  if (req.session && req.session.isAdmin) {
-    return next();
-  } else {
-    return res.status(401).json({ error: 'Unauthorized' });
-  }
-}
+// Rate Limiting
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  max: 100,
+});
+app.use(limiter);
 
-app.post('/login', (req, res) => {
-  const { username, password } = req.body;
-  db.get('SELECT * FROM users WHERE username = ? AND password = ?', [username, password], (err, row) => {
-    if (err || !row) {
-      return res.status(401).json({ error: 'Authentication failed' });
-    }
-    req.session.isAdmin = row.isAdmin === 1;
-    res.json({ message: 'Login successful' });
+// Database setup (SQLite)
+const sequelize = new Sequelize({
+  dialect: 'sqlite',
+  storage: './database.sqlite', // This file will be created and used for storage
+});
+
+// Define models
+const User = sequelize.define('User', {
+  username: { type: DataTypes.STRING, allowNull: false },
+  password: { type: DataTypes.STRING, allowNull: false },
+  isAdmin: { type: DataTypes.BOOLEAN, allowNull: false },
+});
+
+const News = sequelize.define('News', {
+  title: { type: DataTypes.STRING, allowNull: false },
+  content: { type: DataTypes.TEXT, allowNull: false },
+});
+
+const Division = sequelize.define('Division', {
+  name: { type: DataTypes.STRING, allowNull: false },
+});
+
+const Member = sequelize.define('Member', {
+  name: { type: DataTypes.STRING, allowNull: false },
+  divisionId: {
+    type: DataTypes.INTEGER,
+    references: {
+      model: Division,
+      key: 'id',
+    },
+  },
+});
+
+const Research = sequelize.define('Research', {
+  cover: { type: DataTypes.STRING },
+  title: { type: DataTypes.STRING, allowNull: false },
+  date: { type: DataTypes.STRING },
+  link: { type: DataTypes.STRING },
+});
+
+const SyntaxReport = sequelize.define('SyntaxReport', {
+  cover: { type: DataTypes.STRING },
+  title: { type: DataTypes.STRING, allowNull: false },
+  year: { type: DataTypes.INTEGER, allowNull: false },
+});
+
+// Sync database
+sequelize.sync().then(() => {
+  const hashedPassword = bcrypt.hashSync(process.env.ADMIN_PASSWORD, 10);
+  User.findOrCreate({
+    where: { username: process.env.ADMIN_USERNAME },
+    defaults: { password: hashedPassword, isAdmin: true }
   });
+});
+
+// Session configuration
+app.use(session({
+  secret: process.env.SESSION_SECRET,
+  resave: false,
+  saveUninitialized: true,
+  cookie: {
+    secure: process.env.NODE_ENV === 'production',
+    httpOnly: true,
+    maxAge: 60000,
+  },
+}));
+
+// AdminJS setup
+AdminJS.registerAdapter(AdminJSSequelize);
+
+const adminJs = new AdminJS({
+  databases: [sequelize],
+  rootPath: '/admin',
+});
+
+const adminRouter = AdminJSExpress.buildRouter(adminJs);
+app.use(adminJs.options.rootPath, adminRouter);
+
+// Check if AdminJS routes are correctly set up
+app.get('/check-admin', (req, res) => {
+  res.send('AdminJS routes are set up correctly');
 });
 
 // News endpoints
-app.post('/news', requireAdmin, (req, res) => {
+app.post('/news', async (req, res) => {
   const { title, content } = req.body;
-  const stmt = db.prepare('INSERT INTO news (title, content) VALUES (?, ?)');
-  stmt.run(title, content, function (err) {
-    if (err) {
-      return res.status(500).json({ error: err.message });
-    }
-    res.json({ id: this.lastID });
-  });
-  stmt.finalize();
+  try {
+    const news = await News.create({ title, content });
+    res.json({ id: news.id });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
 });
 
-app.get('/news', (req, res) => {
-  db.all('SELECT * FROM news', [], (err, rows) => {
-    if (err) {
-      return res.status(500).json({ error: err.message });
-    }
-    res.json(rows);
-  });
+app.get('/news', async (req, res) => {
+  try {
+    const news = await News.findAll();
+    res.json(news);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
 });
 
 // Divisions and Members endpoints
-app.post('/divisions', requireAdmin, (req, res) => {
+app.post('/divisions', async (req, res) => {
   const { name } = req.body;
-  const stmt = db.prepare('INSERT INTO divisions (name) VALUES (?)');
-  stmt.run(name, function (err) {
-    if (err) {
-      return res.status(500).json({ error: err.message });
-    }
-    res.json({ id: this.lastID });
-  });
-  stmt.finalize();
+  try {
+    const division = await Division.create({ name });
+    res.json({ id: division.id });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
 });
 
-app.get('/divisions', (req, res) => {
-  db.all('SELECT * FROM divisions', [], (err, rows) => {
-    if (err) {
-      return res.status(500).json({ error: err.message });
-    }
-    res.json(rows);
-  });
+app.get('/divisions', async (req, res) => {
+  try {
+    const divisions = await Division.findAll();
+    res.json(divisions);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
 });
 
-app.post('/members', requireAdmin, (req, res) => {
-  const { name, division_id } = req.body;
-  const stmt = db.prepare('INSERT INTO members (name, division_id) VALUES (?, ?)');
-  stmt.run(name, division_id, function (err) {
-    if (err) {
-      return res.status(500).json({ error: err.message });
-    }
-    res.json({ id: this.lastID });
-  });
-  stmt.finalize();
+app.post('/members', async (req, res) => {
+  const { name, divisionId } = req.body;
+  try {
+    const member = await Member.create({ name, divisionId });
+    res.json({ id: member.id });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
 });
 
-app.get('/members', (req, res) => {
-  db.all('SELECT * FROM members', [], (err, rows) => {
-    if (err) {
-      return res.status(500).json({ error: err.message });
-    }
-    res.json(rows);
-  });
+app.get('/members', async (req, res) => {
+  try {
+    const members = await Member.findAll();
+    res.json(members);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
 });
 
 // Research data endpoints
-app.post('/research', requireAdmin, (req, res) => {
+app.post('/research', async (req, res) => {
   const { cover, title, date, link } = req.body;
-  const stmt = db.prepare('INSERT INTO research (cover, title, date, link) VALUES (?, ?, ?, ?)');
-  stmt.run(cover, title, date, link, function (err) {
-    if (err) {
-      return res.status(500).json({ error: err.message });
-    }
-    res.json({ id: this.lastID });
-  });
-  stmt.finalize();
+  try {
+    const research = await Research.create({ cover, title, date, link });
+    res.json({ id: research.id });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
 });
 
-app.get('/research', (req, res) => {
-  db.all('SELECT * FROM research', [], (err, rows) => {
-    if (err) {
-      return res.status(500).json({ error: err.message });
-    }
-    res.json(rows);
-  });
+app.get('/research', async (req, res) => {
+  try {
+    const research = await Research.findAll();
+    res.json(research);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
 });
 
 // Syntax reports endpoints
-app.post('/syntax', requireAdmin, (req, res) => {
+app.post('/syntax', async (req, res) => {
   const { cover, title, year } = req.body;
-  const stmt = db.prepare('INSERT INTO syntax_reports (cover, title, year) VALUES (?, ?, ?)');
-  stmt.run(cover, title, year, function (err) {
-    if (err) {
-      return res.status(500).json({ error: err.message });
-    }
-    res.json({ id: this.lastID });
-  });
-  stmt.finalize();
+  try {
+    const syntaxReport = await SyntaxReport.create({ cover, title, year });
+    res.json({ id: syntaxReport.id });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
 });
 
-app.get('/syntax', (req, res) => {
-  db.all('SELECT * FROM syntax_reports', [], (err, rows) => {
-    if (err) {
-      return res.status(500).json({ error: err.message });
-    }
-    res.json(rows);
-  });
+app.get('/syntax', async (req, res) => {
+  try {
+    const syntaxReports = await SyntaxReport.findAll();
+    res.json(syntaxReports);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
 });
 
 // Handle root endpoint
 app.get('/', (req, res) => {
-  res.send('Welcome to the server');
+  res.send('Welcome to the secure server');
 });
 
 app.listen(port, () => {

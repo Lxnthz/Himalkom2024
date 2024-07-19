@@ -13,6 +13,7 @@ Dokumentasi ini dibuat dengan tujuan untuk melakukan _progress tracking_ selama 
 5. [Progression](#progression)
    1. [Week 1](#week1)
    2. [Week 2](#week2)
+   3. [Week 3](#week3)
 
 # Features <a name="features"></a>
 Berikut adalah fitur-fitur esensial yang merupakan fitur utama dari website Himalkom:
@@ -124,6 +125,11 @@ Berikut adalah langkah-langkah untuk mengatur lingkungan pengembangan:
 
 > **15 Juli 2024** -- **Footer selesai dikerjakan** sudah dicek responsiveness, Header mulai dikerjakan, halaman dashboard admin sudah dibuat templatenya. ***Commit main branch ke-2***
 
+## Week 3 <a name="week3"></a>
+> **16 Juli 2024** -- **Header** progress memperbaiki navbar, (- buat submenu ilkomunity belom masuk semua), **Routing** sudah sesuai tapi belum testing karna database belum jadi, Start pembuatan preloader, **_Commit main branch ke-3_**
 
+> **17 Juli 2024** -- Improve **security** backend, memindahkan credential admin kedalam **.env**
+
+> **18 Juli 2024** -- memindahkan admin dashboard ke backend
 
 

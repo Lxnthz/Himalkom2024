@@ -15,6 +15,7 @@ import Syntax from './pages/Syntax';
 import IGallery from './pages/IGallery';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Preloader from "./components/Preloader/PreloaderLogo";
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -39,6 +40,7 @@ function App() {
       <div className="flex flex-col min-h-screen">
         {!(window.location.pathname.startsWith('/admin') && loggedIn) && <Header loggedIn={loggedIn} onLogout={handleLogout} />}
         <main className="flex-grow">
+        <section className='flex justify-center items-center h-screen'><Preloader /></section>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
@@ -57,6 +59,7 @@ function App() {
         {!(window.location.pathname.startsWith('/admin') && loggedIn) && <Footer />}
       </div>
     </Router>
+    
   );
 }
 
