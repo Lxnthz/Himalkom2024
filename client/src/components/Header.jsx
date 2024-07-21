@@ -126,9 +126,10 @@ function Header() {
                 <div className="relative group">
                     <button className="block lg:inline-block mt-4 lg:mt-0 focus:outline-none group-hover:text-gray-700">Community</button>
                     <div className="absolute left-0 min-w-[200px] bg-white border rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 invisible group-hover:visible">
-                        <Link to="/community" className="block px-4 py-2 hover:bg-gray-200">AgriUX</Link>
-                        <Link to="/community/events" className="block px-4 py-2 hover:bg-gray-200">CSI</Link>
+                        <Link to="/community/AgriUX/AgriUX/" className="block px-4 py-2 hover:bg-gray-200">AgriUX</Link>
+                        <Link to="/community/" className="block px-4 py-2 hover:bg-gray-200">CSI</Link>
                         <Link to="/community/members" className="block px-4 py-2 hover:bg-gray-200">Agribot</Link>
+                        <Link to="/community/members" className="block px-4 py-2 hover:bg-gray-200">IWDC</Link>
                     </div>
                 </div>
                     <Link to="/igallery" className="block lg:inline-block mt-4 lg:mt-0 hover:text-gray-700">IGallery</Link>

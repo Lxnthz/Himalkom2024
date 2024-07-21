@@ -13,8 +13,11 @@ import Komnews from './pages/Komnews';
 import Riset from './pages/Riset';
 import Syntax from './pages/Syntax';
 import IGallery from './pages/IGallery';
+import AgriUX from './pages/community/AgriUX/AgriUX';
+
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Notfound from './pages/Notfound';
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -52,6 +55,8 @@ function App() {
             <Route path="/komnews" element={<Komnews />} />
             <Route path="/research" element={<Riset />} />
             <Route path="/syntax" element={<Syntax />} />
+            <Route path="/*" element={<Notfound />} />
+              <Route path="/community/AgriUX/AgriUX" element={<AgriUX />} />
           </Routes>
         </main>
         {!(window.location.pathname.startsWith('/admin') && loggedIn) && <Footer />}
