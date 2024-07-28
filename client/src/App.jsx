@@ -13,8 +13,14 @@ import Komnews from './pages/Komnews';
 import Riset from './pages/Riset';
 import Syntax from './pages/Syntax';
 import IGallery from './pages/IGallery';
-import AgriUX from './pages/community/AgriUX/AgriUX';
-
+import AgriUX from './pages/community/AgriUX';
+import CSI from './pages/community/CSI';
+import Agribot from './pages/community/Agribot';
+import CP from './pages/community/CP';
+import Daming from './pages/community/Daming';
+import IWDC from './pages/community/IWDC';
+import Gary from './pages/community/Gary';
+import MAD from './pages/community/MAD';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Notfound from './pages/Notfound';
@@ -56,7 +62,14 @@ function App() {
             <Route path="/research" element={<Riset />} />
             <Route path="/syntax" element={<Syntax />} />
             <Route path="/*" element={<Notfound />} />
-              <Route path="/community/AgriUX/AgriUX" element={<AgriUX />} />
+              <Route path="/community/AgriUX" element={<AgriUX />} />
+              <Route path="/community/CSI" element={<CSI />} />
+              <Route path="/community/Agribot" element={<Agribot />} />
+              <Route path="/community/CP" element={<CP />} />
+              <Route path="/community/Daming" element={<Daming />} />
+              <Route path="/community/IWDC" element={<IWDC />} />
+              <Route path="/community/Gary" element={<Gary />} />
+              <Route path="/community/MAD" element={<MAD />} />
           </Routes>
         </main>
         {!(window.location.pathname.startsWith('/admin') && loggedIn) && <Footer />}
