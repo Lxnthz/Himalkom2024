@@ -9,17 +9,33 @@ import { Sequelize, DataTypes } from 'sequelize';
 import AdminJS from 'adminjs';
 import AdminJSExpress from '@adminjs/express';
 import AdminJSSequelize from '@adminjs/sequelize';
-
+import multer from 'multer';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
 dotenv.config();
 
 const app = express();
 const port = process.env.PORT || 5000;
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 app.use(cors());
 app.use(express.json());
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
-// Custom Helmet configuration to allow inline scripts for AdminJS
+const storage = multer.diskStorage({
+  destination: (req, file, cb) => {
+    cb(null, 'uploads/');
+  },
+  filename: (req, file, cb) => {
+    cb(null, `${Date.now()}-${file.originalname}`);
+  },
+});
+
+const upload = multer({ storage: storage });
+
 app.use(helmet({
   contentSecurityPolicy: {
     directives: {
@@ -36,20 +52,17 @@ app.use(helmet({
   }
 }));
 
-// Rate Limiting
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000,
   max: 100,
 });
 app.use(limiter);
 
-// Database setup (SQLite)
 const sequelize = new Sequelize({
   dialect: 'sqlite',
-  storage: './database.sqlite', // This file will be created and used for storage
+  storage: './database.sqlite',
 });
 
-// Define models
 const User = sequelize.define('User', {
   username: { type: DataTypes.STRING, allowNull: false },
   password: { type: DataTypes.STRING, allowNull: false },
@@ -79,7 +92,7 @@ const Member = sequelize.define('Member', {
 const Research = sequelize.define('Research', {
   cover: { type: DataTypes.STRING },
   title: { type: DataTypes.STRING, allowNull: false },
-  date: { type: DataTypes.STRING },
+  date: { type: DataTypes.DATE },
   link: { type: DataTypes.STRING },
 });
 
@@ -89,7 +102,6 @@ const SyntaxReport = sequelize.define('SyntaxReport', {
   year: { type: DataTypes.INTEGER, allowNull: false },
 });
 
-// Sync database
 sequelize.sync().then(() => {
   const hashedPassword = bcrypt.hashSync(process.env.ADMIN_PASSWORD, 10);
   User.findOrCreate({
@@ -98,7 +110,6 @@ sequelize.sync().then(() => {
   });
 });
 
-// Session configuration
 app.use(session({
   secret: process.env.SESSION_SECRET,
   resave: false,
@@ -110,7 +121,6 @@ app.use(session({
   },
 }));
 
-// AdminJS setup
 AdminJS.registerAdapter(AdminJSSequelize);
 
 const adminJs = new AdminJS({
@@ -118,35 +128,24 @@ const adminJs = new AdminJS({
   rootPath: '/admin',
 });
 
-const adminRouter = AdminJSExpress.buildRouter(adminJs);
+const adminRouter = AdminJSExpress.buildAuthenticatedRouter(adminJs, {
+  authenticate: async (email, password) => {
+    const user = await User.findOne({ where: { username: email } });
+    if (user && bcrypt.compareSync(password, user.password)) {
+      return user;
+    }
+    return null;
+  },
+  cookiePassword: process.env.SESSION_SECRET,
+});
+
 app.use(adminJs.options.rootPath, adminRouter);
 
-// Check if AdminJS routes are correctly set up
 app.get('/check-admin', (req, res) => {
   res.send('AdminJS routes are set up correctly');
 });
 
-// News endpoints
-app.post('/news', async (req, res) => {
-  const { title, content } = req.body;
-  try {
-    const news = await News.create({ title, content });
-    res.json({ id: news.id });
-  } catch (err) {
-    res.status(500).json({ error: err.message });
-  }
-});
-
-app.get('/news', async (req, res) => {
-  try {
-    const news = await News.findAll();
-    res.json(news);
-  } catch (err) {
-    res.status(500).json({ error: err.message });
-  }
-});
-
-// Divisions and Members endpoints
+// -- Route Databases Divisions
 app.post('/divisions', async (req, res) => {
   const { name } = req.body;
   try {
@@ -166,6 +165,7 @@ app.get('/divisions', async (req, res) => {
   }
 });
 
+// -- Route Databases Divisions Members
 app.post('/members', async (req, res) => {
   const { name, divisionId } = req.body;
   try {
@@ -185,29 +185,10 @@ app.get('/members', async (req, res) => {
   }
 });
 
-// Research data endpoints
-app.post('/research', async (req, res) => {
-  const { cover, title, date, link } = req.body;
-  try {
-    const research = await Research.create({ cover, title, date, link });
-    res.json({ id: research.id });
-  } catch (err) {
-    res.status(500).json({ error: err.message });
-  }
-});
-
-app.get('/research', async (req, res) => {
-  try {
-    const research = await Research.findAll();
-    res.json(research);
-  } catch (err) {
-    res.status(500).json({ error: err.message });
-  }
-});
-
-// Syntax reports endpoints
-app.post('/syntax', async (req, res) => {
-  const { cover, title, year } = req.body;
+// -- Route Databases Syntax
+app.post('/syntax', upload.single('cover'), async (req, res) => {
+  const { title, year } = req.body;
+  const cover = req.file ? req.file.filename : null;
   try {
     const syntaxReport = await SyntaxReport.create({ cover, title, year });
     res.json({ id: syntaxReport.id });
@@ -225,7 +206,47 @@ app.get('/syntax', async (req, res) => {
   }
 });
 
-// Handle root endpoint
+// -- Route Databases Researches
+app.post('/research', upload.single('cover'), async (req, res) => {
+  const { title, date, link } = req.body;
+  const cover = req.file ? req.file.filename : null;
+  try {
+    const research = await Research.create({ cover, title, date, link });
+    res.json({ id: research.id });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+app.get('/research', async (req, res) => {
+  try {
+    const research = await Research.findAll();
+    res.json(research);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// -- Route Databases Komnews
+app.post('/news', async (req, res) => {
+  const { title, content } = req.body;
+  try {
+    const news = await News.create({ title, content });
+    res.json({ id: news.id });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+app.get('/news', async (req, res) => {
+  try {
+    const news = await News.findAll();
+    res.json(news);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
 app.get('/', (req, res) => {
   res.send('Welcome to the secure server');
 });

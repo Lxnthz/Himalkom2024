@@ -130,6 +130,8 @@ Berikut adalah langkah-langkah untuk mengatur lingkungan pengembangan:
 
 > **17 Juli 2024** -- Improve **security** backend, memindahkan credential admin kedalam **.env**
 
-> **18 Juli 2024** -- memindahkan admin dashboard ke backend
+> **18 Juli 2024** -- memindahkan admin dashboard ke backend, implementasi helmet, dotenv, adminjs, multer pada server
+
+> 
 
 

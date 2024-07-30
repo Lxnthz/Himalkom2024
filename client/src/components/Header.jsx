@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FaAngleDown, FaAngleUp } from 'react-icons/fa';
 import ilkom from '../assets/logoilmukomputer.svg';
@@ -8,6 +8,15 @@ function Header() {
     const [isProfileOpen, setIsProfileOpen] = useState(false);
     const [isCommunityOpen, setIsCommunityOpen] = useState(false);
     const [isProfileDivisiOpen, setIsProfileDivisiOpen] = useState(false);
+    const [visibility, setVisibility] = useState('hidden');
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setVisibility('visible');
+        }, 800);
+    
+        return () => clearTimeout(timer);
+    }, []);
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
@@ -27,98 +36,102 @@ function Header() {
 
     return (
         <header className="py-4 px-10 bg-[#E49800] border-b-[4px] border-black relative flex flex-row justify-between items-center font-changa">
-        <div className="flex justify-between items-center w-full">
-            <div className="text-xl font-bold">
-            <img className='max-w-12' src={ilkom} alt="Ilmu Komputer Logo" />
-            </div>
-            <div className="lg:hidden">
-            <button onClick={toggleMenu} className="focus:outline-none">
-                <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-                >
-                <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d={isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16m-7 6h7"}
-                ></path>
-                </svg>
-            </button>
-            </div>
-        </div>
-        <div
-            className={`fixed inset-0 bg-[#E49800] transform ${
-            isOpen ? 'animate-blobSlideInRight' : 'animate-blobSlideInLeft'
-            } transition-transform duration-300 ease-in-out lg:hidden`}
-        >
-            <div className="absolute top-0 right-0 p-4">
+            <div className="flex justify-between items-center w-full">
+                <div className="text-xl font-bold">
+                <img className='max-w-12' src={ilkom} alt="Ilmu Komputer Logo" />
+                </div>
+                <div className="lg:hidden">
                 <button onClick={toggleMenu} className="focus:outline-none">
                     <svg
                     className="w-6 h-6"
                     fill="none"
                     stroke="currentColor"
-                    viewBox="0 24 24"
+                    viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
                     >
                     <path
                         strokeLinecap="round"
                         strokeLinejoin="round"
                         strokeWidth="2"
-                        d="M6 18L18 6M6 6l12 12"
+                        d={isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16m-7 6h7"}
                     ></path>
                     </svg>
                 </button>
+                </div>
             </div>
-
-{/* NAVBAR MOBILE */}
-            <nav className="flex flex-col items-center justify-center h-full gap-1 font-changa">
-                <Link to="/" className="text-2xl" onClick={toggleMenu}>Home</Link>
-                <button onClick={toggleProfileMenu} className="text-2xl focus:outline-none lg:hidden">
-                    <span className={isProfileOpen ? 'text-white' : ''}>Profile </span>
-                    {isProfileOpen ? <FaAngleDown className="inline-block right-0" /> : <FaAngleUp className="inline-block" />}
-                </button>
-                <div className={`flex flex-col items-center space-y-2 transition-max-height duration-300 ease-in-out overflow-hidden bg-[#ffffff44] w-full ${isProfileOpen ? 'max-h-[25rem]' : 'max-h-0'}`}>
-                    <Link to="/profile/details" className="text-xl" onClick={toggleMenu}>Profile Himalkom</Link>
-                    <button onClick={toggleProfileDivisiMenu} className="text-xl focus:outline-none lg:hidden">
-                        <span className={isProfileDivisiOpen ? 'text-white' : ''}>Profile Divisi </span>
-                        {isProfileDivisiOpen ? <FaAngleDown className="inline-block right-0" /> : <FaAngleUp className="inline-block" />}
+            <div
+                style={{
+                    transform: isOpen ? 'translateX(0)' : 'translateX(100%)',
+                    visibility: visibility,                   
+                }}
+                className={`fixed inset-0 bg-[#E49800] transition-transform duration-300 ease-in-out lg:hidden ${
+                    isOpen ? 'animate-blobSlideInRight' : 'animate-blobSlideInLeft'
+                }`}
+            >
+                <div className="absolute top-0 right-0 p-4">
+                    <button onClick={toggleMenu} className="focus:outline-none">
+                        <svg
+                        className="w-6 h-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                        >
+                        <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M6 18L18 6M6 6l12 12"
+                        ></path>
+                        </svg>
                     </button>
-                    <div className={`flex flex-col items-center space-y-2 transition-max-height duration-300 ease-in-out overflow-hidden bg-[#ffffff5d] w-full ${isProfileDivisiOpen ? 'max-h-[25rem]' : 'max-h-0'}`}>
-                        <Link to="/profile/divisi/bp" className="text-lg" onClick={toggleMenu}>BP</Link>
-                        <Link to="/profile/divisi/bph" className="text-lg" onClick={toggleMenu}>BPH</Link>
-                        <Link to="/profile/divisi/eksternal" className="text-lg" onClick={toggleMenu}>Eksternal</Link>
-                        <Link to="/profile/divisi/internal" className="text-lg" onClick={toggleMenu}>Internal</Link>
-                        <Link to="/profile/divisi/edukasi" className="text-lg" onClick={toggleMenu}>Edukasi</Link>
-                        <Link to="/profile/divisi/hrd" className="text-lg" onClick={toggleMenu}>HRD</Link>
-                        <Link to="/profile/divisi/medbrand" className="text-lg" onClick={toggleMenu}>Media Branding</Link>
-                        <Link to="/profile/divisi/ristek" className="text-lg" onClick={toggleMenu}>Riset dan Teknologi</Link>
-                        <Link to="/profile/divisi/entrepreneur" className="text-lg" onClick={toggleMenu}>Entrepreneur</Link>
+                </div>
+
+    {/* NAVBAR MOBILE */}
+                <nav className="flex flex-col items-center justify-center h-full gap-1 font-changa">
+                    <Link to="/" className="text-2xl" onClick={toggleMenu}>Home</Link>
+                    <button onClick={toggleProfileMenu} className="text-2xl focus:outline-none lg:hidden">
+                        <span className={isProfileOpen ? 'text-white' : ''}>Profile </span>
+                        {isProfileOpen ? <FaAngleDown className="inline-block right-0" /> : <FaAngleUp className="inline-block" />}
+                    </button>
+                    <div className={`flex flex-col items-center space-y-2 transition-max-height duration-300 ease-in-out overflow-hidden bg-[#ffffff44] w-full ${isProfileOpen ? 'max-h-[25rem]' : 'max-h-0'}`}>
+                        <Link to="/profile/details" className="text-xl" onClick={toggleMenu}>Profile Himalkom</Link>
+                        <button onClick={toggleProfileDivisiMenu} className="text-xl focus:outline-none lg:hidden">
+                            <span className={isProfileDivisiOpen ? 'text-white' : ''}>Profile Divisi </span>
+                            {isProfileDivisiOpen ? <FaAngleDown className="inline-block right-0" /> : <FaAngleUp className="inline-block" />}
+                        </button>
+                        <div className={`flex flex-col items-center space-y-2 transition-max-height duration-300 ease-in-out overflow-hidden bg-[#ffffff5d] w-full ${isProfileDivisiOpen ? 'max-h-[25rem]' : 'max-h-0'}`}>
+                            <Link to="/profile/divisi/bp" className="text-lg" onClick={toggleMenu}>BP</Link>
+                            <Link to="/profile/divisi/bph" className="text-lg" onClick={toggleMenu}>BPH</Link>
+                            <Link to="/profile/divisi/eksternal" className="text-lg" onClick={toggleMenu}>Eksternal</Link>
+                            <Link to="/profile/divisi/internal" className="text-lg" onClick={toggleMenu}>Internal</Link>
+                            <Link to="/profile/divisi/edukasi" className="text-lg" onClick={toggleMenu}>Edukasi</Link>
+                            <Link to="/profile/divisi/hrd" className="text-lg" onClick={toggleMenu}>HRD</Link>
+                            <Link to="/profile/divisi/medbrand" className="text-lg" onClick={toggleMenu}>Media Branding</Link>
+                            <Link to="/profile/divisi/ristek" className="text-lg" onClick={toggleMenu}>Riset dan Teknologi</Link>
+                            <Link to="/profile/divisi/entrepreneur" className="text-lg" onClick={toggleMenu}>Entrepreneur</Link>
+                        </div>
                     </div>
-                </div>
-                <button onClick={toggleCommunityMenu} className="text-2xl focus:outline-none lg:hidden">
-                    <span className={isCommunityOpen ? 'text-white' : ''}>Ilkomunity </span>
-                    {isCommunityOpen ? <FaAngleDown className="inline-block right-0" /> : <FaAngleUp className="inline-block" />}
-                </button>
-                <div className={`flex flex-col items-center space-y-2 transition-max-height duration-300 ease-in-out overflow-hidden bg-[#ffffff44] w-full ${isCommunityOpen ? 'max-h-[25rem]' : 'max-h-0'}`}>
-                    <Link to="/community/agriux" className="text-xl" onClick={toggleMenu}>AgriUX</Link>
-                    <Link to="/community/csi" className="text-xl">CSI</Link>
-                    <Link to="/community/agribot" className="text-xl">Agribot</Link>
-                    <Link to="/community/cp" className="text-xl">CP</Link>
-                    <Link to="/community/daming" className="text-xl">Daming</Link>
-                    <Link to="/community/iwdc" className="text-xl">IWDC</Link>
-                    <Link to="/community/gary" className="text-xl">Gary</Link>
-                    <Link to="/community/mad" className="text-xl">MAD</Link>
-                </div>
-                <Link to="/igallery" className="text-2xl" onClick={toggleMenu}>IGallery</Link>
-                <Link to="/komnews" className="text-2xl" onClick={toggleMenu}>Komnews</Link>
-                <Link to="/research" className="text-2xl" onClick={toggleMenu}>Research</Link>
-                <Link to="/syntax" className="text-2xl" onClick={toggleMenu}>Syntax</Link>
-            </nav>
-        </div>
+                    <button onClick={toggleCommunityMenu} className="text-2xl focus:outline-none lg:hidden">
+                        <span className={isCommunityOpen ? 'text-white' : ''}>Ilkomunity </span>
+                        {isCommunityOpen ? <FaAngleDown className="inline-block right-0" /> : <FaAngleUp className="inline-block" />}
+                    </button>
+                    <div className={`flex flex-col items-center space-y-2 transition-max-height duration-300 ease-in-out overflow-hidden bg-[#ffffff44] w-full ${isCommunityOpen ? 'max-h-[25rem]' : 'max-h-0'}`}>
+                        <Link to="/community/agriux" className="text-xl" onClick={toggleMenu}>AgriUX</Link>
+                        <Link to="/community/csi" className="text-xl">CSI</Link>
+                        <Link to="/community/agribot" className="text-xl">Agribot</Link>
+                        <Link to="/community/cp" className="text-xl">CP</Link>
+                        <Link to="/community/daming" className="text-xl">Daming</Link>
+                        <Link to="/community/iwdc" className="text-xl">IWDC</Link>
+                        <Link to="/community/gary" className="text-xl">Gary</Link>
+                        <Link to="/community/mad" className="text-xl">MAD</Link>
+                    </div>
+                    <Link to="/igallery" className="text-2xl" onClick={toggleMenu}>IGallery</Link>
+                    <Link to="/komnews" className="text-2xl" onClick={toggleMenu}>Komnews</Link>
+                    <Link to="/research" className="text-2xl" onClick={toggleMenu}>Research</Link>
+                    <Link to="/syntax" className="text-2xl" onClick={toggleMenu}>Syntax</Link>
+                </nav>
+            </div>
 
 {/* NAVBAR DESKTOP */}
             <nav className="hidden lg:flex space-x-4">

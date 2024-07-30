@@ -1,6 +1,7 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import axios from 'axios';
+import { motion } from 'framer-motion';
 import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
@@ -15,10 +16,11 @@ import Syntax from './pages/Syntax';
 import IGallery from './pages/IGallery';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Preloader from "./components/Preloader/PreloaderLogo";
+import PreloaderContainer from "./components/Preloader/PreloaderContainer";
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
+  const [showPreloader, setShowPreloader] = useState(true);
 
   const handleLogin = async (username, password) => {
     try {
@@ -35,12 +37,38 @@ function App() {
     setLoggedIn(false);
   };
 
+  useEffect(() => {
+    if (showPreloader) {
+      document.body.classList.add('overflow-hidden');
+    } else {
+      document.body.classList.remove('overflow-hidden');
+    }
+
+    const timer = setTimeout(() => {
+      setShowPreloader(false);
+    }, 14000); // Show preloader for 14 seconds
+
+    return () => {
+      clearTimeout(timer);
+      document.body.classList.remove('overflow-hidden');
+    };
+  }, [showPreloader]);
+
   return (
     <Router>
-      <div className="flex flex-col min-h-screen">
+      <div className="relative flex flex-col min-h-screen overflow-hidden">
+        {showPreloader && (
+          <motion.section
+            className='absolute overflow-hidden h-[100vh] w-full inset-0 z-50 flex justify-center items-center bg-[#E49800]'
+            initial={{ y: 0 }}
+            animate={{ y: '-100%', overflow: 'visible'}}
+            transition={{ duration: 1, delay: 13 }} // Slide up after 13 seconds (giving 1 second for sliding up)
+          >
+            <PreloaderContainer />
+          </motion.section>
+        )}
         {!(window.location.pathname.startsWith('/admin') && loggedIn) && <Header loggedIn={loggedIn} onLogout={handleLogout} />}
         <main className="flex-grow">
-        <section className='flex justify-center items-center h-screen'><Preloader /></section>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
@@ -59,7 +87,6 @@ function App() {
         {!(window.location.pathname.startsWith('/admin') && loggedIn) && <Footer />}
       </div>
     </Router>
-    
   );
 }
 
