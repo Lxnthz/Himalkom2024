@@ -35,56 +35,67 @@ function Home() {
 
             <section>
                 {/* Ilkomunity */}
-                <div className='bg-ilkomunity-box bg-cover bg-no-repeat bg-center h-full items-center flex flex-col pt-5 w-screen'> 
-                    <h1 className='font-sports'>Ilkomunity</h1>
-                    <section className='grid grid-cols-2 md:grid-cols-4 md:gap-6 gap-3 p-3'>
-                        <div className="bg-grid-ilkomunity bg-center bg-contain bg-no-repeat flex flex-col items-center justify-center p-6">                           
-                            <img src={saungdesain} alt="Saung Desain" className="w-[50px] h-[50px]" />
-                            <h4 className="text-xs mt-2">Saung Desain</h4>
+                <div className='bg-ilkomunity-box bg-cover bg-no-repeat bg-bottom h-fit items-center flex flex-col pt-5 w-screen'> 
+                    <h1 className='font-sports text-2xl md:text-3xl'>Ilkomunity</h1>
+                    <section className='grid grid-cols-2 lg:grid-cols-4 md:gap-6 gap-3 p-3 place-items-center w-full max-w-[320px] md:max-w-full'>
+                        <div className="bg-grid-ilkomunity bg-center bg-contain bg-no-repeat flex flex-col items-center justify-center p-6 w-full 
+                                        md:h-[250px]">                           
+                            <img src={saungdesain} alt="Saung Desain" className="w-[60px] h-[60px] md:w-full md:h-[140px] lg:h-[100px]" />
+                            <h4 className="text-xs mt-2 md:text-2xl">Saung Desain</h4>
                         </div>      
-                        <div className="bg-grid-ilkomunity bg-center bg-contain bg-no-repeat flex flex-col items-center justify-center p-6">                           
-                            <img src={saungdesain} alt="Saung Desain" className="w-[50px] h-[50px]" />
-                            <h4 className="text-xs mt-2">Saung Desain</h4>
+                        <div className="bg-grid-ilkomunity bg-center bg-contain bg-no-repeat flex flex-col items-center justify-center p-6 w-full
+                                        md:h-[250px]">                           
+                            <img src={saungdesain} alt="Saung Desain" className="w-[60px] h-[60px] md:w-full md:h-[140px] lg:h-[100px]" />
+                            <h4 className="text-xs mt-2 md:text-2xl">Saung Desain</h4>
                         </div>  
-                        <div className="bg-grid-ilkomunity bg-center bg-contain bg-no-repeat flex flex-col items-center justify-center p-6">                           
-                            <img src={saungdesain} alt="Saung Desain" className="w-[50px] h-[50px]" />
-                            <h4 className="text-xs mt-2">Saung Desain</h4>
+                        <div className="bg-grid-ilkomunity bg-center bg-contain bg-no-repeat flex flex-col items-center justify-center p-6 w-full
+                                        md:h-[250px]">                           
+                            <img src={saungdesain} alt="Saung Desain" className="w-[60px] h-[60px] md:w-full md:h-[140px] lg:h-[100px]" />
+                            <h4 className="text-xs mt-2 md:text-2xl">Saung Desain</h4>
                         </div>  
-                        <div className="bg-grid-ilkomunity bg-center bg-contain bg-no-repeat flex flex-col items-center justify-center p-6">                           
-                            <img src={saungdesain} alt="Saung Desain" className="w-[50px] h-[50px]" />
-                            <h4 className="text-xs mt-2">Saung Desain</h4>
+                        <div className="bg-grid-ilkomunity bg-center bg-contain bg-no-repeat flex flex-col items-center justify-center p-6 w-full
+                                        md:h-[250px]">                           
+                            <img src={saungdesain} alt="Saung Desain" className="w-[60px] h-[60px] md:w-full md:h-[140px] lg:h-[100px]" />
+                            <h4 className="text-xs mt-2 md:text-2xl">Saung Desain</h4>
                         </div>
-                        <div className="bg-grid-ilkomunity bg-center bg-contain bg-no-repeat flex flex-col items-center justify-center p-6">                           
-                            <img src={saungdesain} alt="Saung Desain" className="w-[50px] h-[50px]" />
-                            <h4 className="text-xs mt-2">Saung Desain</h4>
+                        <div className="bg-grid-ilkomunity bg-center bg-contain bg-no-repeat flex flex-col items-center justify-center p-6 w-full
+                                        md:h-[250px]">                           
+                            <img src={saungdesain} alt="Saung Desain" className="w-[60px] h-[60px] md:w-full md:h-[140px] lg:h-[100px]" />
+                            <h4 className="text-xs mt-2 md:text-2xl">Saung Desain</h4>
                         </div>      
-                        <div className="bg-grid-ilkomunity bg-center bg-contain bg-no-repeat flex flex-col items-center justify-center p-6">                           
-                            <img src={saungdesain} alt="Saung Desain" className="w-[50px] h-[50px]" />
-                            <h4 className="text-xs mt-2">Saung Desain</h4>
+                        <div className="bg-grid-ilkomunity bg-center bg-contain bg-no-repeat flex flex-col items-center justify-center p-6 w-full
+                                        md:h-[250px]">                           
+                            <img src={saungdesain} alt="Saung Desain" className="w-[60px] h-[60px] md:w-full md:h-[140px] lg:h-[100px]" />
+                            <h4 className="text-xs mt-2 md:text-2xl">Saung Desain</h4>
                         </div>  
-                        <div className="bg-grid-ilkomunity bg-center bg-contain bg-no-repeat flex flex-col items-center justify-center p-6">                           
-                            <img src={saungdesain} alt="Saung Desain" className="w-[50px] h-[50px]" />
-                            <h4 className="text-xs mt-2">Saung Desain</h4>
+                        <div className="bg-grid-ilkomunity bg-center bg-contain bg-no-repeat flex flex-col items-center justify-center p-6 w-full
+                                        md:h-[250px]">                           
+                            <img src={saungdesain} alt="Saung Desain" className="w-[60px] h-[60px] md:w-full md:h-[140px] lg:h-[100px]" />
+                            <h4 className="text-xs mt-2 md:text-2xl">Saung Desain</h4>
                         </div>  
-                        <div className="bg-grid-ilkomunity bg-center bg-contain bg-no-repeat flex flex-col items-center justify-center p-6">                           
-                            <img src={saungdesain} alt="Saung Desain" className="w-[50px] h-[50px]" />
-                            <h4 className="text-xs mt-2">Saung Desain</h4>
+                        <div className="bg-grid-ilkomunity bg-center bg-contain bg-no-repeat flex flex-col items-center justify-center p-6 w-full
+                                        md:h-[250px]">                           
+                            <img src={saungdesain} alt="Saung Desain" className="w-[60px] h-[60px] md:w-full md:h-[140px] lg:h-[100px]" />
+                            <h4 className="text-xs mt-2 md:text-2xl">Saung Desain</h4>
                         </div>                              
                     </section>
                 </div>
 
                 {/* Megaproker */}
-                <div className='bg-megaproker-box bg-cover bg-no-repeat bg-center h-full items-center flex flex-col pt-5 w-screen'>
+                <div className='bg-megaproker-box bg-cover bg-no-repeat bg-bottom h-[1200px] md:h-[1100px] items-center flex flex-col pt-5 w-screen'>
                     <h1>Megaproker</h1>
-                    <div className='bg-card-top-mobile bg-center bg-stretch bg-no-repeat flex flex-col px-7 mx-5 min-w-fit w-auto min-h-fit h-auto'>
-                        <div className='flex-grow flex flex-col justify-start'>
-                            <div className='flex justify-center mt-10'>
-                                <img src={ittoday} className='w-[250px]'></img>
+                    {/* ITod */}
+                    <div className='relative flex flex-col px-7 w-[280px] mx-5 min-w-[10rem] min-h-[672px] h-fit bg-no-repeat bg-center bg-cover bg-card-top-mobile
+                                    md:max-h-[50vh] md:h-[660px] md:min-w-[43rem] md:bg-card-top-tablet md:w-[688px] md:m-0 md:p-0'>
+                        <div className='flex-grow flex flex-col justify-start relative md:flex-row md:justify-around md:items-start mt-10'>
+                            <div className='flex justify-center items-center mt-10 md:items-start md:mt-6'>
+                                <img src={ittoday} className='w-[250px] md:w-[300px] items-center justify-center' alt="IT Today" />
                             </div>
-                            <div className='mt-5 flex justify-center flex-col items-center'>
+                            <div className='mt-5 flex justify-center flex-col items-center md:justify-center md:m-0'>
                                 <h2>IT TODAY</h2>
-                                <p className='text-justify text-xs pb-[200px] max-w-[240px]'>
-                                    <span className='font-bold'>IT Today</span> merupakan serangkaian acara nasional yang
+                                <p className='text-justify text-xs pb-[200px] max-w-[240px] md:text-[14px]'>
+                                    <span className='font-bold'>IT Today </span> 
+                                    merupakan serangkaian acara nasional yang
                                     bertemakan teknologi informasi dalam dunia
                                     Agriculture. Kegiatan ini terdiri atas HackToday (Capture
                                     the Flag), UXToday (UI/UX Design), Poster Competition,
@@ -93,7 +104,26 @@ function Home() {
                                 </p>
                             </div>
                         </div>
+                    </div>    
+                    {/* CPSC */}
+                    <div className='bg-card-bottom-mobile bg-stretch bg-no-repeat md:bg-card-bottom-tablet md:max-h-[50vh] md:h-[660px] md:min-w-[43rem]
+                                    relative flex flex-col min-w-[10rem] w-[280px] min-h-[755px] h-auto translate-y-[-15rem] px-7 mt-5 justify-start items-start md:m-0 md:translate-y-[-20rem]'>
+                        <div className='flex-grow w-full flex flex-col justify-start relative md:flex-row-reverse md:justify-around md:items-start pt-[150px] mt-6 md:mt-[150px]'>
+                            <div className=' flex flex-col justify-start items-center relative md:justify-around md:items-start mt-[100px] md:m-0'>
+                                <img src={cpsc} className='w-[170px]' />
+                            </div>
+                            <div className='mt-5 flex justify-center flex-col items-center md:justify-center md:m-0'>
+                                <h2>CPSC</h2>
+                                <p className='text-justify text-xs max-w-[240px] md:text-[14px]'>
+                                        <span className='font-bold'>Computer Problem Solving Competition (CPSC) </span> 
+                                        merupakan ajang perlombaan tahunan yang diselenggarakan oleh 
+                                        Himpunan Mahasiswa Ilmu Komputer (Himalkom) IPB dan merupakan 
+                                        rangkaian dari acara Pesta Sains Nasional (PSN) FMIPA IPB
+                                </p>
+                            </div>
                         </div>
+                        
+                    </div>
                 </div>
 
                 {/* Komnews */}

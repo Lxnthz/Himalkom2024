@@ -11,6 +11,8 @@ export default {
         'card-bottom-mobile': "url('./src/assets/card-proker/card2-mobile.svg')",
         'card-top-desktop': "url('./src/assets/card-proker/card1-desktop.svg')",
         'card-bottom-desktop': "url('./src/assets/card-proker/card2-desktop.svg')",
+        'card-top-tablet': "url('./src/assets/card-proker/card1-tablet.svg')",
+        'card-bottom-tablet': "url('./src/assets/card-proker/card2-tablet.svg')",
         
         'hero-banner-desktop': "url('./src/assets/banner-desktop.png')",
         'hero-banner-tablet': "url('./src/assets/banner-tablet.png')",
@@ -23,7 +25,7 @@ export default {
         'grid-ilkomunity-desktop': "url('./src/assets/grid-ilkomunity-desktop.png')",
       },
       backgroundSize: {
-        "stretch": "100% 100%"
+        "stretch": "100% 100%",
       },
       fontFamily: {
         monts: ["Montserrat", "sans-serif"],

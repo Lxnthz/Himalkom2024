@@ -65,7 +65,7 @@ function Header() {
                     visibility: visibility,                   
                 }}
                 className={`fixed inset-0 bg-[#E49800] transition-transform duration-300 ease-in-out lg:hidden ${
-                    isOpen ? 'animate-blobSlideInRight' : 'animate-blobSlideInLeft'
+                    isOpen ? 'animate-blobSlideInRight ' : 'animate-blobSlideInLeft'
                 }`}
             >
                 <div className="absolute top-0 right-0 p-4">
