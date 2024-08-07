@@ -1,4 +1,5 @@
-import divider from '../assets/divider.svg'
+import mobileDivider from '../assets/divider.svg'
+import desktopDivider from '../assets/desktopdivider.svg'
 import synapse from '../assets/logosynapse.svg'
 import ilkom from '../assets/logoilmukomputer.svg'
 import ipb from '../assets/logoipb.svg'
@@ -38,8 +39,9 @@ function Footer() {
                     <img src={youtube} onClick={handleYouTubeClick} className='cursor-pointer hover:scale-110 transition-transform duration-300'></img>
                 </div>
             </section>
-            <figure className='my-6 flex justify-center lg:px-10'>
-                <img className='w-full' src={divider}></img>  {/* butuh versi layar lebih gede */}          
+            <figure className='my-6 flex justify-center'>
+                <img className='w-full block md:hidden' src={mobileDivider} alt="Mobile Divider" /> 
+                <img className='w-full hidden md:block' src={desktopDivider} alt="Desktop Divider" />
             </figure>
             <section className='flex flex-col items-center gap-6 lg:flex-row lg:justify-between lg:text-left lg:px-10 2xl:text-lg'>
                 <p className="max-w-[350px] lg:w-1/2">Jl. Meranti Wing 20 Kampus IPB, Babakan, Kec. Dramaga, Kabupaten Bogor, Jawa Barat 16680</p>

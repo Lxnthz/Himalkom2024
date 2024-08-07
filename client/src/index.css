@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer base {
+    @font-face {
+        font-family: 'Sports World';
+        font-style: normal;
+        src: url(./assets/fonts/Sports-World-Regular.ttf) format('ttf'),
+            url(./assets/fonts/Sports-World-Regular.otf) format('otf');
+    }
+}
