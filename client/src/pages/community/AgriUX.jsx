@@ -46,35 +46,17 @@ function AgriUX() {
     return (
         <div>
             <section>
-                <div className="absolut sm:h-[28rem] lg:h-[32rem] grid grid-cols-1 grid-rows-1 border-t-4 border-b-4 border-black mt-2"
-                   >
-                   <div
-                        className="col-start-1 row-start-1 bg-cover bg-center "
-                        style={{
-                            backgroundImage: `url(${bgKomunsm})`,
-                        }}
-                    ></div>
-
-                  
-                    <div
-                        className="col-start-1 row-start-1 hidden sm:block bg-cover bg-center"
-                        style={{
-                            backgroundImage: `url(${bgKomunlg})`,
-                        }}
-                    ></div>  
-
-               
-                    <div className="col-start-1 row-start-1 flex items-center justify-center ">
-                        
+                <div id="Agribot-header-container" className="bg-cover bg-center bg-no-repeat flex items-center h-80 md:h-160 mt-2 justify-center border-t-4 border-b-4 border-black" style={{ backgroundImage: "url('../../../Assets/Ilkommunity/Agribot/bg-agribot.svg')" }}>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 md:gap-x-64">
                         <motion.div
                             whileInView={{ y: [50, 25, 0], opacity: [0, 0, 1] }}
                             transition={{ duration: 0.35 }}
-                            className="flex flex-col items-center text-center pt-64 md:pt-8 md:pr-[22rem] lg:pr-[30rem] lg:mx-20 xl:pr-[34rem] xl:pb-8 xl:mx-60  xl:mt-16 2xl:pr-[34rem] 2xl:pb-8 2xl:mx-60 2xl:mt-16"
+                            className="flex flex-col items-center p-0 gap-6 w-11/12 md:w-94 h-auto md:h-52"
                         >
-                            <h2 className="font-sports font-normal text-5xl md:text-6xl lg:text-6xl xl:text-6xl 2xl:text-6xl text-[#F0E4D4] text-stroke-2 text-stroke-color-black text-shadow-black pt-2">
+                            <h2 className="font-sports-world font-normal text-4xl md:text-6xl leading-10 md:leading-16 text-center text-black-100 shadow-black-5">
                                 AGRIUX
                             </h2>
-                            <p className="font-monts font-normal text-base md:text-sm lg:text-base xl:text-base 2xl:text-base leading-6 px-6 md:px-9 lg:px-1 xl:px-1 2xl:px-6 pt-6 pb-11">
+                            <p className="font-montserrat font-normal text-base md:text-sm lg:text-base xl:text-base 2xl:text-sm leading-6 md:leading-6 lg:leading-6 xl:leading-6 2xl:leading-6 text-center">
                                 AgriUX IPB adalah komunitas yang bergerak pada bidang UI/UX design
                                 <br />
                                 <br />
@@ -167,7 +149,7 @@ function AgriUX() {
                     <motion.div
                         whileInView={{ y: [40, 10, 0], opacity: [0, 0, 1] }}
                         transition={{ duration: 0.35 }}
-                        className="flex flex-col justify-center items-center py-8 pb-32 md:pb-40 lg:pb-44 xl:pb-44 2xl:pb-44 "
+                        className="flex flex-col justify-center items-center py-10 md:py-10 lg:py-10 xl:py-10 2xl:py-10 xl:mb-20"
                     >
                         <div className="flex justify-center items-center w-56 md:w-56 lg:w-56 xl:w-56 2xl:w-56 h-12 md:h-12 lg:h-12 xl:h-12 2xl:h-12 bg-[#E49800] border border-gray-900 shadow-black-4 translate-y-6 shadow-[7px_7px_0_#000000]">
                             <h2 className="font-monts font-semibold text-2xl md:text-xl lg:text-xl xl:text-xl 3xl:text-xl leading-6 md:leading-6 lg:leading-6 xl:leading-6 2xl:leading-6 text-center text-white ">
