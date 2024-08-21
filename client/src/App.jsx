@@ -11,9 +11,9 @@ import ProfileHimalkom from './pages/ProfileHimalkom';
 import ProfileDivisi from './pages/ProfileDivisi';
 import Ilkomunity from './pages/Ilkomunity';
 import Komnews from './pages/Komnews';
-import Riset from './pages/Riset';
+// import Riset from './pages/Riset';
 import Syntax from './pages/Syntax';
-import IGallery from './pages/IGallery';
+// import IGallery from './pages/IGallery';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import PreloaderContainer from "./components/Preloader/PreloaderContainer";
@@ -83,9 +83,9 @@ function AppContent() {
           <Route path="/profile/details" element={<ProfileHimalkom />} />
           <Route path="/profile/divisi/:division" element={<ProfileDivisi />} />
           <Route path="/community" element={<Ilkomunity />} />
-          <Route path="/igallery" element={<IGallery />} />
+          {/* <Route path="/igallery" element={<IGallery />} /> */}
           <Route path="/komnews" element={<Komnews />} />
-          <Route path="/research" element={<Riset />} />
+          {/* <Route path="/research" element={<Riset />} /> */}
           <Route path="/syntax" element={<Syntax />} />
         </Routes>
       </main>
