@@ -92,8 +92,15 @@ function Header() {
             </div>
             <button onClick={toggleCommunityMenu} className="text-2xl focus:outline-none">Community</button>
             <div className={`flex flex-col items-center space-y-2 transition-max-height duration-300 ease-in-out overflow-hidden ${isCommunityOpen ? 'max-h-40' : 'max-h-0'}`}>
-                <Link to="/community" className="text-xl" onClick={toggleMenu}>Forums</Link>
-                {/* Add more links here */}
+                
+                <Link to="/community/AgriUX" className="block px-4 py-2 hover:bg-gray-200">AGRIUX</Link>
+                        <Link to="/community/CSI" className="block px-4 py-2 hover:bg-gray-200">CSI</Link>
+                        <Link to="/community/Agribot" className="block px-4 py-2 hover:bg-gray-200">AGRIBOT</Link>
+                        <Link to="/community/CP" className="block px-4 py-2 hover:bg-gray-200">CP</Link>
+                        <Link to="/community/Daming" className="block px-4 py-2 hover:bg-gray-200">DAMING</Link>
+                        <Link to="/community/IWDC" className="block px-4 py-2 hover:bg-gray-200">IWDC</Link>
+                        <Link to="/community/Gary" className="block px-4 py-2 hover:bg-gray-200">GARY</Link>
+                        <Link to="/community/MAD" className="block px-4 py-2 hover:bg-gray-200">MAD</Link>
             </div>
             <Link to="/igallery" className="text-2xl" onClick={toggleMenu}>IGallery</Link>
             <Link to="/komnews" className="text-2xl" onClick={toggleMenu}>Komnews</Link>
