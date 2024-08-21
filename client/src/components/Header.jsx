@@ -35,7 +35,7 @@ function Header() {
     };
 
     return (
-        <header className="py-4 px-10 bg-[#E49800] border-b-[4px] border-black relative flex flex-row justify-between items-center font-changa">
+        <header className="py-4 px-10 bg-[#E49800] border-b-[4px] border-black relative flex flex-row justify-between items-center font-changa z-20">
             <div className="flex justify-between items-center w-full">
                 <div className="text-xl font-bold">
                 <img className='max-w-12' src={ilkom} alt="Ilmu Komputer Logo" />

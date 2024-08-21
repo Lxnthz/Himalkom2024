@@ -90,6 +90,15 @@ export default {
         blobSlideInRightTablet: 'blobEnterTablet 0.8s ease-in-out forwards, slideInRightTablet 0.8s ease-in-out forwards',
         blobSlideInLeftTablet: 'blobExitTablet 0.8s ease-in-out forwards, slideInLeftTablet 0.8s ease-in-out forwards'
       },
+      textShadow: {
+        'black': "4px 5px #040404"          
+      },
+      textStrokeWidth: {
+        '2': '2px'
+      },
+      textStrokeColor: {
+        'black': '#000'
+      }
     },
   },
   plugins: [],
