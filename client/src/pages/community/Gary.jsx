@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import ImageSlider from "./../../components/ImageSlider";
-import bgGarylg from './../../assets/Ilkommunity/UX/UX-Header-Background.svg'
-import bgGarysm from './../../assets/Ilkommunity/UX/UX-Header-Background-Mobile.svg'
+import bgGarylg from './../../assets/Ilkommunity/Gary/bg-gary.svg'
+import bgGarysm from './../../assets/Ilkommunity/Gary/bg-mobile-gary.svg'
 import bgPatternT from './../../assets/Background/pattern-top.svg'
 import bgPatternB from './../../assets/Background/pattern-bottom.svg'
 import dokum1 from './../../assets/Ilkommunity/Agribot/Agribot-Dokum1.png'
@@ -46,7 +46,7 @@ function Gary() {
     return (
         <div>
             <section>
-                <div className="relative sm:h-[28rem] lg:h-[32rem] grid grid-cols-1 grid-rows-1 border-t-4 border-b-4 border-black mt-2">
+                <div className="absolut sm:h-[28rem] lg:h-[32rem] grid grid-cols-1 grid-rows-1 border-t-4 border-b-4 border-black mt-2">
                    
                     <div
                         className="col-start-1 row-start-1 bg-cover bg-center "
@@ -71,13 +71,13 @@ function Gary() {
                             className="flex flex-col items-center text-center pt-64 md:pt-8 md:pr-[22rem] lg:pr-[30rem] lg:mx-20 xl:pr-[34rem] xl:pb-8 xl:mx-60  xl:mt-16 2xl:pr-[34rem] 2xl:pb-8 2xl:mx-60 2xl:mt-16"
                         >
                             <h2 className="font-sports font-normal text-5xl md:text-6xl lg:text-6xl xl:text-6xl 2xl:text-6xl text-[#F0E4D4] text-stroke-2 text-stroke-color-black text-shadow-black pt-2">
-                                AGRIUX
+                                GARY
                             </h2>
                             <p className="font-monts font-normal text-base md:text-sm lg:text-base xl:text-base 2xl:text-base leading-6 px-6 md:px-9 lg:px-1 xl:px-1 2xl:px-6 pt-6 pb-11">
-                                AgriUX IPB adalah komunitas yang bergerak pada bidang UI/UX design
+                            Game Reality (Gary) adalah komunitas yang berfokus pada game development
                                 <br />
                                 <br />
-                                Setiap Rabu pukul 19:00 di RKU 2.01 (FMIPA lantai 2)
+                                Setiap Rabu pukul 19:00 di Localhost (FMIPA lantai 4)
                             </p>
                         </motion.div>
                     </div>
@@ -115,15 +115,12 @@ function Gary() {
                             showDeskripsi
                                 ? <div className="flex flex-col justify-center bg-[#E49800] border-4 border-black shadow-black-7 my-8 p-4 md:p-10 mx-4 md:mx-8 max-w-screen-lg w-11/12 shadow-[7px_7px_0_#000000]">
                                     <p className="font-montserrat font-semibold text-sm md:text-lg leading-5 md:leading-6 text-justify text-white">
-                                        AgriUX merupakan komunitas yang bertujuan untuk mewadahi minat mahasiswa Ilmu Komputer dalam bidang User Interface dan User Experience pada suatu aplikasi atau web, serta minat dalam bidang desain dengan menggunakan tools desain yang beragam.
-                                        <br />
-                                        <br />
-                                        Product Design memiliki 2 cabang, yaitu UI/UX dan Creative Design. UI/UX lebih fokus kepada problem dan penyelesaiannya serta penerapan tampilan aplikasi atau interface dengan cara melakukan wireframing, lalu pada Creative Design fokus pada pembelajar segala macam jenis desain dengan menggunakan aplikasi Adobe Illustrator, Adobe Photoshop dan lain lain.
+                                    Komunitas Game Reality adalah komunitas yang berorientasi pada pengembangan permainan. Anggota komunitas di dukung untuk dapat menciptakan permainan yang berkualitas dengan memperhatikan dari segi teknik, perancangan dan grafis. Diharapkan kedepannya permainan tersebut dapat diikutkan dalam kompetisi-kompetisi dan dikomersialkan.
                                     </p>
                                 </div>
                                 : <div className="flex flex-col justify-center bg-[#E49800] border-4 border-black shadow-black-7 my-8 p-4 md:p-10 mx-4 md:mx-8 max-w-screen-lg w-11/12 shadow-[7px_7px_0_#000000]">
                                     <h3 className="font-montserrat font-semibold text-sm md:text-lg leading-5 md:leading-6 text-justify text-white">
-                                        Mewadahi Mahasiswa IPB khususnya departemen Ilmu Komputer dalam menyalurkan minatnya di bidang UI/UX Design
+                                    Wadah pertumbuhan dan pengembangan skill dan passion dalam game development bagi mahasiswa IPB.                 
                                     </h3>
                                 </div>
                         }
@@ -140,22 +137,19 @@ function Gary() {
                             </div>
                             <div className="flex flex-col justify-center items-center border-2 border-black max-w-screen-lg w-11/12 bg-white shadow-black-3 py-14 md:py-14 lg:py-14 xl:py-14 2xl:py-14 px-6 md:px-14 lg:px-14 xl:px-14 2xl:px-14 shadow-[7px_7px_0_#000000]">
                                 <li className="font-monts font-normal text-md md:text-xl leading-6 md:leading-6 lg:leading-6 xl:leading-6 2xl:leading-6 text-center text-black ">
-                                    Medali Perak Gemastik IX Cabang Desain Pengalaman Pengguna 2016
+                                2nd Place Award Game Dev Competition Gemastik 9
                                 </li>
                                 <li className="font-monts font-normal text-md md:text-xl leading-6 md:leading-6 lg:leading-6 xl:leading-6 2xl:leading-6 text-center text-black mt-4">
-                                    Juara 2 Samsung Ideaction 2016
+                                Semi Finalist Game Category Imagine Cup 2016 Indonesia
                                 </li>
                                 <li className="font-monts font-normal text-md md:text-xl leading-6 md:leading-6 lg:leading-6 xl:leading-6 2xl:leading-6 text-center text-black mt-4">
-                                    Juara 2 Bidang UI/UX ITFEST USU 2017
+                                2nd Place Award Game Category #PahlawanMuda Apps Challenge 2015
                                 </li>
                                 <li className="font-monts font-normal text-md md:text-xl leading-6 md:leading-6 lg:leading-6 xl:leading-6 2xl:leading-6 text-center text-black mt-4">
-                                    Juara 2 UnityFest UNY cabang UX Design Competition
+                                2nd Place Award Mobile Game Development Competition Technology Euphoria 2015
                                 </li>
                                 <li className="font-monts font-normal text-md md:text-xl leading-6 md:leading-6 lg:leading-6 xl:leading-6 2xl:leading-6 text-center text-black mt-4">
-                                    Medali Emas Gemastik XIII Cabang Desain Pengalaman Pengguna 2020
-                                </li>
-                                <li className="font-monts font-normal text-md md:text-xl leading-6 md:leading-6 lg:leading-6 xl:leading-6 2xl:leading-6 text-center text-black mt-4">
-                                    Juara 2 International Prototype Design Competition - Proto A Thon
+                                2nd Place Award IPB Game Dev Competition IT Today 2015
                                 </li>
                             </div>
                         </motion.div>
@@ -175,11 +169,9 @@ function Gary() {
                         </div>
                         <div className="flex flex-col justify-center items-center border-2 border-black max-w-screen-lg w-11/12 bg-white shadow-black-3 h-44 md:h-44 shadow-[7px_7px_0_#000000]">
                             <h3 className="font-monts font-normal text-base md:text-xl lg:text-xl xl:text-xl 2xl:text-xl leading-6 md:leading-8 lg:leading-8 xl:leading-8  2xl:leading-8 text-center text-black mt-14 pb-9">
-                                Muhammad Raihan Zhafran Halawa
+                                Muhammad Fahmi Ihsan
                                 <br />
-                                Whatsapp: 082260302171
-                                <br />
-                                IG: @agriux
+                                Whatsapp: 085770699775
                             </h3>
                             </div>
                     </motion.div>

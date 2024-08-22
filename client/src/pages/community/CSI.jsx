@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import ImageSlider from "./../../components/ImageSlider";
-import bgKomunlg from './../../assets/Ilkommunity/UX/UX-Header-Background.svg'
-import bgKomunsm from './../../assets/Ilkommunity/UX/UX-Header-Background-Mobile.svg'
+import bgKomunlg from './../../assets/Ilkommunity/CSI/bg-csi.svg'
+import bgKomunsm from './../../assets/Ilkommunity/CSI/bg-mobile-csi.svg'
 import bgPatternT from './../../assets/Background/pattern-top.svg'
 import bgPatternB from './../../assets/Background/pattern-bottom.svg'
 import dokum1 from './../../assets/Ilkommunity/Agribot/Agribot-Dokum1.png'
@@ -11,7 +11,7 @@ import dokum3 from './../../assets/Ilkommunity/Agribot/Agribot-Dokum3.png'
 import dokum4 from './../../assets/Ilkommunity/Agribot/Agribot-Dokum4.png'
 import dokum5 from './../../assets/Ilkommunity/Agribot/Agribot-Dokum5.png'
 
-function CSI() {
+function AgriUX() {
     const [showDeskripsi, setShowDeskripsi] = useState(true);
 
     const fadeInVariants = {
@@ -46,7 +46,7 @@ function CSI() {
     return (
         <div>
             <section>
-                <div className="relative sm:h-[28rem] lg:h-[32rem] grid grid-cols-1 grid-rows-1 border-t-4 border-b-4 border-black mt-2">
+                <div className="absolut sm:h-[28rem] lg:h-[32rem] grid grid-cols-1 grid-rows-1 border-t-4 border-b-4 border-black mt-2">
                    
                     <div
                         className="col-start-1 row-start-1 bg-cover bg-center "
@@ -68,16 +68,16 @@ function CSI() {
                         <motion.div
                             whileInView={{ y: [50, 25, 0], opacity: [0, 0, 1] }}
                             transition={{ duration: 0.35 }}
-                            className="flex flex-col items-center text-center pt-64 md:pt-8 md:pr-[22rem] lg:pr-[30rem] lg:mx-20 xl:pr-[34rem] xl:pb-8 xl:mx-60  xl:mt-16 2xl:pr-[34rem] 2xl:pb-8 2xl:mx-60 2xl:mt-16"
+                            className="flex flex-col items-center text-center pt-64 md:pt-8 md:pr-[22rem] lg:pr-[30rem] lg:mx-20 xl:pr-[34rem] xl:pb-8 xl:mx-56  xl:mt-10 2xl:pr-[34rem] 2xl:pb-8 2xl:mx-60 2xl:mt-16"
                         >
                             <h2 className="font-sports font-normal text-5xl md:text-6xl lg:text-6xl xl:text-6xl 2xl:text-6xl text-[#F0E4D4] text-stroke-2 text-stroke-color-black text-shadow-black pt-2">
-                                AGRIUX
+                                CSI
                             </h2>
                             <p className="font-monts font-normal text-base md:text-sm lg:text-base xl:text-base 2xl:text-base leading-6 px-6 md:px-9 lg:px-1 xl:px-1 2xl:px-6 pt-6 pb-11">
-                                AgriUX IPB adalah komunitas yang bergerak pada bidang UI/UX design
+                            Cyber Security IPB (CSI) adalah komunitas yang bergerak pada bidang keamanan siber dan berfokus pada kompetisi Capture the Flag (CTF) baik di tingkat nasional maupun internasional
                                 <br />
                                 <br />
-                                Setiap Rabu pukul 19:00 di RKU 2.01 (FMIPA lantai 2)
+                                Setiap Jumat pukul 17:00 di gedung Gedung Pusat Komputer (GPK)
                             </p>
                         </motion.div>
                     </div>
@@ -115,15 +115,15 @@ function CSI() {
                             showDeskripsi
                                 ? <div className="flex flex-col justify-center bg-[#E49800] border-4 border-black shadow-black-7 my-8 p-4 md:p-10 mx-4 md:mx-8 max-w-screen-lg w-11/12 shadow-[7px_7px_0_#000000]">
                                     <p className="font-montserrat font-semibold text-sm md:text-lg leading-5 md:leading-6 text-justify text-white">
-                                        AgriUX merupakan komunitas yang bertujuan untuk mewadahi minat mahasiswa Ilmu Komputer dalam bidang User Interface dan User Experience pada suatu aplikasi atau web, serta minat dalam bidang desain dengan menggunakan tools desain yang beragam.
+                                    Komunitas Cyber Security IPB merupakan komunitas yang memfasilitasi mahasiswa IPB yang memiliki minat atau ketertarikan terhadap bidang Keamanan Jaringan. Komunitas ini mempelajari mulai dari metodologi 'hacking', eksploitasi web application hingga low-level application, serta keahlian-keahlian dasar keamanan jaringan.
                                         <br />
                                         <br />
-                                        Product Design memiliki 2 cabang, yaitu UI/UX dan Creative Design. UI/UX lebih fokus kepada problem dan penyelesaiannya serta penerapan tampilan aplikasi atau interface dengan cara melakukan wireframing, lalu pada Creative Design fokus pada pembelajar segala macam jenis desain dengan menggunakan aplikasi Adobe Illustrator, Adobe Photoshop dan lain lain.
+                                        Harapannya di komunitas ini, peserta komunitas dapat menerapkan ilmunya untuk menyelesaikan masalah dan dapat mempersiapkan peserta komunitas untuk mengikuti lomba-lomba terkait serta mempersiapkan peserta untuk pratisipasi aktif dalam bug bounty.
                                     </p>
                                 </div>
                                 : <div className="flex flex-col justify-center bg-[#E49800] border-4 border-black shadow-black-7 my-8 p-4 md:p-10 mx-4 md:mx-8 max-w-screen-lg w-11/12 shadow-[7px_7px_0_#000000]">
                                     <h3 className="font-montserrat font-semibold text-sm md:text-lg leading-5 md:leading-6 text-justify text-white">
-                                        Mewadahi Mahasiswa IPB khususnya departemen Ilmu Komputer dalam menyalurkan minatnya di bidang UI/UX Design
+                                    CSI bertujuan untuk meningkatkan minat dan kesadaran terhadap keamanan siber secara luas, serta meningkatkan keterampilan keamanan siber dan hacking secara khusus.
                                     </h3>
                                 </div>
                         }
@@ -140,22 +140,25 @@ function CSI() {
                             </div>
                             <div className="flex flex-col justify-center items-center border-2 border-black max-w-screen-lg w-11/12 bg-white shadow-black-3 py-14 md:py-14 lg:py-14 xl:py-14 2xl:py-14 px-6 md:px-14 lg:px-14 xl:px-14 2xl:px-14 shadow-[7px_7px_0_#000000]">
                                 <li className="font-monts font-normal text-md md:text-xl leading-6 md:leading-6 lg:leading-6 xl:leading-6 2xl:leading-6 text-center text-black ">
-                                    Medali Perak Gemastik IX Cabang Desain Pengalaman Pengguna 2016
+                                Juara 1 CTF FindIT! 2023
                                 </li>
                                 <li className="font-monts font-normal text-md md:text-xl leading-6 md:leading-6 lg:leading-6 xl:leading-6 2xl:leading-6 text-center text-black mt-4">
-                                    Juara 2 Samsung Ideaction 2016
+                                Juara 3 CTF Unity#11
                                 </li>
                                 <li className="font-monts font-normal text-md md:text-xl leading-6 md:leading-6 lg:leading-6 xl:leading-6 2xl:leading-6 text-center text-black mt-4">
-                                    Juara 2 Bidang UI/UX ITFEST USU 2017
+                                Juara 1 CTF ARA 4.0
                                 </li>
                                 <li className="font-monts font-normal text-md md:text-xl leading-6 md:leading-6 lg:leading-6 xl:leading-6 2xl:leading-6 text-center text-black mt-4">
-                                    Juara 2 UnityFest UNY cabang UX Design Competition
+                                Juara 2 Gemastik XV Divisi 2 Keamanan Siber
                                 </li>
                                 <li className="font-monts font-normal text-md md:text-xl leading-6 md:leading-6 lg:leading-6 xl:leading-6 2xl:leading-6 text-center text-black mt-4">
-                                    Medali Emas Gemastik XIII Cabang Desain Pengalaman Pengguna 2020
+                                Juara 3 Gemastik XV Divisi 2 Keamanan Siber
                                 </li>
                                 <li className="font-monts font-normal text-md md:text-xl leading-6 md:leading-6 lg:leading-6 xl:leading-6 2xl:leading-6 text-center text-black mt-4">
-                                    Juara 2 International Prototype Design Competition - Proto A Thon
+                                Juara 3 National Cyber Week 2022
+                                </li>
+                                <li className="font-monts font-normal text-md md:text-xl leading-6 md:leading-6 lg:leading-6 xl:leading-6 2xl:leading-6 text-center text-black mt-4">
+                                Juara 3 CTF Hology 5.0
                                 </li>
                             </div>
                         </motion.div>
@@ -175,11 +178,9 @@ function CSI() {
                         </div>
                         <div className="flex flex-col justify-center items-center border-2 border-black max-w-screen-lg w-11/12 bg-white shadow-black-3 h-44 md:h-44 shadow-[7px_7px_0_#000000]">
                             <h3 className="font-monts font-normal text-base md:text-xl lg:text-xl xl:text-xl 2xl:text-xl leading-6 md:leading-8 lg:leading-8 xl:leading-8  2xl:leading-8 text-center text-black mt-14 pb-9">
-                                Muhammad Raihan Zhafran Halawa
+                                NUmero Uno Aroefy
                                 <br />
-                                Whatsapp: 082260302171
-                                <br />
-                                IG: @agriux
+                                Whatsapp: 082380845064
                             </h3>
                             </div>
                     </motion.div>
@@ -189,5 +190,5 @@ function CSI() {
     );
 }
 
-export default CSI;
+export default AgriUX;
 

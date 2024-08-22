@@ -46,7 +46,7 @@ function Agribot() {
     return (
         <div>
             <section>
-                <div className="relative sm:h-[28rem] lg:h-[32rem] grid grid-cols-1 grid-rows-1 border-t-4 border-b-4 border-black mt-2">
+                <div className="absolut sm:h-[28rem] lg:h-[32rem] grid grid-cols-1 grid-rows-1 border-t-4 border-b-4 border-black mt-2">
                    
                     <div
                         className="col-start-1 row-start-1 bg-cover bg-center "
@@ -68,7 +68,7 @@ function Agribot() {
                         <motion.div
                             whileInView={{ y: [50, 25, 0], opacity: [0, 0, 1] }}
                             transition={{ duration: 0.35 }}
-                            className="flex flex-col items-center text-center pt-64 md:pt-8 md:pr-[22rem] lg:pr-[30rem] lg:mx-20 xl:pr-[34rem] xl:pb-8 xl:mx-60  xl:mt-16 2xl:pr-[34rem] 2xl:pb-8 2xl:mx-60 2xl:mt-16"
+                            className="flex flex-col items-center text-center pt-64 md:pt-8 md:pr-[22rem] lg:pr-[30rem] lg:mx-20 xl:pr-[34rem] xl:pb-8 xl:mx-60  xl:mt-12 2xl:pr-[34rem] 2xl:pb-8 2xl:mx-60 2xl:mt-16"
                         >
                             <h2 className="font-sports font-normal text-5xl md:text-6xl lg:text-6xl xl:text-6xl 2xl:text-6xl text-[#F0E4D4] text-stroke-2 text-stroke-color-black text-shadow-black pt-2">
                                 AGRIBOT
@@ -115,15 +115,18 @@ function Agribot() {
                             showDeskripsi
                                 ? <div className="flex flex-col justify-center bg-[#E49800] border-4 border-black shadow-black-7 my-8 p-4 md:p-10 mx-4 md:mx-8 max-w-screen-lg w-11/12 shadow-[7px_7px_0_#000000]">
                                     <p className="font-montserrat font-semibold text-sm md:text-lg leading-5 md:leading-6 text-justify text-white">
-                                    Agribot merupakan komunitas robotik mahasiswa Ilmu Komputer IPB yang telah berdiri sejak tahun 2014. Kegiatan komunitas robotika ini berfokus pada pengembangan sistem tertanam dan juga pada bidang robotika. Komunitas ini juga bergerak dalam hal-hal yang terkait kecerdasan buatan, machine learning, dan pengembangan decision support system. Komunitas ini diperuntukkan untuk semua mahasiswa aktif ilmu komputer IPB beserta mahasiswa lain yang tertarik dengan tujuan komunitas ini. Mulai tahun 2016,
+                                    Agribot merupakan komunitas robotik mahasiswa Ilmu Komputer IPB yang telah berdiri sejak tahun 2014. Kegiatan komunitas robotika ini berfokus pada pengembangan sistem tertanam dan juga pada bidang robotika. 
+                                        <br />
+                                        <br />
+                                        Komunitas ini diperuntukkan untuk semua mahasiswa aktif ilmu komputer IPB beserta mahasiswa lain yang tertarik dengan tujuan komunitas ini. Mulai tahun 2016,
                                         sesuai dengan semangat IPB membentuk Unit Kegiatan Mahasiswa Robotika,
                                         komunitas ini mulai menjalin kerja sama dengan mahasiswa dari Departemen Teknik Mesin dan Biosistem serta Departemen Fisika.
                                     </p>
                                 </div>
                                 : <div className="flex flex-col justify-center bg-[#E49800] border-4 border-black shadow-black-7 my-8 p-4 md:p-10 mx-4 md:mx-8 max-w-screen-lg w-11/12 shadow-[7px_7px_0_#000000]">
                                     <h3 className="font-montserrat font-semibold text-sm md:text-lg leading-5 md:leading-6 text-justify text-white">
-                                    <li>Mewadahi minat mahasiswa Ilmu Komputer IPB di bidang pengembangan robotik,</li>
-                                    <li>Menghasilkan robot yang memiliki dampak baik terhadap masyarakat dan institusi,</li>
+                                    <li>Mewadahi minat mahasiswa Ilmu Komputer IPB di bidang pengembangan robotik</li>
+                                    <li>Menghasilkan robot yang memiliki dampak baik terhadap masyarakat dan institusi</li>
                                     <li>Memfasilitasi pelatihan robotik bagi Ilmu Komputer dan mahasiswa IPB.</li>
                                     </h3>
                                 </div>
@@ -140,13 +143,14 @@ function Agribot() {
                                 </h2>
                             </div>
                             <div className="flex flex-col justify-center items-center border-2 border-black max-w-screen-lg w-11/12 bg-white shadow-black-3 py-14 md:py-14 lg:py-14 xl:py-14 2xl:py-14 px-6 md:px-14 lg:px-14 xl:px-14 2xl:px-14 shadow-[7px_7px_0_#000000]">
-                                <li className="font-monts font-normal text-md md:text-xl leading-6 md:leading-6 lg:leading-6 xl:leading-6 2xl:leading-6 text-center text-black ">
+                                <div className="font-monts font-normal text-md md:text-xl leading-6 md:leading-6 lg:leading-6 xl:leading-6 2xl:leading-6 text-center text-black ">
+                                <li className="font-monts font-normal text-md md:text-xl leading-6 md:leading-6 lg:leading-6 xl:leading-6 2xl:leading-6 text-center text-black mt-4">
                                 Best Team - IoT Motor Creation 2019
                                 </li>
                                 <li className="font-monts font-normal text-md md:text-xl leading-6 md:leading-6 lg:leading-6 xl:leading-6 2xl:leading-6 text-center text-black mt-4">
                                 Juara 2 - IoT Aplication Competition Inter University 2016
                                 </li>
-                                
+                                </div>
                             </div>
                         </motion.div>
                     </motion.div>
@@ -165,10 +169,10 @@ function Agribot() {
                         </div>
                         <div className="flex flex-col justify-center items-center border-2 border-black max-w-screen-lg w-11/12 bg-white shadow-black-3 h-44 md:h-44 shadow-[7px_7px_0_#000000]">
                             <h3 className="font-monts font-normal text-base md:text-xl lg:text-xl xl:text-xl 2xl:text-xl leading-6 md:leading-8 lg:leading-8 xl:leading-8  2xl:leading-8 text-center text-black mt-14 pb-9">
-                                Ismy Fana Fillah
+                            Ismy Fana Fillah
                                 <br />
-                                Whatsapp: 082260302171
-                                
+                                Whatsapp: 082322632462
+                                <br />
                             </h3>
                             </div>
                     </motion.div>
