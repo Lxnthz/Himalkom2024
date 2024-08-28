@@ -5,11 +5,18 @@ import bgKomunlg from './../../assets/Ilkommunity/UX/UX-Header-Background.svg'
 import bgKomunsm from './../../assets/Ilkommunity/UX/UX-Header-Background-Mobile.svg'
 import bgPatternT from './../../assets/Background/pattern-top.svg'
 import bgPatternB from './../../assets/Background/pattern-bottom.svg'
-import dokum1 from './../../assets/Ilkommunity/Agribot/Agribot-Dokum1.png'
-import dokum2 from './../../assets/Ilkommunity/Agribot/Agribot-Dokum2.png'
-import dokum3 from './../../assets/Ilkommunity/Agribot/Agribot-Dokum3.png'
-import dokum4 from './../../assets/Ilkommunity/Agribot/Agribot-Dokum4.png'
-import dokum5 from './../../assets/Ilkommunity/Agribot/Agribot-Dokum5.png'
+import dokum1 from './../../assets/Ilkommunity/UX/UX-dokum1.png'
+import dokum2 from './../../assets/Ilkommunity/UX/UX-dokum2.png'
+import dokum3 from './../../assets/Ilkommunity/UX/UX-dokum3.png'
+import dokum4 from './../../assets/Ilkommunity/UX/UX-dokum4.png'
+import dokum5 from './../../assets/Ilkommunity/UX/UX-dokum5.png'
+import dokum6 from './../../assets/Ilkommunity/UX/UX-dokum6.png'
+import dokum7 from './../../assets/Ilkommunity/UX/UX-dokum7.png'
+import dokum8 from './../../assets/Ilkommunity/UX/UX-dokum8.png'
+import dokum9 from './../../assets/Ilkommunity/UX/UX-dokum9.png'
+import dokum10 from './../../assets/Ilkommunity/UX/UX-dokum10.png'
+
+
 
 function AgriUX() {
     const [showDeskripsi, setShowDeskripsi] = useState(true);
@@ -40,7 +47,13 @@ function AgriUX() {
         { url: dokum2 },
         { url: dokum3 },
         { url: dokum4 },
-        { url: dokum5 }
+        { url: dokum5 },
+        { url: dokum6 },
+        { url: dokum7 },
+        { url: dokum8 },
+        { url: dokum9 },
+        { url: dokum10 },
+     
     ];
 
     return (
@@ -139,29 +152,30 @@ function AgriUX() {
                                 </h2>
                             </div>
                             <div className="flex flex-col justify-center items-center border-2 border-black max-w-screen-lg w-11/12 bg-white shadow-black-3 py-14 md:py-14 lg:py-14 xl:py-14 2xl:py-14 px-6 md:px-14 lg:px-14 xl:px-14 2xl:px-14 shadow-[7px_7px_0_#000000]">
-                                <li className="font-monts font-normal text-md md:text-xl leading-6 md:leading-6 lg:leading-6 xl:leading-6 2xl:leading-6 text-center text-black ">
+                                <p className="font-monts font-normal text-md md:text-xl leading-6 md:leading-6 lg:leading-6 xl:leading-6 2xl:leading-6 text-center text-black ">
                                     Medali Perak Gemastik IX Cabang Desain Pengalaman Pengguna 2016
-                                </li>
-                                <li className="font-monts font-normal text-md md:text-xl leading-6 md:leading-6 lg:leading-6 xl:leading-6 2xl:leading-6 text-center text-black mt-4">
+                                </p>
+                                <p className="font-monts font-normal text-md md:text-xl leading-6 md:leading-6 lg:leading-6 xl:leading-6 2xl:leading-6 text-center text-black mt-4">
                                     Juara 2 Samsung Ideaction 2016
-                                </li>
-                                <li className="font-monts font-normal text-md md:text-xl leading-6 md:leading-6 lg:leading-6 xl:leading-6 2xl:leading-6 text-center text-black mt-4">
+                                </p>
+                                <p className="font-monts font-normal text-md md:text-xl leading-6 md:leading-6 lg:leading-6 xl:leading-6 2xl:leading-6 text-center text-black mt-4">
                                     Juara 2 Bidang UI/UX ITFEST USU 2017
-                                </li>
-                                <li className="font-monts font-normal text-md md:text-xl leading-6 md:leading-6 lg:leading-6 xl:leading-6 2xl:leading-6 text-center text-black mt-4">
+                                </p>
+                                <p className="font-monts font-normal text-md md:text-xl leading-6 md:leading-6 lg:leading-6 xl:leading-6 2xl:leading-6 text-center text-black mt-4">
                                     Juara 2 UnityFest UNY cabang UX Design Competition
-                                </li>
-                                <li className="font-monts font-normal text-md md:text-xl leading-6 md:leading-6 lg:leading-6 xl:leading-6 2xl:leading-6 text-center text-black mt-4">
+                                </p>
+                                <p className="font-monts font-normal text-md md:text-xl leading-6 md:leading-6 lg:leading-6 xl:leading-6 2xl:leading-6 text-center text-black mt-4">
                                     Medali Emas Gemastik XIII Cabang Desain Pengalaman Pengguna 2020
-                                </li>
-                                <li className="font-monts font-normal text-md md:text-xl leading-6 md:leading-6 lg:leading-6 xl:leading-6 2xl:leading-6 text-center text-black mt-4">
+                                </p>
+                                <p className="font-monts font-normal text-md md:text-xl leading-6 md:leading-6 lg:leading-6 xl:leading-6 2xl:leading-6 text-center text-black mt-4">
                                     Juara 2 International Prototype Design Competition - Proto A Thon
-                                </li>
+                                </p>
                             </div>
                         </motion.div>
                     </motion.div>
 
-                    
+                    <ImageSlider slides={slides} />
+                    {/* <ScrollButton /> */}
  
                     <motion.div
                         whileInView={{ y: [40, 10, 0], opacity: [0, 0, 1] }}

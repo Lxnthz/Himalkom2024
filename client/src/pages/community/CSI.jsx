@@ -5,11 +5,14 @@ import bgKomunlg from './../../assets/Ilkommunity/CSI/bg-csi.svg'
 import bgKomunsm from './../../assets/Ilkommunity/CSI/bg-mobile-csi.svg'
 import bgPatternT from './../../assets/Background/pattern-top.svg'
 import bgPatternB from './../../assets/Background/pattern-bottom.svg'
-import dokum1 from './../../assets/Ilkommunity/Agribot/Agribot-Dokum1.png'
-import dokum2 from './../../assets/Ilkommunity/Agribot/Agribot-Dokum2.png'
-import dokum3 from './../../assets/Ilkommunity/Agribot/Agribot-Dokum3.png'
-import dokum4 from './../../assets/Ilkommunity/Agribot/Agribot-Dokum4.png'
-import dokum5 from './../../assets/Ilkommunity/Agribot/Agribot-Dokum5.png'
+import dokum1 from './../../assets/Ilkommunity/CSI/CSI-Dokum1.png'
+import dokum2 from './../../assets/Ilkommunity/CSI/CSI-Dokum2.png'
+import dokum3 from './../../assets/Ilkommunity/CSI/CSI-Dokum3.png'
+import dokum4 from './../../assets/Ilkommunity/CSI/CSI-Dokum4.png'
+import dokum5 from './../../assets/Ilkommunity/CSI/CSI-Dokum5.png'
+import dokum6 from './../../assets/Ilkommunity/CSI/CSI-Dokum6.png'
+import dokum7 from './../../assets/Ilkommunity/CSI/CSI-Dokum7.png'
+
 
 function AgriUX() {
     const [showDeskripsi, setShowDeskripsi] = useState(true);
@@ -40,7 +43,9 @@ function AgriUX() {
         { url: dokum2 },
         { url: dokum3 },
         { url: dokum4 },
-        { url: dokum5 }
+        { url: dokum5 },
+        { url: dokum6 },
+        { url: dokum7 }
     ];
 
     return (
@@ -139,32 +144,32 @@ function AgriUX() {
                                 </h2>
                             </div>
                             <div className="flex flex-col justify-center items-center border-2 border-black max-w-screen-lg w-11/12 bg-white shadow-black-3 py-14 md:py-14 lg:py-14 xl:py-14 2xl:py-14 px-6 md:px-14 lg:px-14 xl:px-14 2xl:px-14 shadow-[7px_7px_0_#000000]">
-                                <li className="font-monts font-normal text-md md:text-xl leading-6 md:leading-6 lg:leading-6 xl:leading-6 2xl:leading-6 text-center text-black ">
+                                <p className="font-monts font-normal text-md md:text-xl leading-6 md:leading-6 lg:leading-6 xl:leading-6 2xl:leading-6 text-center text-black ">
                                 Juara 1 CTF FindIT! 2023
-                                </li>
-                                <li className="font-monts font-normal text-md md:text-xl leading-6 md:leading-6 lg:leading-6 xl:leading-6 2xl:leading-6 text-center text-black mt-4">
+                                </p>
+                                <p className="font-monts font-normal text-md md:text-xl leading-6 md:leading-6 lg:leading-6 xl:leading-6 2xl:leading-6 text-center text-black mt-4">
                                 Juara 3 CTF Unity#11
-                                </li>
-                                <li className="font-monts font-normal text-md md:text-xl leading-6 md:leading-6 lg:leading-6 xl:leading-6 2xl:leading-6 text-center text-black mt-4">
+                                </p>
+                                <p className="font-monts font-normal text-md md:text-xl leading-6 md:leading-6 lg:leading-6 xl:leading-6 2xl:leading-6 text-center text-black mt-4">
                                 Juara 1 CTF ARA 4.0
-                                </li>
-                                <li className="font-monts font-normal text-md md:text-xl leading-6 md:leading-6 lg:leading-6 xl:leading-6 2xl:leading-6 text-center text-black mt-4">
+                                </p>
+                                <p className="font-monts font-normal text-md md:text-xl leading-6 md:leading-6 lg:leading-6 xl:leading-6 2xl:leading-6 text-center text-black mt-4">
                                 Juara 2 Gemastik XV Divisi 2 Keamanan Siber
-                                </li>
-                                <li className="font-monts font-normal text-md md:text-xl leading-6 md:leading-6 lg:leading-6 xl:leading-6 2xl:leading-6 text-center text-black mt-4">
+                                </p>
+                                <p className="font-monts font-normal text-md md:text-xl leading-6 md:leading-6 lg:leading-6 xl:leading-6 2xl:leading-6 text-center text-black mt-4">
                                 Juara 3 Gemastik XV Divisi 2 Keamanan Siber
-                                </li>
-                                <li className="font-monts font-normal text-md md:text-xl leading-6 md:leading-6 lg:leading-6 xl:leading-6 2xl:leading-6 text-center text-black mt-4">
+                                </p>
+                                <p className="font-monts font-normal text-md md:text-xl leading-6 md:leading-6 lg:leading-6 xl:leading-6 2xl:leading-6 text-center text-black mt-4">
                                 Juara 3 National Cyber Week 2022
-                                </li>
-                                <li className="font-monts font-normal text-md md:text-xl leading-6 md:leading-6 lg:leading-6 xl:leading-6 2xl:leading-6 text-center text-black mt-4">
+                                </p>
+                                <p className="font-monts font-normal text-md md:text-xl leading-6 md:leading-6 lg:leading-6 xl:leading-6 2xl:leading-6 text-center text-black mt-4">
                                 Juara 3 CTF Hology 5.0
-                                </li>
+                                </p>
                             </div>
                         </motion.div>
                     </motion.div>
 
-                    
+                    <ImageSlider slides={slides} />
  
                     <motion.div
                         whileInView={{ y: [40, 10, 0], opacity: [0, 0, 1] }}

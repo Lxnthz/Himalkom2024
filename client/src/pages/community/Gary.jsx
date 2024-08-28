@@ -5,11 +5,12 @@ import bgGarylg from './../../assets/Ilkommunity/Gary/bg-gary.svg'
 import bgGarysm from './../../assets/Ilkommunity/Gary/bg-mobile-gary.svg'
 import bgPatternT from './../../assets/Background/pattern-top.svg'
 import bgPatternB from './../../assets/Background/pattern-bottom.svg'
-import dokum1 from './../../assets/Ilkommunity/Agribot/Agribot-Dokum1.png'
-import dokum2 from './../../assets/Ilkommunity/Agribot/Agribot-Dokum2.png'
-import dokum3 from './../../assets/Ilkommunity/Agribot/Agribot-Dokum3.png'
-import dokum4 from './../../assets/Ilkommunity/Agribot/Agribot-Dokum4.png'
-import dokum5 from './../../assets/Ilkommunity/Agribot/Agribot-Dokum5.png'
+import dokum1 from './../../assets/Ilkommunity/Gary/GARY-Dokum1.png'
+import dokum2 from './../../assets/Ilkommunity/Gary/GARY-Dokum2.png'
+import dokum3 from './../../assets/Ilkommunity/Gary/GARY-Dokum3.png'
+import dokum4 from './../../assets/Ilkommunity/Gary/GARY-Dokum4.png'
+
+
 
 function Gary() {
     const [showDeskripsi, setShowDeskripsi] = useState(true);
@@ -40,7 +41,6 @@ function Gary() {
         { url: dokum2 },
         { url: dokum3 },
         { url: dokum4 },
-        { url: dokum5 }
     ];
 
     return (
@@ -136,26 +136,26 @@ function Gary() {
                                 </h2>
                             </div>
                             <div className="flex flex-col justify-center items-center border-2 border-black max-w-screen-lg w-11/12 bg-white shadow-black-3 py-14 md:py-14 lg:py-14 xl:py-14 2xl:py-14 px-6 md:px-14 lg:px-14 xl:px-14 2xl:px-14 shadow-[7px_7px_0_#000000]">
-                                <li className="font-monts font-normal text-md md:text-xl leading-6 md:leading-6 lg:leading-6 xl:leading-6 2xl:leading-6 text-center text-black ">
+                                <p className="font-monts font-normal text-md md:text-xl leading-6 md:leading-6 lg:leading-6 xl:leading-6 2xl:leading-6 text-center text-black ">
                                 2nd Place Award Game Dev Competition Gemastik 9
-                                </li>
-                                <li className="font-monts font-normal text-md md:text-xl leading-6 md:leading-6 lg:leading-6 xl:leading-6 2xl:leading-6 text-center text-black mt-4">
-                                Semi Finalist Game Category Imagine Cup 2016 Indonesia
-                                </li>
-                                <li className="font-monts font-normal text-md md:text-xl leading-6 md:leading-6 lg:leading-6 xl:leading-6 2xl:leading-6 text-center text-black mt-4">
+                                </p>
+                                <p className="font-monts font-normal text-md md:text-xl leading-6 md:leading-6 lg:leading-6 xl:leading-6 2xl:leading-6 text-center text-black mt-4">
+                                Semi Finalis Game Category Imagine Cup 2016 Indonesia
+                                </p>
+                                <p className="font-monts font-normal text-md md:text-xl leading-6 md:leading-6 lg:leading-6 xl:leading-6 2xl:leading-6 text-center text-black mt-4">
                                 2nd Place Award Game Category #PahlawanMuda Apps Challenge 2015
-                                </li>
-                                <li className="font-monts font-normal text-md md:text-xl leading-6 md:leading-6 lg:leading-6 xl:leading-6 2xl:leading-6 text-center text-black mt-4">
+                                </p>
+                                <p className="font-monts font-normal text-md md:text-xl leading-6 md:leading-6 lg:leading-6 xl:leading-6 2xl:leading-6 text-center text-black mt-4">
                                 2nd Place Award Mobile Game Development Competition Technology Euphoria 2015
-                                </li>
-                                <li className="font-monts font-normal text-md md:text-xl leading-6 md:leading-6 lg:leading-6 xl:leading-6 2xl:leading-6 text-center text-black mt-4">
+                                </p>
+                                <p className="font-monts font-normal text-md md:text-xl leading-6 md:leading-6 lg:leading-6 xl:leading-6 2xl:leading-6 text-center text-black mt-4">
                                 2nd Place Award IPB Game Dev Competition IT Today 2015
-                                </li>
+                                </p>
                             </div>
                         </motion.div>
                     </motion.div>
 
-                    
+                    <ImageSlider slides={slides} />
  
                     <motion.div
                         whileInView={{ y: [40, 10, 0], opacity: [0, 0, 1] }}

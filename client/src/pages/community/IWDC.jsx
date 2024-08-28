@@ -5,11 +5,13 @@ import bgKomunlg from './../../assets/Ilkommunity/IWDC/bg-IWDC.svg'
 import bgKomunsm from './../../assets/Ilkommunity/IWDC/bg-mobile-IWDC.svg'
 import bgPatternT from './../../assets/Background/pattern-top.svg'
 import bgPatternB from './../../assets/Background/pattern-bottom.svg'
-import dokum1 from './../../assets/Ilkommunity/Agribot/Agribot-Dokum1.png'
-import dokum2 from './../../assets/Ilkommunity/Agribot/Agribot-Dokum2.png'
-import dokum3 from './../../assets/Ilkommunity/Agribot/Agribot-Dokum3.png'
-import dokum4 from './../../assets/Ilkommunity/Agribot/Agribot-Dokum4.png'
-import dokum5 from './../../assets/Ilkommunity/Agribot/Agribot-Dokum5.png'
+import dokum1 from './../../assets/Ilkommunity/IWDC/iwdc-dokum1.png'
+import dokum2 from './../../assets/Ilkommunity/IWDC/iwdc-dokum2.png'
+import dokum3 from './../../assets/Ilkommunity/IWDC/iwdc-dokum3.png'
+import dokum4 from './../../assets/Ilkommunity/IWDC/iwdc-dokum4.png'
+import dokum5 from './../../assets/Ilkommunity/IWDC/iwdc-dokum5.png'
+import dokum6 from './../../assets/Ilkommunity/IWDC/iwdc-dokum6.png'
+
 
 function IWDC() {
     const [showDeskripsi, setShowDeskripsi] = useState(true);
@@ -40,7 +42,8 @@ function IWDC() {
         { url: dokum2 },
         { url: dokum3 },
         { url: dokum4 },
-        { url: dokum5 }
+        { url: dokum5 },
+        { url: dokum6 }
     ];
 
     return (
@@ -143,7 +146,7 @@ function IWDC() {
                         </motion.div>
                     </motion.div>
 
-                    
+                    <ImageSlider slides={slides} />
  
                     <motion.div
                         whileInView={{ y: [40, 10, 0], opacity: [0, 0, 1] }}

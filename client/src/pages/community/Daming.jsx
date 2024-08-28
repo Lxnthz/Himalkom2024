@@ -5,11 +5,12 @@ import bgKomunlg from './../../assets/Ilkommunity/Daming/bg-daming.svg'
 import bgKomunsm from './../../assets/Ilkommunity/Daming/bg-mobile-daming.svg'
 import bgPatternT from './../../assets/Background/pattern-top.svg'
 import bgPatternB from './../../assets/Background/pattern-bottom.svg'
-import dokum1 from './../../assets/Ilkommunity/Agribot/Agribot-Dokum1.png'
-import dokum2 from './../../assets/Ilkommunity/Agribot/Agribot-Dokum2.png'
-import dokum3 from './../../assets/Ilkommunity/Agribot/Agribot-Dokum3.png'
-import dokum4 from './../../assets/Ilkommunity/Agribot/Agribot-Dokum4.png'
-import dokum5 from './../../assets/Ilkommunity/Agribot/Agribot-Dokum5.png'
+import dokum1 from './../../assets/Ilkommunity/Daming/Daming-Dokum1.svg'
+import dokum2 from './../../assets/Ilkommunity/Daming/Daming-Dokum2.svg'
+import dokum3 from './../../assets/Ilkommunity/Daming/Daming-Dokum3.svg'
+import dokum4 from './../../assets/Ilkommunity/Daming/Daming-Dokum4.svg'
+import dokum5 from './../../assets/Ilkommunity/Daming/Daming-Dokum5.png'
+
 
 function Daming() {
     const [showDeskripsi, setShowDeskripsi] = useState(true);
@@ -148,20 +149,20 @@ function Daming() {
                                 </h2>
                             </div>
                             <div className="flex flex-col justify-center items-center border-2 border-black max-w-screen-lg w-11/12 bg-white shadow-black-3 py-14 md:py-14 lg:py-14 xl:py-14 2xl:py-14 px-6 md:px-14 lg:px-14 xl:px-14 2xl:px-14 shadow-[7px_7px_0_#000000]">
-                                <li className="font-monts font-normal text-md md:text-xl leading-6 md:leading-6 lg:leading-6 xl:leading-6 2xl:leading-6 text-center text-black ">
+                                <p className="font-monts font-normal text-md md:text-xl leading-6 md:leading-6 lg:leading-6 xl:leading-6 2xl:leading-6 text-center text-black ">
                                 Juara 1 Satria data 2022
-                                </li>
-                                <li className="font-monts font-normal text-md md:text-xl leading-6 md:leading-6 lg:leading-6 xl:leading-6 2xl:leading-6 text-center text-black mt-4">
+                                </p>
+                                <p className="font-monts font-normal text-md md:text-xl leading-6 md:leading-6 lg:leading-6 xl:leading-6 2xl:leading-6 text-center text-black mt-4">
                                 Finalis Joints Data Competition 2023
-                                </li>
-                                <li className="font-monts font-normal text-md md:text-xl leading-6 md:leading-6 lg:leading-6 xl:leading-6 2xl:leading-6 text-center text-black mt-4">
+                                </p>
+                                <p className="font-monts font-normal text-md md:text-xl leading-6 md:leading-6 lg:leading-6 xl:leading-6 2xl:leading-6 text-center text-black mt-4">
                                 Juara 3 Gammafest - Data Science Competition 2023
-                                </li>
+                                </p>
                             </div>
                         </motion.div>
                     </motion.div>
 
-                    
+                    <ImageSlider slides={slides} />
  
                     <motion.div
                         whileInView={{ y: [40, 10, 0], opacity: [0, 0, 1] }}

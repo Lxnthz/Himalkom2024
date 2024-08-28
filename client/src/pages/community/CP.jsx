@@ -5,11 +5,13 @@ import bgKomunlg from './../../assets/Ilkommunity/CP/bg-cp.svg'
 import bgKomunsm from './../../assets/Ilkommunity/CP/bg-mobile-cp.svg'
 import bgPatternT from './../../assets/Background/pattern-top.svg'
 import bgPatternB from './../../assets/Background/pattern-bottom.svg'
-import dokum1 from './../../assets/Ilkommunity/Agribot/Agribot-Dokum1.png'
-import dokum2 from './../../assets/Ilkommunity/Agribot/Agribot-Dokum2.png'
-import dokum3 from './../../assets/Ilkommunity/Agribot/Agribot-Dokum3.png'
-import dokum4 from './../../assets/Ilkommunity/Agribot/Agribot-Dokum4.png'
-import dokum5 from './../../assets/Ilkommunity/Agribot/Agribot-Dokum5.png'
+import dokum1 from './../../assets/Ilkommunity/CP/CP-Dokum1.png'
+import dokum2 from './../../assets/Ilkommunity/CP/CP-Dokum2.png'
+import dokum3 from './../../assets/Ilkommunity/CP/CP-Dokum3.png'
+import dokum4 from './../../assets/Ilkommunity/CP/CP-Dokum4.png'
+import dokum5 from './../../assets/Ilkommunity/CP/CP-Dokum5.png'
+import dokum6 from './../../assets/Ilkommunity/CP/CP-Dokum6.png'
+
 
 function CP() {
     const [showDeskripsi, setShowDeskripsi] = useState(true);
@@ -40,7 +42,8 @@ function CP() {
         { url: dokum2 },
         { url: dokum3 },
         { url: dokum4 },
-        { url: dokum5 }
+        { url: dokum5 },
+        { url: dokum6 }
     ];
 
     return (
@@ -137,23 +140,23 @@ function CP() {
                                 </h2>
                             </div>
                             <div className="flex flex-col justify-center items-center border-2 border-black max-w-screen-lg w-11/12 bg-white shadow-black-3 py-14 md:py-14 lg:py-14 xl:py-14 2xl:py-14 px-6 md:px-14 lg:px-14 xl:px-14 2xl:px-14 shadow-[7px_7px_0_#000000]">
-                                <li className="font-monts font-normal text-md md:text-xl leading-6 md:leading-6 lg:leading-6 xl:leading-6 2xl:leading-6 text-center text-black ">
+                                <p className="font-monts font-normal text-md md:text-xl leading-6 md:leading-6 lg:leading-6 xl:leading-6 2xl:leading-6 text-center text-black ">
                                 Finalis JOINTS
-                                </li>
-                                <li className="font-monts font-normal text-md md:text-xl leading-6 md:leading-6 lg:leading-6 xl:leading-6 2xl:leading-6 text-center text-black mt-4">
+                                </p>
+                                <p className="font-monts font-normal text-md md:text-xl leading-6 md:leading-6 lg:leading-6 xl:leading-6 2xl:leading-6 text-center text-black mt-4">
                                 CP Finalis Arkavidia
-                                </li>
-                                <li className="font-monts font-normal text-md md:text-xl leading-6 md:leading-6 lg:leading-6 xl:leading-6 2xl:leading-6 text-center text-black mt-4">
+                                </p>
+                                <p className="font-monts font-normal text-md md:text-xl leading-6 md:leading-6 lg:leading-6 xl:leading-6 2xl:leading-6 text-center text-black mt-4">
                                 CP Peserta Regional ICPC
-                                </li>
-                                <li className="font-monts font-normal text-md md:text-xl leading-6 md:leading-6 lg:leading-6 xl:leading-6 2xl:leading-6 text-center text-black mt-4">
+                                </p>
+                                <p className="font-monts font-normal text-md md:text-xl leading-6 md:leading-6 lg:leading-6 xl:leading-6 2xl:leading-6 text-center text-black mt-4">
                                 CP Finalis Gemastik Divisi I
-                                </li>
+                                </p>
                             </div>
                         </motion.div>
                     </motion.div>
 
-                    
+                    <ImageSlider slides={slides} />
  
                     <motion.div
                         whileInView={{ y: [40, 10, 0], opacity: [0, 0, 1] }}

@@ -43,7 +43,7 @@ const ImageSlider = ({ slides }) => {
       whileInView={{ y: [40, 10, 0], opacity: [0, 0, 1] }}
       transition={{ duration: 0.35 }}   
       id="image-slider" 
-      className="mt-20 flex flex-col justify-center items-center"
+      className="mt-10 mb-10 flex flex-col justify-center items-center"
     >
     <div className="flex justify-center items-center w-56 md:w-56 lg:w-56 xl:w-56 2xl:w-56 h-12 md:h-12 lg:h-12 xl:h-12 2xl:h-12 bg-[#E49800] border border-gray-900 shadow-black-4 translate-y-6 shadow-[7px_7px_0_#000000]">
                             <h2 className="font-monts font-semibold text-2xl md:text-xl lg:text-xl xl:text-xl 3xl:text-xl leading-6 md:leading-6 lg:leading-6 xl:leading-6 2xl:leading-6 text-center text-white ">
@@ -51,19 +51,20 @@ const ImageSlider = ({ slides }) => {
                             </h2>
                         </div>
 
-        <div className="w-[66.5rem] h-[704px] bg-[#453755] border-3 border-gray-900 shadow-lg p-4 flex flex-col items-center">
-        <div className="flex justify-center items-center w-full py-14">
+        
+        <div className="w-11/12 xl:w-[64rem] 2xl:w-[70rem] xl:h-[47rem] bg-[#453755] border-3 border-gray-900 p-4 flex flex-col justify-center shadow-[7px_7px_0_#16052b] md:shadow-[15px_15px_0_#16052b]">
+        <div className="flex justify-center items-center w-full py-14 ">
           <img
             src={arrowleft}
-            alt="arrow left"
-            className="cursor-pointer pr-4 sm:pr-8 md:pr-12 lg:pr-16 xl:pr-20"
+            alt="arrow left" 
+            className="cursor-pointer pr-4 sm:pr-8 md:pr-12 lg:pr-16 xl:pr-20 w-[15%] md:w-[13%] xl:w-[13%]"
             onClick={goToPrevious}
           />
-          <div className='w-[40rem] h-[18rem] sm:h-[250px] md:h-[300px] lg:h-[342px] border-3 border-[#16052B] shadow-lg' style={slideStyles}></div>
+          <div className='w-[20rem] h-[7rem] sm:h-[250px] md:w-[40rem] md:h-[18rem] lg:h-[342px] border-3 border-[#16052B] shadow-[7px_7px_0_#16052b] md:shadow-[15px_15px_0_#16052b]' style={slideStyles}></div>
           <img
             src={arrowright}
             alt="arrow right"
-            className="cursor-pointer pl-4 sm:pl-8 md:pl-12 lg:pl-16 xl:pl-20"
+            className="cursor-pointer pl-4 sm:pl-8 md:pl-12 lg:pl-16 xl:pl-20 w-[15%] md:w-[13%] lg:w-[13%] xl:w-[13%]"
             onClick={goToNext}
           />
         </div>
@@ -72,7 +73,7 @@ const ImageSlider = ({ slides }) => {
           {visibleThumbs.map((slide, slideIndex) => (
             <div
               key={slideIndex}
-              className="border-2 border-[#16052B] w-[150px] h-[100px] sm:w-[180px] sm:h-[120px] md:w-[200px] md:h-[130px] lg:w-[215px] lg:h-[136px] m-1 transition-transform transform hover:scale-110"
+              className="border-2 border-[#16052B] w-[4rem] h-[100px] sm:w-[180px] sm:h-[120px] md:w-[200px] md:h-[130px] lg:w-[215px] lg:h-[136px] m-1 transition-transform transform hover:scale-110"
             >
               <img
                 src={slides[getThumbnailIndex(slideIndex)].url}
