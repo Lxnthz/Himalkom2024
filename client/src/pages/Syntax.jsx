@@ -9,7 +9,7 @@ function Syntax() {
   return (
     <div className="p-4">
       {/* Section 1: Header Section with Background Images */}
-      <section className="relative sm:h-[28rem] lg:h-[32rem] grid grid-cols-1 grid-rows-1 border-t-4 border-b-4 border-black mt-2">
+      <section className="absolut sm:h-[28rem] lg:h-[32rem] grid grid-cols-1 grid-rows-1 border-t-4 border-b-4 border-black mt-2">
         {/* Mobile Background Image */}
         <div
           className="col-start-1 row-start-1 bg-cover bg-center"
@@ -43,7 +43,7 @@ function Syntax() {
       </section>
 
       {/* Section 2: Cards Section with Background Patterns */}
-      <section className="relative bg-no-repeat bg-right bg-contain pt-20"
+      <section className=" bg-no-repeat bg-right bg-contain pt-20"
         style={{
           backgroundImage: `url(${bgPatternT}), url(${bgPatternB})`,
           backgroundPosition: '100% 0, 0 100%',

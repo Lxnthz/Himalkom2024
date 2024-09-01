@@ -54,19 +54,19 @@ function IGallery() {
       >
         {/* Cards Grid */}
         <div className='grid grid-cols-1 lg:grid-cols-3 md:gap-12 gap-10 p-0 place-items-center w-full max-w-[500px] md:max-w-full mx-auto'>
-          <div className="w-9/12 h-[18rem] bg-[#E49800]">
+          <div className="w-11/12 h-[18rem] bg-[#E49800] border-4 border-black">
             <div
-              className="  bg-center bg-contain bg-no-repeat flex flex-col items-center justify-center  w-full md:h-[250px] pb-6"
+              className="  bg-center bg-no-repeat flex flex-col items-center justify-center  w-full md:h-[250px] pt-3"
             >
               <img
                 src={Card_Desktop}
                 alt="Saung Desain"
-                className="w-[120px] h-[90px] md:w-full md:h-[140px] lg:w-[300px] h-[100px] "
+                className="w-11/12 h-5/12  md:h-[140px] lg:w-[300px] pb-6  "
               />
-              <h2 className=''>
+              <h2 className='pr-[6rem]'>
                 Saung Desain
                 </h2>
-                <h2 className='flex-end'>
+                <h2 className='pl-[6rem]'>
                 Saung Desain
                 </h2>
               <div className="flex flex-col max-w-[190px]">
