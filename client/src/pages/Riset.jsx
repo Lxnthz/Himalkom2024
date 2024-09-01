@@ -1,240 +1,268 @@
-function Riset() {
-    return (
-        <div className="flex overflow-hidden flex-col bg-gray-50">
-<div className="-z-1 flex relative flex-col justify-center items-center px-16 py-48 mt-3 w-full min-h-[737px] max-md:px-5 max-md:py-24 max-md:max-w-full">
-  <img
-    loading="lazy"
-    src="https://cdn.builder.io/api/v1/image/assets/TEMP/b03d937ad441af50daf6d9b245cda1e5f51a7cd381058500496f1d79c60575a6?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059"
-    className="object-cover absolute inset-0 size-full max-md:order-1"
-  />
-  <div className="flex relative flex-wrap gap-5 items-center mb-0 max-md:mb-2.5 max-md:max-w-full max-md:order-2">
-    <div className="flex flex-col self-stretch my-auto min-w-[240px] w-[532px] max-md:max-w-full">
-      <div className="flex flex-col max-w-full text-4xl leading-none rounded-none w-[343px]">
-        <div className="text-slate-900">RISET ILKOMERZ</div>
-      </div>
-      <div className="mt-4 text-2xl leading-7 text-justify text-gray-900 max-md:max-w-full">
-        <span className="font-bold">Riset Ilkomerz</span> merupakan
-        kegiatan riset yang ditujukan untuk menjaring minat, pendapat, dan
-        aspirasi ilkomerz untuk membangun Himalkom berdasarkan kebutuhan
-        ilkomerz.
-      </div>
-    </div>
-              <img
-                loading="lazy"
-                srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/a8d59cffdd1508a366434ac6a2814b7b0e59f28b08d6f7a623c7943b2914d8d8?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/a8d59cffdd1508a366434ac6a2814b7b0e59f28b08d6f7a623c7943b2914d8d8?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/a8d59cffdd1508a366434ac6a2814b7b0e59f28b08d6f7a623c7943b2914d8d8?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/a8d59cffdd1508a366434ac6a2814b7b0e59f28b08d6f7a623c7943b2914d8d8?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/a8d59cffdd1508a366434ac6a2814b7b0e59f28b08d6f7a623c7943b2914d8d8?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/a8d59cffdd1508a366434ac6a2814b7b0e59f28b08d6f7a623c7943b2914d8d8?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/a8d59cffdd1508a366434ac6a2814b7b0e59f28b08d6f7a623c7943b2914d8d8?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/a8d59cffdd1508a366434ac6a2814b7b0e59f28b08d6f7a623c7943b2914d8d8?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059"
-                className="object-contain self-stretch my-auto aspect-[1.47] min-w-[240px] w-[523px] max-md:max-w-full"
-              />
-            </div>
-          </div>
-          <div className="flex flex-col self-center mt-20 max-md:mt-10 max-md:max-w-full">
-            <div className="flex flex-wrap gap-5 items-start max-md:max-w-full">
-              <div className="flex flex-col justify-between min-h-[399px] min-w-[240px] w-[389px]">
-                <div className="flex overflow-hidden flex-col justify-center max-w-full bg-white shadow-sm w-[389px]">
-                  <img
-                    loading="lazy"
-                    srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/9e43b49d6156bd8294141adaa82b6f14960e6f668ede1521b20f743683774272?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/9e43b49d6156bd8294141adaa82b6f14960e6f668ede1521b20f743683774272?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/9e43b49d6156bd8294141adaa82b6f14960e6f668ede1521b20f743683774272?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/9e43b49d6156bd8294141adaa82b6f14960e6f668ede1521b20f743683774272?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/9e43b49d6156bd8294141adaa82b6f14960e6f668ede1521b20f743683774272?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/9e43b49d6156bd8294141adaa82b6f14960e6f668ede1521b20f743683774272?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/9e43b49d6156bd8294141adaa82b6f14960e6f668ede1521b20f743683774272?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/9e43b49d6156bd8294141adaa82b6f14960e6f668ede1521b20f743683774272?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059"
-                    className="object-contain w-full aspect-[1.43]"
-                  />
-                </div>
-                <div className="flex flex-col mt-4 max-w-full w-[389px]">
-                  <div className="text-base font-bold leading-6 text-gray-900">
-                    Ketertarikan Ilkomerz dalam membangun
-                    <br />
-                    Startup
-                  </div>
-                  <div className="mt-2 text-sm leading-none text-zinc-600">
-                    23/12
-                  </div>
-                </div>
-                <div className="mt-4 text-sm font-bold tracking-normal leading-none text-indigo-800">
-                  Baca selengkapnya
-                </div>
-              </div>
-              <div className="flex flex-col justify-between min-h-[399px] min-w-[240px] w-[389px]">
-                <div className="flex overflow-hidden flex-col justify-center max-w-full bg-white shadow-sm w-[389px]">
-                  <img
-                    loading="lazy"
-                    srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/9e43b49d6156bd8294141adaa82b6f14960e6f668ede1521b20f743683774272?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/9e43b49d6156bd8294141adaa82b6f14960e6f668ede1521b20f743683774272?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/9e43b49d6156bd8294141adaa82b6f14960e6f668ede1521b20f743683774272?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/9e43b49d6156bd8294141adaa82b6f14960e6f668ede1521b20f743683774272?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/9e43b49d6156bd8294141adaa82b6f14960e6f668ede1521b20f743683774272?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/9e43b49d6156bd8294141adaa82b6f14960e6f668ede1521b20f743683774272?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/9e43b49d6156bd8294141adaa82b6f14960e6f668ede1521b20f743683774272?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/9e43b49d6156bd8294141adaa82b6f14960e6f668ede1521b20f743683774272?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059"
-                    className="object-contain w-full aspect-[1.43]"
-                  />
-                </div>
-                <div className="flex flex-col mt-4 max-w-full w-[389px]">
-                  <div className="text-base font-bold leading-6 text-gray-900">
-                    Ketertarikan Ilkomerz dalam membangun
-                    <br />
-                    Startup
-                  </div>
-                  <div className="mt-2 text-sm leading-none text-zinc-600">
-                    23/12
-                  </div>
-                </div>
-                <div className="mt-4 text-sm font-bold tracking-normal leading-none text-indigo-800">
-                  Baca selengkapnya
-                </div>
-              </div>
-              <div className="flex flex-col justify-between min-h-[399px] min-w-[240px] w-[389px]">
-                <div className="flex overflow-hidden flex-col justify-center max-w-full bg-white shadow-sm w-[389px]">
-                  <img
-                    loading="lazy"
-                    srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/9e43b49d6156bd8294141adaa82b6f14960e6f668ede1521b20f743683774272?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/9e43b49d6156bd8294141adaa82b6f14960e6f668ede1521b20f743683774272?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/9e43b49d6156bd8294141adaa82b6f14960e6f668ede1521b20f743683774272?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/9e43b49d6156bd8294141adaa82b6f14960e6f668ede1521b20f743683774272?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/9e43b49d6156bd8294141adaa82b6f14960e6f668ede1521b20f743683774272?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/9e43b49d6156bd8294141adaa82b6f14960e6f668ede1521b20f743683774272?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/9e43b49d6156bd8294141adaa82b6f14960e6f668ede1521b20f743683774272?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/9e43b49d6156bd8294141adaa82b6f14960e6f668ede1521b20f743683774272?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059"
-                    className="object-contain w-full aspect-[1.43]"
-                  />
-                </div>
-                <div className="flex flex-col mt-4 max-w-full w-[389px]">
-                  <div className="text-base font-bold leading-6 text-gray-900">
-                    Ketertarikan Ilkomerz dalam membangun
-                    <br />
-                    Startup
-                  </div>
-                  <div className="mt-2 text-sm leading-none text-zinc-600">
-                    23/12
-                  </div>
-                </div>
-                <div className="mt-4 text-sm font-bold tracking-normal leading-none text-indigo-800">
-                  Baca selengkapnya
-                </div>
-              </div>
-            </div>
-            <div className="flex flex-wrap gap-5 items-start mt-10 max-md:max-w-full">
-              <div className="flex flex-col justify-between min-h-[399px] min-w-[240px] w-[389px]">
-                <div className="flex overflow-hidden flex-col justify-center max-w-full bg-white shadow-sm w-[389px]">
-                  <img
-                    loading="lazy"
-                    srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/9e43b49d6156bd8294141adaa82b6f14960e6f668ede1521b20f743683774272?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/9e43b49d6156bd8294141adaa82b6f14960e6f668ede1521b20f743683774272?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/9e43b49d6156bd8294141adaa82b6f14960e6f668ede1521b20f743683774272?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/9e43b49d6156bd8294141adaa82b6f14960e6f668ede1521b20f743683774272?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/9e43b49d6156bd8294141adaa82b6f14960e6f668ede1521b20f743683774272?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/9e43b49d6156bd8294141adaa82b6f14960e6f668ede1521b20f743683774272?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/9e43b49d6156bd8294141adaa82b6f14960e6f668ede1521b20f743683774272?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/9e43b49d6156bd8294141adaa82b6f14960e6f668ede1521b20f743683774272?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059"
-                    className="object-contain w-full aspect-[1.43]"
-                  />
-                </div>
-                <div className="flex flex-col mt-4 max-w-full w-[389px]">
-                  <div className="text-base font-bold leading-6 text-gray-900">
-                    Ketertarikan Ilkomerz dalam membangun
-                    <br />
-                    Startup
-                  </div>
-                  <div className="mt-2 text-sm leading-none text-zinc-600">
-                    23/12
-                  </div>
-                </div>
-                <div className="mt-4 text-sm font-bold tracking-normal leading-none text-indigo-800">
-                  Baca selengkapnya
-                </div>
-              </div>
-              <div className="flex flex-col justify-between min-h-[399px] min-w-[240px] w-[389px]">
-                <div className="flex overflow-hidden flex-col justify-center max-w-full bg-white shadow-sm w-[389px]">
-                  <img
-                    loading="lazy"
-                    srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/9e43b49d6156bd8294141adaa82b6f14960e6f668ede1521b20f743683774272?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/9e43b49d6156bd8294141adaa82b6f14960e6f668ede1521b20f743683774272?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/9e43b49d6156bd8294141adaa82b6f14960e6f668ede1521b20f743683774272?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/9e43b49d6156bd8294141adaa82b6f14960e6f668ede1521b20f743683774272?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/9e43b49d6156bd8294141adaa82b6f14960e6f668ede1521b20f743683774272?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/9e43b49d6156bd8294141adaa82b6f14960e6f668ede1521b20f743683774272?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/9e43b49d6156bd8294141adaa82b6f14960e6f668ede1521b20f743683774272?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/9e43b49d6156bd8294141adaa82b6f14960e6f668ede1521b20f743683774272?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059"
-                    className="object-contain w-full aspect-[1.43]"
-                  />
-                </div>
-                <div className="flex flex-col mt-4 max-w-full w-[389px]">
-                  <div className="text-base font-bold leading-6 text-gray-900">
-                    Ketertarikan Ilkomerz dalam membangun
-                    <br />
-                    Startup
-                  </div>
-                  <div className="mt-2 text-sm leading-none text-zinc-600">
-                    23/12
-                  </div>
-                </div>
-                <div className="mt-4 text-sm font-bold tracking-normal leading-none text-indigo-800">
-                  Baca selengkapnya
-                </div>
-              </div>
-              <div className="flex flex-col justify-between min-h-[399px] min-w-[240px] w-[389px]">
-                <div className="flex overflow-hidden flex-col justify-center max-w-full bg-white shadow-sm w-[389px]">
-                  <img
-                    loading="lazy"
-                    srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/9e43b49d6156bd8294141adaa82b6f14960e6f668ede1521b20f743683774272?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/9e43b49d6156bd8294141adaa82b6f14960e6f668ede1521b20f743683774272?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/9e43b49d6156bd8294141adaa82b6f14960e6f668ede1521b20f743683774272?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/9e43b49d6156bd8294141adaa82b6f14960e6f668ede1521b20f743683774272?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/9e43b49d6156bd8294141adaa82b6f14960e6f668ede1521b20f743683774272?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/9e43b49d6156bd8294141adaa82b6f14960e6f668ede1521b20f743683774272?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/9e43b49d6156bd8294141adaa82b6f14960e6f668ede1521b20f743683774272?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/9e43b49d6156bd8294141adaa82b6f14960e6f668ede1521b20f743683774272?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059"
-                    className="object-contain w-full aspect-[1.43]"
-                  />
-                </div>
-                <div className="flex flex-col mt-4 max-w-full w-[389px]">
-                  <div className="text-base font-bold leading-6 text-gray-900">
-                    Ketertarikan Ilkomerz dalam membangun
-                    <br />
-                    Startup
-                  </div>
-                  <div className="mt-2 text-sm leading-none text-zinc-600">
-                    23/12
-                  </div>
-                </div>
-                <div className="mt-4 text-sm font-bold tracking-normal leading-none text-indigo-800">
-                  Baca selengkapnya
-                </div>
-              </div>
-            </div>
-            <div className="flex flex-wrap gap-5 items-start mt-10 max-md:max-w-full">
-              <div className="flex flex-col justify-between min-h-[399px] min-w-[240px] w-[389px]">
-                <div className="flex overflow-hidden flex-col justify-center max-w-full bg-white shadow-sm w-[389px]">
-                  <img
-                    loading="lazy"
-                    srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/9e43b49d6156bd8294141adaa82b6f14960e6f668ede1521b20f743683774272?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/9e43b49d6156bd8294141adaa82b6f14960e6f668ede1521b20f743683774272?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/9e43b49d6156bd8294141adaa82b6f14960e6f668ede1521b20f743683774272?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/9e43b49d6156bd8294141adaa82b6f14960e6f668ede1521b20f743683774272?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/9e43b49d6156bd8294141adaa82b6f14960e6f668ede1521b20f743683774272?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/9e43b49d6156bd8294141adaa82b6f14960e6f668ede1521b20f743683774272?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/9e43b49d6156bd8294141adaa82b6f14960e6f668ede1521b20f743683774272?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/9e43b49d6156bd8294141adaa82b6f14960e6f668ede1521b20f743683774272?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059"
-                    className="object-contain w-full aspect-[1.43]"
-                  />
-                </div>
-                <div className="flex flex-col mt-4 max-w-full w-[389px]">
-                  <div className="text-base font-bold leading-6 text-gray-900">
-                    Ketertarikan Ilkomerz dalam membangun
-                    <br />
-                    Startup
-                  </div>
-                  <div className="mt-2 text-sm leading-none text-zinc-600">
-                    23/12
-                  </div>
-                </div>
-                <div className="mt-4 text-sm font-bold tracking-normal leading-none text-indigo-800">
-                  Baca selengkapnya
-                </div>
-              </div>
-              <div className="flex flex-col justify-between min-h-[399px] min-w-[240px] w-[389px]">
-                <div className="flex overflow-hidden flex-col justify-center max-w-full bg-white shadow-sm w-[389px]">
-                  <img
-                    loading="lazy"
-                    srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/9e43b49d6156bd8294141adaa82b6f14960e6f668ede1521b20f743683774272?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/9e43b49d6156bd8294141adaa82b6f14960e6f668ede1521b20f743683774272?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/9e43b49d6156bd8294141adaa82b6f14960e6f668ede1521b20f743683774272?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/9e43b49d6156bd8294141adaa82b6f14960e6f668ede1521b20f743683774272?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/9e43b49d6156bd8294141adaa82b6f14960e6f668ede1521b20f743683774272?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/9e43b49d6156bd8294141adaa82b6f14960e6f668ede1521b20f743683774272?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/9e43b49d6156bd8294141adaa82b6f14960e6f668ede1521b20f743683774272?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/9e43b49d6156bd8294141adaa82b6f14960e6f668ede1521b20f743683774272?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059"
-                    className="object-contain w-full aspect-[1.43]"
-                  />
-                </div>
-                <div className="flex flex-col mt-4 max-w-full w-[389px]">
-                  <div className="text-base font-bold leading-6 text-gray-900">
-                    Ketertarikan Ilkomerz dalam membangun
-                    <br />
-                    Startup
-                  </div>
-                  <div className="mt-2 text-sm leading-none text-zinc-600">
-                    23/12
-                  </div>
-                </div>
-                <div className="mt-4 text-sm font-bold tracking-normal leading-none text-indigo-800">
-                  Baca selengkapnya
-                </div>
-              </div>
-              <div className="flex flex-col justify-between min-h-[399px] min-w-[240px] w-[389px]">
-                <div className="flex overflow-hidden flex-col justify-center max-w-full bg-white shadow-sm w-[389px]">
-                  <img
-                    loading="lazy"
-                    srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/9e43b49d6156bd8294141adaa82b6f14960e6f668ede1521b20f743683774272?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/9e43b49d6156bd8294141adaa82b6f14960e6f668ede1521b20f743683774272?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/9e43b49d6156bd8294141adaa82b6f14960e6f668ede1521b20f743683774272?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/9e43b49d6156bd8294141adaa82b6f14960e6f668ede1521b20f743683774272?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/9e43b49d6156bd8294141adaa82b6f14960e6f668ede1521b20f743683774272?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/9e43b49d6156bd8294141adaa82b6f14960e6f668ede1521b20f743683774272?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/9e43b49d6156bd8294141adaa82b6f14960e6f668ede1521b20f743683774272?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/9e43b49d6156bd8294141adaa82b6f14960e6f668ede1521b20f743683774272?apiKey=79308c3c83634e818020c0ac730ab059&&apiKey=79308c3c83634e818020c0ac730ab059"
-                    className="object-contain w-full aspect-[1.43]"
-                  />
-                </div>
-                <div className="flex flex-col mt-4 max-w-full w-[389px]">
-                  <div className="text-base font-bold leading-6 text-gray-900">
-                    Ketertarikan Ilkomerz dalam membangun
-                    <br />
-                    Startup
-                  </div>
-                  <div className="mt-2 text-sm leading-none text-zinc-600">
-                    23/12
-                  </div>
-                </div>
-                <div className="mt-4 text-sm font-bold tracking-normal leading-none text-indigo-800">
-                  Baca selengkapnya
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+import { motion } from 'framer-motion';
+import bgKomunlg from '../assets/Riset_Desktop.svg';
+import bgKomunsm from '../assets/Riset_Phone.svg';
+import Card_Desktop from '../assets/card-proker/card-Riset-Desktop.svg';
+import bgPatternT from '../assets/pattern-top.svg';
+import bgPatternB from '../assets/pattern-bottom.svg';
 
-    );
+function IGallery() {
+  return (
+    <div className="p-4">
+      {/* Section 1: Header Section with Background Images */}
+      <section className="relative sm:h-[28rem] lg:h-[32rem] grid grid-cols-1 grid-rows-1 border-t-4 border-b-4 border-black mt-2">
+        {/* Mobile Background Image */}
+        <div
+          className="col-start-1 row-start-1 bg-cover bg-center"
+          style={{ backgroundImage: `url(${bgKomunsm})` }}
+        ></div>
+
+        {/* Desktop Background Image */}
+        <div
+          className="col-start-1 row-start-1 hidden sm:block bg-cover bg-center"
+          style={{ backgroundImage: `url(${bgKomunlg})` }}
+        ></div>
+
+        {/* Centered Content with Animation */}
+        <div className="col-start-1 row-start-1 flex items-center justify-center">
+          <motion.div
+            whileInView={{ y: [50, 25, 0], opacity: [0, 0, 1] }}
+            transition={{ duration: 0.35 }}
+            className="flex flex-col items-center text-center pt-64 md:pt-8 md:pr-[22rem] lg:pr-[30rem] lg:mx-20 xl:pr-[34rem] xl:pb-8 xl:mx-60 xl:mt-16 2xl:pr-[34rem] 2xl:pb-8 2xl:mx-60 2xl:mt-16"
+          >
+            <h2 className="font-sports font-normal text-5xl md:text-6xl lg:text-6xl xl:text-6xl 2xl:text-6xl text-[#F0E4D4] text-stroke-2 text-stroke-color-black text-shadow-black pt-2">
+              AGRIUX
+            </h2>
+            <p className="font-monts font-normal text-base md:text-sm lg:text-base xl:text-base 2xl:text-base leading-6 px-6 md:px-9 lg:px-1 xl:px-1 2xl:px-6 pt-6 pb-11">
+              AgriUX IPB adalah komunitas yang bergerak pada bidang UI/UX design
+              <br />
+              <br />
+              Setiap Rabu pukul 19:00 di RKU 2.01 (FMIPA lantai 2)
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Section 2: Cards Section with Background Patterns */}
+      <section className="relative bg-no-repeat bg-right bg-contain pt-20"
+        style={{
+          backgroundImage: `url(${bgPatternT}), url(${bgPatternB})`,
+          backgroundPosition: '100% 0, 0 100%',
+          backgroundRepeat: 'no-repeat, no-repeat',
+          backgroundSize: 'contain, contain',
+        }}
+      >
+        {/* Cards Grid */}
+        <div className='grid grid-cols-2 lg:grid-cols-3 md:gap-12 gap-10 p-0 place-items-center w-full max-w-[500px] md:max-w-full mx-auto'>
+            <div
+              className="bg-center bg-contain bg-no-repeat flex flex-col items-center justify-center p-6 w-full md:h-[250px]"
+            >
+              <img
+                src={Card_Desktop}
+                alt="Saung Desain"
+                className="w-[120px] h-[90px] md:w-full md:h-[140px] lg:h-[100px]"
+              />
+              <div className="flex flex-col max-w-[190px]">
+                <div className="flex flex-col w-full">
+                  <div className="w-full text-sm font-bold leading-4 text-black">
+                    Ketertarikan Ilkomerz dalam membangun
+                    <br />
+                    Startup
+                  </div>
+                  <div className="mt-1 text-xs leading-none text-zinc-600">23/12</div>
+                </div>
+                <div className="self-start mt-2 text-xs font-medium tracking-normal leading-none text-indigo-800">
+                  Baca selengkapnya
+                </div>
+              </div>
+            </div>
+            {/* Cards Grid */}
+            <div
+              className="bg-center bg-contain bg-no-repeat flex flex-col items-center justify-center p-6 w-full md:h-[250px]"
+            >
+              <img
+                src={Card_Desktop}
+                alt="Saung Desain"
+                className="w-[120px] h-[90px] md:w-full md:h-[140px] lg:h-[100px]"
+              />
+              <div className="flex flex-col max-w-[190px]">
+                <div className="flex flex-col w-full">
+                  <div className="w-full text-sm font-bold leading-4 text-black">
+                    Ketertarikan Ilkomerz dalam membangun
+                    <br />
+                    Startup
+                  </div>
+                  <div className="mt-1 text-xs leading-none text-zinc-600">23/12</div>
+                </div>
+                <div className="self-start mt-2 text-xs font-medium tracking-normal leading-none text-indigo-800">
+                  Baca selengkapnya
+                </div>
+              </div>
+            </div>
+            {/* Cards Grid */}
+            <div
+              className="bg-center bg-contain bg-no-repeat flex flex-col items-center justify-center p-6 w-full md:h-[250px]"
+            >
+              <img
+                src={Card_Desktop}
+                alt="Saung Desain"
+                className="w-[120px] h-[90px] md:w-full md:h-[140px] lg:h-[100px]"
+              />
+              <div className="flex flex-col max-w-[190px]">
+                <div className="flex flex-col w-full">
+                  <div className="w-full text-sm font-bold leading-4 text-black">
+                    Ketertarikan Ilkomerz dalam membangun
+                    <br />
+                    Startup
+                  </div>
+                  <div className="mt-1 text-xs leading-none text-zinc-600">23/12</div>
+                </div>
+                <div className="self-start mt-2 text-xs font-medium tracking-normal leading-none text-indigo-800">
+                  Baca selengkapnya
+                </div>
+              </div>
+            </div>
+            {/* Cards Grid */}
+            <div
+              className="bg-center bg-contain bg-no-repeat flex flex-col items-center justify-center p-6 w-full md:h-[250px]"
+            >
+              <img
+                src={Card_Desktop}
+                alt="Saung Desain"
+                className="w-[120px] h-[90px] md:w-full md:h-[140px] lg:h-[100px]"
+              />
+              <div className="flex flex-col max-w-[190px]">
+                <div className="flex flex-col w-full">
+                  <div className="w-full text-sm font-bold leading-4 text-black">
+                    Ketertarikan Ilkomerz dalam membangun
+                    <br />
+                    Startup
+                  </div>
+                  <div className="mt-1 text-xs leading-none text-zinc-600">23/12</div>
+                </div>
+                <div className="self-start mt-2 text-xs font-medium tracking-normal leading-none text-indigo-800">
+                  Baca selengkapnya
+                </div>
+              </div>
+            </div>
+            {/* Cards Grid */}
+            <div
+              className="bg-center bg-contain bg-no-repeat flex flex-col items-center justify-center p-6 w-full md:h-[250px]"
+            >
+              <img
+                src={Card_Desktop}
+                alt="Saung Desain"
+                className="w-[120px] h-[90px] md:w-full md:h-[140px] lg:h-[100px]"
+              />
+              <div className="flex flex-col max-w-[190px]">
+                <div className="flex flex-col w-full">
+                  <div className="w-full text-sm font-bold leading-4 text-black">
+                    Ketertarikan Ilkomerz dalam membangun
+                    <br />
+                    Startup
+                  </div>
+                  <div className="mt-1 text-xs leading-none text-zinc-600">23/12</div>
+                </div>
+                <div className="self-start mt-2 text-xs font-medium tracking-normal leading-none text-indigo-800">
+                  Baca selengkapnya
+                </div>
+              </div>
+            </div>
+            {/* Cards Grid */}
+            <div
+              className="bg-center bg-contain bg-no-repeat flex flex-col items-center justify-center p-6 w-full md:h-[250px]"
+            >
+              <img
+                src={Card_Desktop}
+                alt="Saung Desain"
+                className="w-[120px] h-[90px] md:w-full md:h-[140px] lg:h-[100px]"
+              />
+              <div className="flex flex-col max-w-[190px]">
+                <div className="flex flex-col w-full">
+                  <div className="w-full text-sm font-bold leading-4 text-black">
+                    Ketertarikan Ilkomerz dalam membangun
+                    <br />
+                    Startup
+                  </div>
+                  <div className="mt-1 text-xs leading-none text-zinc-600">23/12</div>
+                </div>
+                <div className="self-start mt-2 text-xs font-medium tracking-normal leading-none text-indigo-800">
+                  Baca selengkapnya
+                </div>
+              </div>
+            </div>
+            {/* Cards Grid */}
+            <div
+              className="bg-center bg-contain bg-no-repeat flex flex-col items-center justify-center p-6 w-full md:h-[250px]"
+            >
+              <img
+                src={Card_Desktop}
+                alt="Saung Desain"
+                className="w-[120px] h-[90px] md:w-full md:h-[140px] lg:h-[100px]"
+              />
+              <div className="flex flex-col max-w-[190px]">
+                <div className="flex flex-col w-full">
+                  <div className="w-full text-sm font-bold leading-4 text-black">
+                    Ketertarikan Ilkomerz dalam membangun
+                    <br />
+                    Startup
+                  </div>
+                  <div className="mt-1 text-xs leading-none text-zinc-600">23/12</div>
+                </div>
+                <div className="self-start mt-2 text-xs font-medium tracking-normal leading-none text-indigo-800">
+                  Baca selengkapnya
+                </div>
+              </div>
+            </div>
+            {/* Cards Grid */}
+            <div
+              className="bg-center bg-contain bg-no-repeat flex flex-col items-center justify-center p-6 w-full md:h-[250px]"
+            >
+              <img
+                src={Card_Desktop}
+                alt="Saung Desain"
+                className="w-[120px] h-[90px] md:w-full md:h-[140px] lg:h-[100px]"
+              />
+              <div className="flex flex-col max-w-[190px]">
+                <div className="flex flex-col w-full">
+                  <div className="w-full text-sm font-bold leading-4 text-black">
+                    Ketertarikan Ilkomerz dalam membangun
+                    <br />
+                    Startup
+                  </div>
+                  <div className="mt-1 text-xs leading-none text-zinc-600">23/12</div>
+                </div>
+                <div className="self-start mt-2 text-xs font-medium tracking-normal leading-none text-indigo-800">
+                  Baca selengkapnya
+                </div>
+              </div>
+            </div>
+            {/* Cards Grid */}
+            <div
+              className="bg-center bg-contain bg-no-repeat flex flex-col items-center justify-center p-6 w-full md:h-[250px]"
+            >
+              <img
+                src={Card_Desktop}
+                alt="Saung Desain"
+                className="w-[120px] h-[90px] md:w-full md:h-[140px] lg:h-[100px]"
+              />
+              <div className="flex flex-col max-w-[190px]">
+                <div className="flex flex-col w-full">
+                  <div className="w-full text-sm font-bold leading-4 text-black">
+                    Ketertarikan Ilkomerz dalam membangun
+                    <br />
+                    Startup
+                  </div>
+                  <div className="mt-1 text-xs leading-none text-zinc-600">23/12</div>
+                </div>
+                <div className="self-start mt-2 text-xs font-medium tracking-normal leading-none text-indigo-800">
+                  Baca selengkapnya
+                </div>
+              </div>
+            </div>
+        </div>
+      </section>
+    </div>
+  );
 }
 
-export default Riset;
+export default IGallery;
