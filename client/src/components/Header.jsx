@@ -117,14 +117,14 @@ function Header() {
                         {isCommunityOpen ? <FaAngleDown className="inline-block right-0" /> : <FaAngleUp className="inline-block" />}
                     </button>
                     <div className={`flex flex-col items-center space-y-2 transition-max-height duration-300 ease-in-out overflow-hidden bg-[#ffffff44] w-full ${isCommunityOpen ? 'max-h-[25rem]' : 'max-h-0'}`}>
-                        <Link to="/community/agriux" className="text-xl" onClick={toggleMenu}>AgriUX</Link>
-                        <Link to="/community/csi" className="text-xl">CSI</Link>
-                        <Link to="/community/agribot" className="text-xl">Agribot</Link>
-                        <Link to="/community/cp" className="text-xl">CP</Link>
-                        <Link to="/community/daming" className="text-xl">Daming</Link>
-                        <Link to="/community/iwdc" className="text-xl">IWDC</Link>
-                        <Link to="/community/gary" className="text-xl">Gary</Link>
-                        <Link to="/community/mad" className="text-xl">MAD</Link>
+                        <Link to="/community/AgriUX" className="block px-4 py-2 hover:bg-gray-200">AGRIUX</Link>
+                        <Link to="/community/CSI" className="block px-4 py-2 hover:bg-gray-200">CSI</Link>
+                        <Link to="/community/Agribot" className="block px-4 py-2 hover:bg-gray-200">AGRIBOT</Link>
+                        <Link to="/community/CP" className="block px-4 py-2 hover:bg-gray-200">CP</Link>
+                        <Link to="/community/Daming" className="block px-4 py-2 hover:bg-gray-200">DAMING</Link>
+                        <Link to="/community/IWDC" className="block px-4 py-2 hover:bg-gray-200">IWDC</Link>
+                        <Link to="/community/Gary" className="block px-4 py-2 hover:bg-gray-200">GARY</Link>
+                        <Link to="/community/MAD" className="block px-4 py-2 hover:bg-gray-200">MAD</Link>
                     </div>
                     <Link to="/igallery" className="text-2xl" onClick={toggleMenu}>IGallery</Link>
                     <Link to="/komnews" className="text-2xl" onClick={toggleMenu}>Komnews</Link>
@@ -159,14 +159,14 @@ function Header() {
                 <div className="relative group">
                     <button className="block lg:inline-block mt-4 lg:mt-0 focus:outline-none group-hover:text-gray-700">Community</button>
                     <div className="absolute left-0 min-w-[200px] bg-white border rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 invisible group-hover:visible">
-                        <Link to="/community/agriux" className="block px-4 py-2 hover:bg-gray-200">AgriUX</Link>
-                        <Link to="/community/csi" className="block px-4 py-2 hover:bg-gray-200">CSI</Link>
-                        <Link to="/community/agribot" className="block px-4 py-2 hover:bg-gray-200">Agribot</Link>
-                        <Link to="/community/cp" className="block px-4 py-2 hover:bg-gray-200">CP</Link>
-                        <Link to="/community/daming" className="block px-4 py-2 hover:bg-gray-200">Daming</Link>
-                        <Link to="/community/iwdc" className="block px-4 py-2 hover:bg-gray-200">IWDC</Link>
-                        <Link to="/community/gary" className="block px-4 py-2 hover:bg-gray-200">Gary</Link>
-                        <Link to="/community/mad" className="block px-4 py-2 hover:bg-gray-200">MAD</Link>
+                        <Link to="/community/AgriUX" className="block px-4 py-2 hover:bg-gray-200">AGRIUX</Link>
+                        <Link to="/community/CSI" className="block px-4 py-2 hover:bg-gray-200">CSI</Link>
+                        <Link to="/community/Agribot" className="block px-4 py-2 hover:bg-gray-200">AGRIBOT</Link>
+                        <Link to="/community/CP" className="block px-4 py-2 hover:bg-gray-200">CP</Link>
+                        <Link to="/community/Daming" className="block px-4 py-2 hover:bg-gray-200">DAMING</Link>
+                        <Link to="/community/IWDC" className="block px-4 py-2 hover:bg-gray-200">IWDC</Link>
+                        <Link to="/community/Gary" className="block px-4 py-2 hover:bg-gray-200">GARY</Link>
+                        <Link to="/community/MAD" className="block px-4 py-2 hover:bg-gray-200">MAD</Link>
                     </div>
                 </div>
                     <Link to="/igallery" className="block lg:inline-block mt-4 lg:mt-0 hover:text-gray-700">IGallery</Link>

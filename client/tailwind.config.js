@@ -32,6 +32,15 @@ export default {
         changa: ["Changa One", "sans-serif"],
         sports: ["Sports World", "sans-serif"],
       },
+      textShadow: {
+        'black': '4px 5px #040404',
+      },
+      textStrokeWidth: {
+        '2': '2px',
+      },
+      textStrokeColor: {
+        'black': '#000000',
+      },
       keyframes: {
         // MOBILE KEYFRAMES
         blobEnter: {
@@ -90,16 +99,38 @@ export default {
         blobSlideInRightTablet: 'blobEnterTablet 0.8s ease-in-out forwards, slideInRightTablet 0.8s ease-in-out forwards',
         blobSlideInLeftTablet: 'blobExitTablet 0.8s ease-in-out forwards, slideInLeftTablet 0.8s ease-in-out forwards'
       },
-      textShadow: {
-        'black': "4px 5px #040404"          
-      },
-      textStrokeWidth: {
-        '2': '2px'
-      },
-      textStrokeColor: {
-        'black': '#000'
-      }
     },
   },
-  plugins: [],
-};
+  plugins: [
+    function({ addUtilities, theme }) {
+      // Add text shadow utilities
+      addUtilities({
+        '.text-shadow-black': {
+          textShadow: theme('textShadow.black'),
+        },
+      }, ['responsive', 'hover']);
+      
+      // Add text stroke width utilities
+      addUtilities(
+        Object.keys(theme('textStrokeWidth')).reduce((acc, key) => {
+          acc[`.text-stroke-${key}`] = {
+            '-webkit-text-stroke-width': theme(`textStrokeWidth.${key}`),
+          };
+          return acc;
+        }, {}),
+        ['responsive', 'hover']
+      );
+      
+      // Add text stroke color utilities
+      addUtilities(
+        Object.keys(theme('textStrokeColor')).reduce((acc, key) => {
+          acc[`.text-stroke-color-${key}`] = {
+            '-webkit-text-stroke-color': theme(`textStrokeColor.${key}`),
+          };
+          return acc;
+        }, {}),
+        ['responsive', 'hover']
+      );
+    }
+  ],
+}
