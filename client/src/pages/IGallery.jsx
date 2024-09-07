@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import bgKomunlg from '../assets/IGallery_Desktop.svg';
 import bgKomunsm from '../assets/IGallery_Phone.svg';
-import Card_Desktop from '../assets/card-proker/card-Riset-Desktop.svg';
+import Card_Desktop from '../assets/BibitQ.svg';
 import bgPatternT from '../assets/pattern-top.svg';
 import bgPatternB from '../assets/pattern-bottom.svg';
 
@@ -9,7 +9,7 @@ function IGallery() {
   return (
     <div className="p-4">
       {/* Section 1: Header Section with Background Images */}
-      <section className="absolut sm:h-[28rem] lg:h-[32rem] grid grid-cols-1 grid-rows-1 border-t-4 border-b-4 border-black mt-2">
+      <section className="absolut sm:h-[18 rem] lg:w-[22 rem] lg:h-[32 rem] grid grid-cols-1 grid-rows-1 border-t-4 border-b-4 border-black mt-1">
         {/* Mobile Background Image */}
         <div
           className="col-start-1 row-start-1 bg-cover bg-center"
@@ -53,20 +53,24 @@ function IGallery() {
         }}
       >
         {/* Cards Grid */}
-        <div className='grid grid-cols-1 lg:grid-cols-3 md:gap-12 gap-10 p-0 place-items-center w-full max-w-[500px] md:max-w-full mx-auto'>
-          <div className="w-11/12 h-[18rem] bg-[#E49800] border-4 border-black">
+        <div className='grid grid-cols-1 lg:grid-cols-3 md:gap-12 gap-20 p-30 place-items-center w-full max-w-[30 rem] md:max-w-full mx-auto'>
+          {/* box kartu*/}
+          <div className="w-11/12 h-[28rem] bg-[#E49800] border-4 border-black">
             <div
               className="  bg-center bg-no-repeat flex flex-col items-center justify-center  w-full md:h-[250px] pt-3"
             >
+              {/* Box gambar */}
+            <div className="border-2 border-[#16052B] w-[15rem] h-[140px] sm:w-[180px] sm:h-[160 px] md:w-[45 rem] md:h-[13 rem] lg:w-[200 px] lg:h-[200 px] m-9 transition-transform transform hover:scale-110">
               <img
                 src={Card_Desktop}
                 alt="Saung Desain"
-                className="w-11/12 h-5/12  md:h-[140px] lg:w-[300px] pb-6  "
+                className="w-[20rem] h-[] md:h-[140px] lg:w-[150 px] pb-6 lg:h-[150 px]   xl:pt-[3rem]"
               />
-              <h2 className='pr-[6rem]'>
+              </div>
+              <h2 className='pr-[6rem] pt-[10 rem]'>
                 Saung Desain
                 </h2>
-                <h2 className='pl-[6rem]'>
+                <h2 className='pl-[6rem] pb-[0.5rem]'>
                 Saung Desain
                 </h2>
               <div className="flex flex-col max-w-[190px]">
