@@ -12,11 +12,11 @@ import ProfileHimalkom from './pages/ProfileHimalkom';
 import ProfileDivisi from './pages/ProfileDivisi';
 import Ilkomunity from './pages/Ilkomunity';
 import Komnews from './pages/Komnews';
-import Riset from './pages/Riset';
 import Syntax from './pages/Syntax';
-// ------------------------------------- dev-ridho
+// import Riset from './pages/Riset';
+// import IGallery from './pages/IGallery';
 
-import IGallery from './pages/IGallery';
+// ------------------------------------- dev-ridho
 import AgriUX from './pages/community/AgriUX';
 import CSI from './pages/community/CSI';
 import Agribot from './pages/community/Agribot';
@@ -27,8 +27,6 @@ import Gary from './pages/community/Gary';
 import MAD from './pages/community/MAD';
 import Notfound from './pages/Notfound';
 // --------------------------------------------
-
-import IGallery from './pages/IGallery';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import PreloaderContainer from "./components/Preloader/PreloaderContainer";
@@ -107,9 +105,9 @@ function AppContent() {
               <Route path="/community/IWDC" element={<IWDC />} />
               <Route path="/community/Gary" element={<Gary />} />
               <Route path="/community/MAD" element={<MAD />} />
-          <Route path="/igallery" element={<IGallery />} />
+          {/* <Route path="/igallery" element={<IGallery />} />*/}
           <Route path="/komnews" element={<Komnews />} />
-          <Route path="/research" element={<Riset />} />
+          {/* <Route path="/research" element={<Riset />} /> */}
           <Route path="/syntax" element={<Syntax />} />
           <Route path="/*" element={<Notfound />} />
         </Routes>
