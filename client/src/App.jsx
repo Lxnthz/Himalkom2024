@@ -14,7 +14,7 @@ import Ilkomunity from './pages/Ilkomunity';
 import Komnews from './pages/Komnews';
 import Syntax from './pages/Syntax';
 // import Riset from './pages/Riset';
-// import IGallery from './pages/IGallery';
+import IGallery from './pages/IGallery';
 
 // ------------------------------------- dev-ridho
 import AgriUX from './pages/community/AgriUX';
@@ -109,6 +109,7 @@ function AppContent() {
           <Route path="/komnews" element={<Komnews />} />
           {/* <Route path="/research" element={<Riset />} /> */}
           <Route path="/syntax" element={<Syntax />} />
+          <Route path="/igallery" element={<IGallery />} />
           <Route path="/*" element={<Notfound />} />
         </Routes>
       </main>

@@ -45,6 +45,8 @@ export default {
 
         'grid-ilkomunity': "url('./src/assets/grid-ilkomunity.png')",
         'grid-ilkomunity-desktop': "url('./src/assets/grid-ilkomunity-desktop.png')",
+
+        'gallery-hero': "url('./src/assets/IGalleryAssets/hero.png')",
       },
       backgroundSize: {
         "stretch": "100% 100%",
