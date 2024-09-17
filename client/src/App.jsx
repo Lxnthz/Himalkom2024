@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes, useLocation, Navigate } from 'react-router-dom';
 import axios from 'axios';
 import { motion } from 'framer-motion';
+
 import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
@@ -11,13 +12,26 @@ import ProfileHimalkom from './pages/ProfileHimalkom';
 import ProfileDivisi from './pages/ProfileDivisi';
 import Ilkomunity from './pages/Ilkomunity';
 import Komnews from './pages/Komnews';
+import Syntax from './pages/Syntax';
 import Komnews_dalem from './pages/Komnews_dalem';
 // import Riset from './pages/Riset';
-import Syntax from './pages/Syntax';
 // import IGallery from './pages/IGallery';
+
+// ------------------------------------- dev-ridho
+import AgriUX from './pages/community/AgriUX';
+import CSI from './pages/community/CSI';
+import Agribot from './pages/community/Agribot';
+import CP from './pages/community/CP';
+import Daming from './pages/community/Daming';
+import IWDC from './pages/community/IWDC';
+import Gary from './pages/community/Gary';
+import MAD from './pages/community/MAD';
+import Notfound from './pages/Notfound';
+// --------------------------------------------
 import Header from './components/Header';
 import Footer from './components/Footer';
 import PreloaderContainer from "./components/Preloader/PreloaderContainer";
+
 
 function AppContent() {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -84,11 +98,20 @@ function AppContent() {
           <Route path="/profile/details" element={<ProfileHimalkom />} />
           <Route path="/profile/divisi/:division" element={<ProfileDivisi />} />
           <Route path="/community" element={<Ilkomunity />} />
-          {/* <Route path="/igallery" element={<IGallery />} /> */}
+              <Route path="/community/AgriUX" element={<AgriUX />} />
+              <Route path="/community/CSI" element={<CSI />} />
+              <Route path="/community/Agribot" element={<Agribot />} />
+              <Route path="/community/CP" element={<CP />} />
+              <Route path="/community/Daming" element={<Daming />} />
+              <Route path="/community/IWDC" element={<IWDC />} />
+              <Route path="/community/Gary" element={<Gary />} />
+              <Route path="/community/MAD" element={<MAD />} />
+          {/* <Route path="/igallery" element={<IGallery />} />*/}
           <Route path="/komnews" element={<Komnews />} />
           <Route path="/komnews/view" element={<Komnews_dalem />} />
           {/* <Route path="/research" element={<Riset />} /> */}
           <Route path="/syntax" element={<Syntax />} />
+          <Route path="/*" element={<Notfound />} />
         </Routes>
       </main>
       {!isAdminRoute && <Footer />}
