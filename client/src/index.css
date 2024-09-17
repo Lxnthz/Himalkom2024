@@ -4,3 +4,32 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components{
+    .shade-width{
+        -webkit-text-stroke-width: 2px;
+    }
+    .shade-color{
+        -webkit-text-stroke-color: #040404;
+    }
+
+    .card-title{
+        -webkit-text-stroke-width: 1px;
+    }
+
+    .m-block-start{
+        margin-block-start: 1em;
+    }
+    .m-block-end{
+        margin-block-end: 1em;
+    }
+
+    .no-scrollbar{
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+}
+

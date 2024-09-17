@@ -11,6 +11,7 @@ import ProfileHimalkom from './pages/ProfileHimalkom';
 import ProfileDivisi from './pages/ProfileDivisi';
 import Ilkomunity from './pages/Ilkomunity';
 import Komnews from './pages/Komnews';
+import Komnews_dalem from './pages/Komnews_dalem';
 // import Riset from './pages/Riset';
 import Syntax from './pages/Syntax';
 // import IGallery from './pages/IGallery';
@@ -85,6 +86,7 @@ function AppContent() {
           <Route path="/community" element={<Ilkomunity />} />
           {/* <Route path="/igallery" element={<IGallery />} /> */}
           <Route path="/komnews" element={<Komnews />} />
+          <Route path="/komnews/view" element={<Komnews_dalem />} />
           {/* <Route path="/research" element={<Riset />} /> */}
           <Route path="/syntax" element={<Syntax />} />
         </Routes>
