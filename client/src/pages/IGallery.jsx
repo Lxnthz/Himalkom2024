@@ -1,281 +1,140 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
-import bgKomunlg from '../assets/IGallery_Desktop.svg';
-import bgKomunsm from '../assets/IGallery_Phone.svg';
-import Card_Desktop from '../assets/BibitQ.svg';
-import bgPatternT from '../assets/pattern-top.svg';
-import bgPatternB from '../assets/pattern-bottom.svg';
+import data from "../data/igallery_data.jsx";
+import Card from '../components/Admin/IGalleryCard.jsx';
 
-function IGallery() {
-  return (
-    <div className="p-4">
-      {/* Section 1: Header Section with Background Images */}
-      <section className="absolut sm:h-[18 rem] lg:w-[22 rem] lg:h-[32 rem] grid grid-cols-1 grid-rows-1 border-t-4 border-b-4 border-black mt-1">
-        {/* Mobile Background Image */}
-        <div
-          className="col-start-1 row-start-1 bg-cover bg-center"
-          style={{ backgroundImage: `url(${bgKomunsm})` }}
-        ></div>
+import vector from "../assets/IGalleryAssets/igallery-vector.svg";
 
-        {/* Desktop Background Image */}
-        <div
-          className="col-start-1 row-start-1 hidden sm:block bg-cover bg-center"
-          style={{ backgroundImage: `url(${bgKomunlg})` }}
-        ></div>
+export default function IGallery() {
+  const cards = data.map((item) => {
+    return (
+      <Card
+        key={item.id}
+        title={item.title}
+        category={item.category}
+        desc={item.desc}
+        created={item.created}
+        img={item.img}
+        link={item.link}
+      />
+    );
+  });
 
-        {/* Centered Content with Animation */}
-        <div className="col-start-1 row-start-1 flex items-center justify-center">
-          <motion.div
-            whileInView={{ y: [50, 25, 0], opacity: [0, 0, 1] }}
-            transition={{ duration: 0.35 }}
-            className="flex flex-col items-center text-center pt-64 md:pt-8 md:pr-[22rem] lg:pr-[30rem] lg:mx-20 xl:pr-[34rem] xl:pb-8 xl:mx-60 xl:mt-16 2xl:pr-[34rem] 2xl:pb-8 2xl:mx-60 2xl:mt-16"
-          >
-            <h2 className="font-sports font-normal text-5xl md:text-6xl lg:text-6xl xl:text-6xl 2xl:text-6xl text-[#F0E4D4] text-stroke-2 text-stroke-color-black text-shadow-black pt-2">
-            I-GALLERY
-            </h2>
-            <p className="font-monts font-normal text-base md:text-sm lg:text-base xl:text-base 2xl:text-base leading-4 px-3 md:px-9 lg:px-1 xl:px-2 2xl:px-6 pt-6 pb-11">
-              I-Gallery adalah platform yang berisi kumpulan projek-projek yang telah
-              dibuat oleh mahasiswa ilmu komputer. I-Gallery menampilkan projek dari
-              setiap mata kuliah berprojek. Tujuan dari I-Gallery adalah untuk
-              menunjukan projek yang telah dibuat oleh mahasiswa ilmu komputer.
+  const [selectedCategory, setSelectedCategory] = useState(null);
 
-            </p>
-          </motion.div>
-        </div>
-      </section>
+  const handleFilterClick = (category) => {
+    setSelectedCategory(category);
+  };
 
-      {/* Section 2: Cards Section with Background Patterns */}
-      <section className=" bg-no-repeat bg-right bg-contain pt-20"
-        style={{
-          backgroundImage: `url(${bgPatternT}), url(${bgPatternB})`,
-          backgroundPosition: '100% 0, 0 100%',
-          backgroundRepeat: 'no-repeat, no-repeat',
-          backgroundSize: 'contain, contain',
-        }}
-      >
-        {/* Cards Grid */}
-        <div className='grid grid-cols-1 lg:grid-cols-3 md:gap-12 gap-20 p-30 place-items-center w-full max-w-[30 rem] md:max-w-full mx-auto'>
-          {/* box kartu*/}
-          <div className="w-11/12 h-[28rem] bg-[#E49800] border-4 border-black">
-            <div
-              className="  bg-center bg-no-repeat flex flex-col items-center justify-center  w-full md:h-[250px] pt-3"
-            >
-              {/* Box gambar */}
-            <div className="border-2 border-[#16052B] w-[15rem] h-[140px] sm:w-[180px] sm:h-[160 px] md:w-[45 rem] md:h-[13 rem] lg:w-[200 px] lg:h-[200 px] m-9 transition-transform transform hover:scale-110">
-              <img
-                src={Card_Desktop}
-                alt="Saung Desain"
-                className="w-[20rem] h-[] md:h-[140px] lg:w-[150 px] pb-6 lg:h-[150 px]   xl:pt-[3rem]"
-              />
-              </div>
-              <h2 className='pr-[6rem] pt-[10 rem]'>
-                Saung Desain
-                </h2>
-                <h2 className='pl-[6rem] pb-[0.5rem]'>
-                Saung Desain
-                </h2>
-              <div className="flex flex-col max-w-[190px]">
-                <div className="flex flex-col w-full">
-                  <div className="w-full text-sm font-bold leading-4 text-black">
-                    Ketertarikan Ilkomerz dalam membangun
-                    <br />
-                    Startup
-                  </div>
-                  <div className="mt-1 text-xs leading-none text-zinc-600">23/12</div>
-                </div>
-                <div className="self-start mt-2 text-xs font-medium tracking-normal leading-none text-indigo-800">
-                  Baca selengkapnya
-                </div>
-              </div>
-            </div>
-            </div>
-            {/* Cards Grid */}
-            <div
-              className="bg-center bg-contain bg-no-repeat flex flex-col items-center justify-center p-6 w-full md:h-[250px]"
-            >
-              <img
-                src={Card_Desktop}
-                alt="Saung Desain"
-                className="w-[120px] h-[90px] md:w-full md:h-[140px] lg:h-[100px]"
-              />
-              <div className="flex flex-col max-w-[190px]">
-                <div className="flex flex-col w-full">
-                  <div className="w-full text-sm font-bold leading-4 text-black">
-                    Ketertarikan Ilkomerz dalam membangun
-                    <br />
-                    Startup
-                  </div>
-                  <div className="mt-1 text-xs leading-none text-zinc-600">23/12</div>
-                </div>
-                <div className="self-start mt-2 text-xs font-medium tracking-normal leading-none text-indigo-800">
-                  Baca selengkapnya
-                </div>
-              </div>
-            </div>
-            {/* Cards Grid */}
-            <div
-              className="bg-center bg-contain bg-no-repeat flex flex-col items-center justify-center p-6 w-full md:h-[250px]"
-            >
-              <img
-                src={Card_Desktop}
-                alt="Saung Desain"
-                className="w-[120px] h-[90px] md:w-full md:h-[140px] lg:h-[100px]"
-              />
-              <div className="flex flex-col max-w-[190px]">
-                <div className="flex flex-col w-full">
-                  <div className="w-full text-sm font-bold leading-4 text-black">
-                    Ketertarikan Ilkomerz dalam membangun
-                    <br />
-                    Startup
-                  </div>
-                  <div className="mt-1 text-xs leading-none text-zinc-600">23/12</div>
-                </div>
-                <div className="self-start mt-2 text-xs font-medium tracking-normal leading-none text-indigo-800">
-                  Baca selengkapnya
-                </div>
-              </div>
-            </div>
-            {/* Cards Grid */}
-            <div
-              className="bg-center bg-contain bg-no-repeat flex flex-col items-center justify-center p-6 w-full md:h-[250px]"
-            >
-              <img
-                src={Card_Desktop}
-                alt="Saung Desain"
-                className="w-[120px] h-[90px] md:w-full md:h-[140px] lg:h-[100px]"
-              />
-              <div className="flex flex-col max-w-[190px]">
-                <div className="flex flex-col w-full">
-                  <div className="w-full text-sm font-bold leading-4 text-black">
-                    Ketertarikan Ilkomerz dalam membangun
-                    <br />
-                    Startup
-                  </div>
-                  <div className="mt-1 text-xs leading-none text-zinc-600">23/12</div>
-                </div>
-                <div className="self-start mt-2 text-xs font-medium tracking-normal leading-none text-indigo-800">
-                  Baca selengkapnya
-                </div>
-              </div>
-            </div>
-            {/* Cards Grid */}
-            <div
-              className="bg-center bg-contain bg-no-repeat flex flex-col items-center justify-center p-6 w-full md:h-[250px]"
-            >
-              <img
-                src={Card_Desktop}
-                alt="Saung Desain"
-                className="w-[120px] h-[90px] md:w-full md:h-[140px] lg:h-[100px]"
-              />
-              <div className="flex flex-col max-w-[190px]">
-                <div className="flex flex-col w-full">
-                  <div className="w-full text-sm font-bold leading-4 text-black">
-                    Ketertarikan Ilkomerz dalam membangun
-                    <br />
-                    Startup
-                  </div>
-                  <div className="mt-1 text-xs leading-none text-zinc-600">23/12</div>
-                </div>
-                <div className="self-start mt-2 text-xs font-medium tracking-normal leading-none text-indigo-800">
-                  Baca selengkapnya
-                </div>
-              </div>
-            </div>
-            {/* Cards Grid */}
-            <div
-              className="bg-center bg-contain bg-no-repeat flex flex-col items-center justify-center p-6 w-full md:h-[250px]"
-            >
-              <img
-                src={Card_Desktop}
-                alt="Saung Desain"
-                className="w-[120px] h-[90px] md:w-full md:h-[140px] lg:h-[100px]"
-              />
-              <div className="flex flex-col max-w-[190px]">
-                <div className="flex flex-col w-full">
-                  <div className="w-full text-sm font-bold leading-4 text-black">
-                    Ketertarikan Ilkomerz dalam membangun
-                    <br />
-                    Startup
-                  </div>
-                  <div className="mt-1 text-xs leading-none text-zinc-600">23/12</div>
-                </div>
-                <div className="self-start mt-2 text-xs font-medium tracking-normal leading-none text-indigo-800">
-                  Baca selengkapnya
-                </div>
-              </div>
-            </div>
-            {/* Cards Grid */}
-            <div
-              className="bg-center bg-contain bg-no-repeat flex flex-col items-center justify-center p-6 w-full md:h-[250px]"
-            >
-              <img
-                src={Card_Desktop}
-                alt="Saung Desain"
-                className="w-[120px] h-[90px] md:w-full md:h-[140px] lg:h-[100px]"
-              />
-              <div className="flex flex-col max-w-[190px]">
-                <div className="flex flex-col w-full">
-                  <div className="w-full text-sm font-bold leading-4 text-black">
-                    Ketertarikan Ilkomerz dalam membangun
-                    <br />
-                    Startup
-                  </div>
-                  <div className="mt-1 text-xs leading-none text-zinc-600">23/12</div>
-                </div>
-                <div className="self-start mt-2 text-xs font-medium tracking-normal leading-none text-indigo-800">
-                  Baca selengkapnya
-                </div>
-              </div>
-            </div>
-            {/* Cards Grid */}
-            <div
-              className="bg-center bg-contain bg-no-repeat flex flex-col items-center justify-center p-6 w-full md:h-[250px]"
-            >
-              <img
-                src={Card_Desktop}
-                alt="Saung Desain"
-                className="w-[120px] h-[90px] md:w-full md:h-[140px] lg:h-[100px]"
-              />
-              <div className="flex flex-col max-w-[190px]">
-                <div className="flex flex-col w-full">
-                  <div className="w-full text-sm font-bold leading-4 text-black">
-                    Ketertarikan Ilkomerz dalam membangun
-                    <br />
-                    Startup
-                  </div>
-                  <div className="mt-1 text-xs leading-none text-zinc-600">23/12</div>
-                </div>
-                <div className="self-start mt-2 text-xs font-medium tracking-normal leading-none text-indigo-800">
-                  Baca selengkapnya
-                </div>
-              </div>
-            </div>
-            {/* Cards Grid */}
-            <div
-              className="bg-center bg-contain bg-no-repeat flex flex-col items-center justify-center p-6 w-full md:h-[250px]"
-            >
-              <img
-                src={Card_Desktop}
-                alt="Saung Desain"
-                className="w-[120px] h-[90px] md:w-full md:h-[140px] lg:h-[100px]"
-              />
-              <div className="flex flex-col max-w-[190px]">
-                <div className="flex flex-col w-full">
-                  <div className="w-full text-sm font-bold leading-4 text-black">
-                    Ketertarikan Ilkomerz dalam membangun
-                    <br />
-                    Startup
-                  </div>
-                  <div className="mt-1 text-xs leading-none text-zinc-600">23/12</div>
-                </div>
-                <div className="self-start mt-2 text-xs font-medium tracking-normal leading-none text-indigo-800">
-                  Baca selengkapnya
-                </div>
-              </div>
-            </div>
-        </div>
-      </section>
+  const handleAllClick = () => {
+    setSelectedCategory(null);
+  };
+
+  const filteredCards = selectedCategory
+    ? cards.filter((item) => item.props.category === selectedCategory)
+    : cards;
+
+  const cardElements = filteredCards.map((card, index) => (
+    <div key={index}>
+      {card}
     </div>
-  );
-}
+  ));
 
-export default IGallery;
+  return (
+    <section>
+      {/* Hero */}
+      <div className='bg-gallery-hero bg-stretch flex flex-col-reverse mt-3 py-12 lg:flex-row lg:justify-evenly lg:items-center'>
+        <motion.div
+          whileInView={{ y: [50, 25, 0], opacity: [0, 0, 1] }}
+          transition={{duration: 0.35}}
+          className='w-full flex flex-col items-center text-justify px-4 mt-10 gap-y-3 lg:w-[47vw]'
+        >
+          <h1 className='font-sports text-2xl text-[#F0E4D4] text-stroke-2 text-stroke-color-black text-shadow-black md:text-3xl lg:text-4xl'>I-GALLERY</h1>
+          <p className='font-monts'>I-Gallery adalah platform yang berisi kumpulan projek-projek yang telah dibuat oleh mahasiswa ilmu komputer. 
+          I-Gallery menampilkan projek dari setiap mata kuliah berprojek. Tujuan dari I-Gallery adalah untuk menunjukan 
+          projek yang telah dibuat oleh mahasiswa ilmu komputer.</p>
+        </motion.div>
+        <motion.div
+          whileInView={{ y: [50, 25, 0], opacity: [0, 0, 1] }}
+          transition={{duration: 0.35}}
+          className='flex justify-center'
+        >
+          <img src={vector} className='w-[70vw] md:w-[40vw] lg:max-w-[25vw]'></img>
+        </motion.div>
+      </div>
+
+      {/* MAIN */}
+      <div className='flex flex-col mt-6 items-center'>
+        <motion.div
+          whileInView={{ y: [50, 25, 0], opacity: [0, 0, 1] }}
+          transition={{duration: 0.35}}
+        >
+          <div className='flex flex-col items-center gap-y-2'>
+            <h1 className='text-2xl font-sports text-[#F0E4D4] text-stroke-2 text-stroke-color-black text-shadow-black'>DAFTAR MATKUL</h1>
+            <div className='flex justify-center flex-wrap'>
+            <motion.button
+              whileHover={{ scale: [null, 1.09, 1.06] }}
+              transition={{ duration: 0.4 }}
+              className='flex border-2 border-black w-auto justify-center align-center py-[4px] px-[9px] bg-[#E49800] m-[5px] font-monts text-[13px] text-white font-[500] rounded '
+              onClick={handleAllClick}
+            >
+              <span>Semua</span>
+            </motion.button>
+            <motion.button
+            whileHover={{ scale: [null, 1.09, 1.06] }}
+            transition={{ duration: 0.4 }}
+            className='flex border-2 border-black w-auto justify-center align-center py-[4px] px-[9px] bg-[#E49800] m-[5px] font-monts text-[13px] text-white font-[500] rounded '
+            onClick={() => handleFilterClick('Basis Data')}
+            >
+              <span>Basis Data</span>
+            </motion.button>
+            <motion.button
+              whileHover={{ scale: [null, 1.09, 1.06] }}
+              transition={{ duration: 0.4 }}
+              className='flex border-2 border-black w-auto justify-center align-center py-[4px] px-[9px] bg-[#E49800] m-[5px] font-monts text-[13px] text-white font-[500] rounded '
+              onClick={() => handleFilterClick('Rekayasa Perangkat Lunak')}
+            >
+              <span>Rekayasa Perangkat Lunak</span>
+            </motion.button>
+            <motion.button
+              whileHover={{ scale: [null, 1.09, 1.06] }}
+              transition={{ duration: 0.4 }}
+              className='flex border-2 border-black w-auto justify-center align-center py-[4px] px-[9px] bg-[#E49800] m-[5px] font-monts text-[13px] text-white font-[500] rounded '
+              onClick={() => handleFilterClick('Grafika Komputer')}
+            >
+              <span>Grafika Komputer</span>
+            </motion.button>
+            <motion.button
+              whileHover={{ scale: [null, 1.09, 1.06] }}
+              transition={{ duration: 0.4 }}
+              className='flex border-2 border-black w-auto justify-center align-center py-[4px] px-[9px] bg-[#E49800] m-[5px] font-monts text-[13px] text-white font-[500] rounded '
+              onClick={() => handleFilterClick('Analisis Desain Sistem')}
+            >
+              <span>Analisis Desain Sistem</span>
+            </motion.button>
+            <motion.button
+              whileHover={{ scale: [null, 1.09, 1.06] }}
+              transition={{ duration: 0.4 }}
+              className='flex border-2 border-black w-auto justify-center align-center py-[4px] px-[9px] bg-[#E49800] m-[5px] font-monts text-[13px] text-white font-[500] rounded '
+              onClick={() => handleFilterClick('Desain Pengalaman Pengguna')}
+            >
+              <span>Desain Pengalaman Pengguna</span>
+            </motion.button>
+            <motion.button
+              whileHover={{ scale: [null, 1.09, 1.06] }}
+              transition={{ duration: 0.4 }}
+              className='flex border-2 border-black w-auto justify-center align-center py-[4px] px-[9px] bg-[#E49800] m-[5px] font-monts text-[13px] text-white font-[500] rounded '
+              onClick={() => handleFilterClick('Pengolahan Citra Digital')}
+            >
+              <span>Pengolahan Citra Digital</span>
+            </motion.button>
+            </div>
+          </div>
+        </motion.div>
+        <div className='flex justify-center flex-wrap gap-[50px]'>
+          {cardElements}
+        </div>
+      </div>
+    </section>
+  )
+}
