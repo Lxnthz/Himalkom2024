@@ -49,6 +49,8 @@ export default {
 
         'grid-ilkomunity': "url('./src/assets/grid-ilkomunity.png')",
         'grid-ilkomunity-desktop': "url('./src/assets/grid-ilkomunity-desktop.png')",
+
+        'gallery-hero': "url('./src/assets/IGalleryAssets/hero.png')",
       },
       backgroundSize: {
         "stretch": "100% 100%",
@@ -68,6 +70,9 @@ export default {
       textStrokeColor: {
         'black': '#000000',
       },
+      boxShadow: {
+        'solid-black': '1.5px 1.5px 0px #000000'
+      }, 
       keyframes: {
         // MOBILE KEYFRAMES
         blobEnter: {
