@@ -46,7 +46,7 @@ function Gary() {
     return (
         <div>
             <section>
-                <div className="absolut sm:h-[28rem] lg:h-[32rem] grid grid-cols-1 grid-rows-1 border-t-4 border-b-4 border-black mt-2">
+                <div className=" sm:h-[28rem] lg:h-[32rem] grid grid-cols-1 grid-rows-1 border-t-4 border-b-4 border-black mt-2">
                    
                     <div
                         className="col-start-1 row-start-1 bg-cover bg-center "
