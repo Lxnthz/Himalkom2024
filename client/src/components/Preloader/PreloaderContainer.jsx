@@ -16,7 +16,7 @@ const PreloaderContainer = () => {
     }, []);
 
     return (
-        <section className="w-full max-h-[100vh] flex justify-center items-center bg-[#E49800] overflow-hidden">
+        <section className="w-full max-h-[100vh] flex justify-center items-center bg-[#E49800] overflow-hidden z-[9999]">
         <AnimatePresence>
             {showLogo && (
                 <motion.div

@@ -1,16 +1,16 @@
-import { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import axios from 'axios';
+import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion'
+
+import PreloaderContainer from './components/Preloader/PreloaderContainer';
 import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
-import AdminDashboard from './pages/AdminDashboard';
-import AdminLogin from './pages/AdminLogin';
 import ProfileHimalkom from './pages/ProfileHimalkom';
 import ProfileDivisi from './pages/ProfileDivisi';
 import Ilkomunity from './pages/Ilkomunity';
 import Komnews from './pages/Komnews';
-import Syntax from './pages/Syntax';
+// import Syntax from './pages/Syntax';
 // import Riset from './pages/Riset';
 import IGallery from './pages/IGallery';
 
@@ -36,66 +36,73 @@ import Medbrand from './pages/divisi/Medbrand';
 import Ristek from './pages/divisi/Ristek';
 import Entrepreneur from './pages/divisi/Entrepreneur';
 
-function App() {
-  const [loggedIn, setLoggedIn] = useState(false);
+function AppContent() {
+  const [showPreloader, setShowPreloader] = useState(true); // Initialize preloader as visible
 
-  const handleLogin = async (username, password) => {
-    try {
-      const response = await axios.post('http://localhost:5000/login', { username, password });
-      if (response.data.message === 'Login successful') {
-        setLoggedIn(true);
-      }
-    } catch (error) {
-      console.error('Login failed:', error);
+  useEffect(() => {
+    if (showPreloader) {
+      document.body.classList.add('overflow-hidden');
+    } else {
+      document.body.classList.remove('overflow-hidden');
     }
-  };
-
-  const handleLogout = () => {
-    setLoggedIn(false);
-  };
+    const timer = setTimeout(() => {
+      setShowPreloader(false);
+    }, 14000);
+    return () => {
+      clearTimeout(timer);
+      document.body.classList.remove('overflow-hidden');
+    };
+  }, [showPreloader, location.pathname]);
 
   return (
-    <Router>
-      <div className="flex flex-col min-h-screen">
-        {!(window.location.pathname.startsWith('/admin') && loggedIn) && <Header loggedIn={loggedIn} onLogout={handleLogout} />}
-        <main className="flex-grow">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/admin" element={<AdminLogin handleLogin={handleLogin} />} />
-            <Route path="/admin-dashboard/*" element={loggedIn ? <AdminDashboard /> : <AdminLogin handleLogin={handleLogin} />} />
-            <Route path="/profile/details" element={<ProfileHimalkom />} />
-            <Route path="/profile/divisi/:division" element={<ProfileDivisi />} />
-              <Route path="profile/divisi/bp" element={<BP />} />
-              <Route path="profile/divisi/bph" element={<BPH />} />
-              <Route path="profile/divisi/edukasi" element={<Edukasi />} />
-              <Route path="profile/divisi/eksternal" element={<Eksternal />} />
-              <Route path="profile/divisi/hrd" element={<HRD />} />       
-              <Route path="profile/divisi/internal" element={<Internal />} />   
-              <Route path="profile/divisi/medbrand" element={<Medbrand />} />   
-              <Route path="profile/divisi/ristek" element={<Ristek />} />  
-              <Route path="profile/divisi/entrepreneur" element={<Entrepreneur />} />       
-            <Route path="/community" element={<Ilkomunity />} />
-            <Route path="/komnews" element={<Komnews />} />
-            <Route path="/*" element={<Notfound />} />
-              <Route path="/community/AgriUX" element={<AgriUX />} />
-              <Route path="/community/CSI" element={<CSI />} />
-              <Route path="/community/Agribot" element={<Agribot />} />
-              <Route path="/community/CP" element={<CP />} />
-              <Route path="/community/Daming" element={<Daming />} />
-              <Route path="/community/IWDC" element={<IWDC />} />
-              <Route path="/community/Gary" element={<Gary />} />
-              <Route path="/community/MAD" element={<MAD />} />
-          {/* <Route path="/igallery" element={<IGallery />} />*/}
+    <div className="flex flex-col min-h-screen">
+    {showPreloader && (
+        <motion.section
+          className='absolute overflow-hidden h-[100vh] w-full inset-0 z-[9999] flex justify-center items-center bg-[#E49800]'
+          initial={{ y: 0 }}
+          animate={{ y: '-100%', overflow: 'visible'}}
+          transition={{ duration: 1, delay: 13 }}
+        >
+          <PreloaderContainer />
+        </motion.section>
+      )}
+      <Header />
+      <main className="flex-grow">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/profile/details" element={<ProfileHimalkom />} />
+          <Route path="/profile/divisi/:division" element={<ProfileDivisi />} />
+          <Route path="profile/divisi/bp" element={<BP />} />
+          <Route path="profile/divisi/bph" element={<BPH />} />
+          <Route path="profile/divisi/edukasi" element={<Edukasi />} />
+          <Route path="profile/divisi/eksternal" element={<Eksternal />} />
+          <Route path="profile/divisi/hrd" element={<HRD />} />
+          <Route path="profile/divisi/internal" element={<Internal />} />
+          <Route path="profile/divisi/medbrand" element={<Medbrand />} />
+          <Route path="profile/divisi/ristek" element={<Ristek />} />
+          <Route path="profile/divisi/entrepreneur" element={<Entrepreneur />} />
+          <Route path="/community" element={<Ilkomunity />} />
+          <Route path="/komnews" element={<Komnews />} />
+          <Route path="/*" element={<Notfound />} />
+          <Route path="/community/AgriUX" element={<AgriUX />} />
+          <Route path="/community/CSI" element={<CSI />} />
+          <Route path="/community/Agribot" element={<Agribot />} />
+          <Route path="/community/CP" element={<CP />} />
+          <Route path="/community/Daming" element={<Daming />} />
+          <Route path="/community/IWDC" element={<IWDC />} />
+          <Route path="/community/Gary" element={<Gary />} />
+          <Route path="/community/MAD" element={<MAD />} />
+          {/* <Route path="/igallery" element={<IGallery />} /> */}
           <Route path="/komnews" element={<Komnews />} />
           {/* <Route path="/research" element={<Riset />} /> */}
-          <Route path="/syntax" element={<Syntax />} />
+          {/* <Route path="/syntax" element={<Syntax />} /> */}
           <Route path="/igallery" element={<IGallery />} />
           <Route path="/*" element={<Notfound />} />
         </Routes>
       </main>
-      {!isAdminRoute && <Footer />}
+      <Footer />
     </div>
   );
 }
