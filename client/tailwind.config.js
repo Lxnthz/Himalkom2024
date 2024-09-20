@@ -66,6 +66,9 @@ export default {
       textStrokeColor: {
         'black': '#000000',
       },
+      boxShadow: {
+        'solid-black': '1.5px 1.5px 0px #000000'
+      }, 
       keyframes: {
         // MOBILE KEYFRAMES
         blobEnter: {

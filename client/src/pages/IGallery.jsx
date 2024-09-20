@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import data from '../data/igallery_data';
-import Card from '../components/IGalleryCard';
+import data from '../data/igallery_data.jsx';
+import Card from '../components/IGalleryCard.jsx';
 
 import vector from '../assets/IGalleryAssets/igallery-vector.svg'
 
