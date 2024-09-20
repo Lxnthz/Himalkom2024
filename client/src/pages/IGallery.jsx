@@ -69,7 +69,7 @@ export default function IGallery() {
           whileInView={{ y: [50, 25, 0], opacity: [0, 0, 1] }}
           transition={{duration: 0.35}}
         >
-          <div className='flex flex-col items-center gap-y-2'>
+          <div className='flex flex-col items-center gap-y-2 mb-5'>
             <h1 className='text-2xl font-sports text-[#F0E4D4] text-stroke-2 text-stroke-color-black text-shadow-black'>DAFTAR MATKUL</h1>
             <div className='flex justify-center flex-wrap'>
             <motion.button
@@ -131,7 +131,7 @@ export default function IGallery() {
             </div>
           </div>
         </motion.div>
-        <div className='flex justify-center flex-wrap gap-[50px]'>
+        <div className='flex justify-center flex-wrap gap-[50px] md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 m-10'>
           {cardElements}
         </div>
       </div>
