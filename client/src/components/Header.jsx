@@ -25,7 +25,7 @@ function Header() {
     };
 
     return (
-        <header className="py-4 px-10 bg-[#E49800] border-b-[4px] border-black relative flex flex-row justify-between items-center font-changa">
+        <header className="py-4 px-10 bg-[#E49800] border-b-[4px] border-black relative flex flex-row justify-between items-center font-changa z-50" >
         <div className="flex justify-between items-center w-full">
             <div className="text-xl font-bold">
             <img className='max-w-12' src={ilkom} alt="Ilmu Komputer Logo" />
@@ -72,7 +72,7 @@ function Header() {
                 </svg>
             </button>
             </div>
-            <nav className="flex flex-col items-center justify-center h-full gap-1 font-changa">
+            <nav className="flex flex-col items-center justify-center h-full gap-1 font-changa ">
             <Link to="/" className="text-2xl" onClick={toggleMenu}>Home</Link>
             <button onClick={toggleProfileMenu} className="text-2xl focus:outline-none lg:hidden">Profile</button>
             <div className={`flex flex-col items-center space-y-2 transition-max-height duration-300 ease-in-out overflow-hidden ${isProfileOpen ? 'max-h-[25rem]' : 'max-h-0'}`}>

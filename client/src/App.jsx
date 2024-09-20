@@ -82,7 +82,9 @@ function App() {
               <Route path="/community/IWDC" element={<IWDC />} />
               <Route path="/community/Gary" element={<Gary />} />
               <Route path="/community/MAD" element={<MAD />} />
-
+          </Routes>
+        </main>
+      </div>
     </Router>
   );
 }
