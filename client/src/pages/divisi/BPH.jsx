@@ -48,7 +48,7 @@ function BPH (){
 
                     
         <div className="col-start-1 row-start-1 flex  h-[35rem] pt-[18rem]  md:pt-[0rem] md:text-left md:px-[22rem] lg:px-[30rem] md:mt-[5rem] lg:mt-[8rem]  xl:ml-[32rem] xl:mt-[11rem] xl:px-[7rem]">
-          <motion.div className="text-center" >
+          <motion.div className="text-center lg:ml-[5vw]" >
             <h2 className="font-sports font-light text-2xl md:text-5xl lg:text-6xl xl:text-6xl 2xl:text-6xl text-[#F0E4D4] text-stroke-2 text-stroke-color-black text-shadow-black mb-2 md:mb-5 md:text-left">BADAN PENGURUS HARIAN</h2>
             <p className="font-monts font-normal text-sm text-center lg:text-lg leading-6 item-center md:text-justify px-4 md:px-0">Badan Pengurus Harian (BPH), merupakan salah satu badan yang melakukan fungsi kontrol, koordinasi, pengembangan dan peningkatan sistem manajemen administrasi dan keuangan serta komunikasi dalam membangun hubungan internal dan eksternal Himalkom.</p>
           </motion.div>

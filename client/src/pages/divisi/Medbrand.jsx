@@ -54,8 +54,8 @@ function Medbrand (){
                     ></div>
 
                     
-        <div className="col-start-1 row-start-1 flex  h-[33rem] pt-[18rem]  md:pt-[0rem] md:text-left md:px-[22rem] lg:px-[30rem] md:mt-[5rem] lg:mt-[8rem]  xl:ml-[32rem] xl:mt-[11rem] xl:px-[7rem]">
-          <motion.div className="text-center" >
+        <div className="col-start-1 row-start-1 flex  h-[33rem] pt-[18rem]  md:pt-[3rem] md:text-left md:px-[22rem] lg:px-[30rem] md:mt-[5rem] lg:mt-[8rem]  xl:ml-[32rem] xl:mt-[9rem] xl:px-[7rem]">
+          <motion.div className="text-center lg:ml-[5vw]" >
             <h2 className="font-sports font-light text-2xl md:text-5xl lg:text-6xl xl:text-6xl 2xl:text-6xl text-[#F0E4D4] text-stroke-2 text-stroke-color-black text-shadow-black mb-2 md:mb-5 md:text-left">MEDIA DAN BRANDING</h2>
             <p className="font-monts font-normal text-sm text-center lg:text-lg leading-6 item-center md:text-justify px-1 md:px-0">Mebrand merupakan badan yang bertugas untuk membuat, mengelola, dan mengoptimalkan media informasi Himalkom sebagai pusat informasi, mendokumentasikan kegiatan yang diselenggarakan oleh Himalkom, dan menjalin kerja sama dengan media partner untuk meningkatkan branding Himalkom.</p>
           </motion.div>
