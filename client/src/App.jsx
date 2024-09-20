@@ -82,10 +82,7 @@ function App() {
               <Route path="/community/IWDC" element={<IWDC />} />
               <Route path="/community/Gary" element={<Gary />} />
               <Route path="/community/MAD" element={<MAD />} />
-          </Routes>
-        </main>
-        {!(window.location.pathname.startsWith('/admin') && loggedIn) && <Footer />}
-      </div>
+
     </Router>
   );
 }

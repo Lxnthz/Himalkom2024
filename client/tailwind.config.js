@@ -6,13 +6,35 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        'mob-m': '375px',
+        // => @media (min-width: 640px) { ... }
+        
+        'mob-l': '425px',
+        // => @media (min-width: 640px) { ... }
+        
+        'sm': '640px',
+        // => @media (min-width: 640px) { ... }
+
+        'md': '768px',
+        // => @media (min-width: 768px) { ... }
+
+        'lg': '1024px',
+        // => @media (min-width: 1024px) { ... }
+
+        'xl': '1280px',
+        // => @media (min-width: 1280px) { ... }
+
+        '2xl': '1536px',
+        // => @media (min-width: 1536px) { ... }
+      },
       backgroundImage: {
-        'card-top-mobile': "url('./src/assets/card-proker/card1-mobile.svg')",
-        'card-bottom-mobile': "url('./src/assets/card-proker/card2-mobile.svg')",
-        'card-top-desktop': "url('./src/assets/card-proker/card1-desktop.svg')",
-        'card-bottom-desktop': "url('./src/assets/card-proker/card2-desktop.svg')",
-        'card-top-tablet': "url('./src/assets/card-proker/card1-tablet.svg')",
-        'card-bottom-tablet': "url('./src/assets/card-proker/card2-tablet.svg')",
+        'card-top-mobile': "url('./src/assets/card-proker/card1-mobile.png')",
+        'card-bottom-mobile': "url('./src/assets/card-proker/card2-mobile.png')",
+        'card-top-desktop': "url('./src/assets/card-proker/card1-desktop.png')",
+        'card-bottom-desktop': "url('./src/assets/card-proker/card2-desktop.png')",
+        'card-top-tablet': "url('./src/assets/card-proker/card1-tablet.png')",
+        'card-bottom-tablet': "url('./src/assets/card-proker/card2-tablet.png')",
         
         'hero-banner-desktop': "url('./src/assets/banner-desktop.png')",
         'hero-banner-tablet': "url('./src/assets/banner-tablet.png')",
@@ -21,7 +43,7 @@ export default {
         'ilkomunity-box': "url('./src/assets/bgilkomunity.png')",
         'megaproker-box': "url('./src/assets/bgmegaproker.png')",
 
-        'grid-ilkomunity': "url('./src/assets/ilkomunity.svg')",
+        'grid-ilkomunity': "url('./src/assets/grid-ilkomunity.png')",
         'grid-ilkomunity-desktop': "url('./src/assets/grid-ilkomunity-desktop.png')",
       },
       backgroundSize: {
@@ -33,10 +55,11 @@ export default {
         sports: ["Sports World", "sans-serif"],
       },
       textShadow: {
-        'black': '4px 5px #040404',
+        'black': '2px 3px #040404',
       },
       textStrokeWidth: {
         '2': '2px',
+        '1': '1px',
       },
       textStrokeColor: {
         'black': '#000000',

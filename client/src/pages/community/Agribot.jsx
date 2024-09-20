@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import ImageSlider from "./../../components/ImageSlider";
 import bgKomunlg from './../../assets/Ilkommunity/Agribot/bg-agribot.svg'
