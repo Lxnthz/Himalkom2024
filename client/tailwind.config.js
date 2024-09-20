@@ -39,6 +39,10 @@ export default {
         'hero-banner-desktop': "url('./src/assets/banner-desktop.png')",
         'hero-banner-tablet': "url('./src/assets/banner-tablet.png')",
         'hero-banner-phone': "url('./src/assets/banner-phone.png')",
+        'komnews-banner': "url('./src/assets/komnews-banner.svg')",
+        'komnews-headline': "url('./src/assets/komnews-headline.svg')",
+        'komnews-dalem': "url('./src/assets/komnews-dalem.svg')",
+        'komnews-card': "url('./src/assets/komnews-card.svg')",
 
         'ilkomunity-box': "url('./src/assets/bgilkomunity.png')",
         'megaproker-box': "url('./src/assets/bgmegaproker.png')",
