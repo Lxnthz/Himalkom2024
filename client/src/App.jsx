@@ -10,6 +10,11 @@ import ProfileHimalkom from './pages/ProfileHimalkom';
 import ProfileDivisi from './pages/ProfileDivisi';
 import Ilkomunity from './pages/Ilkomunity';
 import Komnews from './pages/Komnews';
+import Syntax from './pages/Syntax';
+// import Riset from './pages/Riset';
+import IGallery from './pages/IGallery';
+
+// ------------------------------------- dev-ridho
 import AgriUX from './pages/community/AgriUX';
 import CSI from './pages/community/CSI';
 import Agribot from './pages/community/Agribot';
@@ -82,9 +87,23 @@ function App() {
               <Route path="/community/IWDC" element={<IWDC />} />
               <Route path="/community/Gary" element={<Gary />} />
               <Route path="/community/MAD" element={<MAD />} />
-          </Routes>
-        </main>
-      </div>
+          {/* <Route path="/igallery" element={<IGallery />} />*/}
+          <Route path="/komnews" element={<Komnews />} />
+          {/* <Route path="/research" element={<Riset />} /> */}
+          <Route path="/syntax" element={<Syntax />} />
+          <Route path="/igallery" element={<IGallery />} />
+          <Route path="/*" element={<Notfound />} />
+        </Routes>
+      </main>
+      {!isAdminRoute && <Footer />}
+    </div>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <AppContent />
     </Router>
   );
 }
