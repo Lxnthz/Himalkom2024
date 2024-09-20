@@ -47,7 +47,7 @@ function BP (){
                     ></div>
 
                     
-          <div className="col-start-1 row-start-1 flex  h-[33rem] pt-[17rem]  md:pt-[0rem] md:text-left md:px-[22rem] lg:px-[30rem] md:mt-[5rem] lg:mt-[8rem]  xl:ml-[32rem] xl:mt-[11rem] xl:px-[7rem]">
+          <div className="col-start-1 row-start-1 flex  h-[33rem] pt-[17rem]  md:pt-[0rem] md:text-left md:ml-[15rem] md:px-[5rem] lg:ml-[15rem] lg:px-[8rem] md:mt-[5rem] lg:mt-[7rem]  xl:ml-[28rem] xl:mt-[11rem] xl:px-[7rem]">
             <motion.div className="text-center lg:ml-[5vw]" >
               <h2 className="font-sports font-light text-2xl md:text-5xl lg:text-6xl xl:text-6xl 2xl:text-6xl text-[#F0E4D4] text-stroke-2 text-stroke-color-black text-shadow-black mb-3 md:mb-5 md:text-left">BADAN PENGAWAS</h2>
               <p className="font-monts font-normal text-sm text-center lg:text-lg leading-6 item-center md:text-justify px-3 md:px-0">Badan Pengawas (BP), merupakan badan yang bertugas dalam mengawasi pelaksanaan rencana kerja dan anggaran secara independen, mengawasi tugas dan wewenang kinerja BPH dan seluruh divisi Himalkom selama satu periode kepengurusan.</p>
