@@ -79,28 +79,28 @@ function Header() {
                 <Link to="/profile/details" className="text-xl" onClick={toggleMenu}>Profile Himalkom</Link>
                 <button onClick={toggleProfileDivisiMenu} className="text-xl focus:outline-none lg:hidden">Profile Divisi</button>
                 <div className={`flex flex-col items-center space-y-2 transition-max-height duration-300 ease-in-out overflow-hidden ${isProfileDivisiOpen ? 'max-h-[25rem]' : 'max-h-0'}`}>
-                    <Link to="/profile/divisi/bp" className="text-lg" onClick={toggleMenu}>BP</Link>
-                    <Link to="/profile/divisi/bph" className="text-lg" onClick={toggleMenu}>BPH</Link>
-                    <Link to="/profile/divisi/eksternal" className="text-lg" onClick={toggleMenu}>Eksternal</Link>
-                    <Link to="/profile/divisi/internal" className="text-lg" onClick={toggleMenu}>Internal</Link>
-                    <Link to="/profile/divisi/edukasi" className="text-lg" onClick={toggleMenu}>Edukasi</Link>
-                    <Link to="/profile/divisi/hrd" className="text-lg" onClick={toggleMenu}>HRD</Link>
-                    <Link to="/profile/divisi/medbrand" className="text-lg" onClick={toggleMenu}>Media Branding</Link>
-                    <Link to="/profile/divisi/ristek" className="text-lg" onClick={toggleMenu}>Riset dan Teknologi</Link>
-                    <Link to="/profile/divisi/entrepreneur" className="text-lg" onClick={toggleMenu}>Entrepreneur</Link>
+                    <Link to="profile/divisi/bp" className="text-lg" onClick={toggleMenu}>BP</Link>
+                    <Link to="profile/divisi/bph" className="text-lg" onClick={toggleMenu}>BPH</Link>
+                    <Link to="profile/divisi/eksternal" className="text-lg" onClick={toggleMenu}>Eksternal</Link>
+                    <Link to="profile/divisi/internal" className="text-lg" onClick={toggleMenu}>Internal</Link>
+                    <Link to="profile/divisi/edukasi" className="text-lg" onClick={toggleMenu}>Edukasi</Link>
+                    <Link to="profile/divisi/hrd" className="text-lg" onClick={toggleMenu}>HRD</Link>
+                    <Link to="profile/divisi/medbrand" className="text-lg" onClick={toggleMenu}>Media Branding</Link>
+                    <Link to="profile/divisi/ristek" className="text-lg" onClick={toggleMenu}>Riset dan Teknologi</Link>
+                    <Link to="profile/divisi/entrepreneur" className="text-lg" onClick={toggleMenu}>Entrepreneur</Link>
                 </div>
             </div>
             <button onClick={toggleCommunityMenu} className="text-2xl focus:outline-none">Community</button>
             <div className={`flex flex-col items-center space-y-2 transition-max-height duration-300 ease-in-out overflow-hidden ${isCommunityOpen ? 'max-h-40' : 'max-h-0'}`}>
                 
-                <Link to="/community/AgriUX" className="block px-4 py-2 hover:bg-gray-200">AGRIUX</Link>
-                        <Link to="/community/CSI" className="block px-4 py-2 hover:bg-gray-200">CSI</Link>
-                        <Link to="/community/Agribot" className="block px-4 py-2 hover:bg-gray-200">AGRIBOT</Link>
-                        <Link to="/community/CP" className="block px-4 py-2 hover:bg-gray-200">CP</Link>
-                        <Link to="/community/Daming" className="block px-4 py-2 hover:bg-gray-200">DAMING</Link>
-                        <Link to="/community/IWDC" className="block px-4 py-2 hover:bg-gray-200">IWDC</Link>
-                        <Link to="/community/Gary" className="block px-4 py-2 hover:bg-gray-200">GARY</Link>
-                        <Link to="/community/MAD" className="block px-4 py-2 hover:bg-gray-200">MAD</Link>
+                <Link to="/community/AgriUX" className="block px-4 hover:bg-gray-200">AGRIUX</Link>
+                        <Link to="/community/CSI" className="block px-4 hover:bg-gray-200">CSI</Link>
+                        <Link to="/community/Agribot" className="block px-4 hover:bg-gray-200">AGRIBOT</Link>
+                        <Link to="/community/CP" className="block px-4 hover:bg-gray-200">CP</Link>
+                        <Link to="/community/Daming" className="block px-4 hover:bg-gray-200">DAMING</Link>
+                        <Link to="/community/IWDC" className="block px-4 hover:bg-gray-200">IWDC</Link>
+                        <Link to="/community/Gary" className="block px-4 hover:bg-gray-200">GARY</Link>
+                        <Link to="/community/MAD" className="block px-4 hover:bg-gray-200">MAD</Link>
             </div>
             <Link to="/igallery" className="text-2xl" onClick={toggleMenu}>IGallery</Link>
             <Link to="/komnews" className="text-2xl" onClick={toggleMenu}>Komnews</Link>
@@ -117,15 +117,15 @@ function Header() {
                         <div className="relative">
                         <button onClick={toggleProfileDivisiMenu} className="block w-full text-left px-4 py-2 focus:outline-none hover:bg-gray-200">Profile Divisi</button>
                         <div className={`flex flex-col bg-white border rounded shadow-lg transition-max-height duration-1000 ease-in-out overflow-hidden ${isProfileDivisiOpen ? 'max-h-[25rem]' : 'max-h-0'}`}>
-                            <Link to="/profile/divisi/bp" className="block px-4 py-2 hover:bg-gray-200">BP</Link>
-                            <Link to="/profile/divisi/bph" className="block px-4 py-2 hover:bg-gray-200">BPH</Link>
-                            <Link to="/profile/divisi/eksternal" className="block px-4 py-2 hover:bg-gray-200">Eksternal</Link>
-                            <Link to="/profile/divisi/internal" className="block px-4 py-2 hover:bg-gray-200">Internal</Link> 
-                            <Link to="/profile/divisi/edukasi" className="block px-4 py-2 hover:bg-gray-200">Edukasi</Link>
-                            <Link to="/profile/divisi/hrd" className="block px-4 py-2 hover:bg-gray-200">HRD</Link>
-                            <Link to="/profile/divisi/medbrand" className="block px-4 py-2 hover:bg-gray-200">Media Branding</Link>
-                            <Link to="/profile/divisi/ristek" className="block px-4 py-2 hover:bg-gray-200">Riset dan Teknologi</Link>
-                            <Link to="/profile/divisi/entrepreneur" className="block px-4 py-2 hover:bg-gray-200">Entrepreneur</Link>
+                            <Link to="profile/divisi/bp" className="block px-4 py-2 hover:bg-gray-200">BP</Link>
+                            <Link to="profile/divisi/bph" className="block px-4 py-2 hover:bg-gray-200">BPH</Link>
+                            <Link to="profile/divisi/eksternal" className="block px-4 py-2 hover:bg-gray-200">Eksternal</Link>
+                            <Link to="profile/divisi/internal" className="block px-4 py-2 hover:bg-gray-200">Internal</Link> 
+                            <Link to="profile/divisi/edukasi" className="block px-4 py-2 hover:bg-gray-200">Edukasi</Link>
+                            <Link to="profile/divisi/hrd" className="block px-4 py-2 hover:bg-gray-200">HRD</Link>
+                            <Link to="profile/divisi/medbrand" className="block px-4 py-2 hover:bg-gray-200">Media Branding</Link>
+                            <Link to="profile/divisi/ristek" className="block px-4 py-2 hover:bg-gray-200">Riset dan Teknologi</Link>
+                            <Link to="profile/divisi/entrepreneur" className="block px-4 py-2 hover:bg-gray-200">Entrepreneur</Link>
                         </div>
                         </div>
                     </div>

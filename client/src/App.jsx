@@ -10,9 +10,6 @@ import ProfileHimalkom from './pages/ProfileHimalkom';
 import ProfileDivisi from './pages/ProfileDivisi';
 import Ilkomunity from './pages/Ilkomunity';
 import Komnews from './pages/Komnews';
-import Riset from './pages/Riset';
-import Syntax from './pages/Syntax';
-import IGallery from './pages/IGallery';
 import AgriUX from './pages/community/AgriUX';
 import CSI from './pages/community/CSI';
 import Agribot from './pages/community/Agribot';
@@ -24,6 +21,15 @@ import MAD from './pages/community/MAD';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Notfound from './pages/Notfound';
+import BP from './pages/divisi/BP';
+import BPH from './pages/divisi/BPH';
+import Edukasi from './pages/divisi/Edukasi';
+import Eksternal from './pages/divisi/Eksternal';
+import HRD from './pages/divisi/HRD';
+import Internal from './pages/divisi/Internal';
+import Medbrand from './pages/divisi/Medbrand';
+import Ristek from './pages/divisi/Ristek';
+import Entrepreneur from './pages/divisi/Entrepreneur';
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -56,11 +62,17 @@ function App() {
             <Route path="/admin-dashboard/*" element={loggedIn ? <AdminDashboard /> : <AdminLogin handleLogin={handleLogin} />} />
             <Route path="/profile/details" element={<ProfileHimalkom />} />
             <Route path="/profile/divisi/:division" element={<ProfileDivisi />} />
+              <Route path="profile/divisi/bp" element={<BP />} />
+              <Route path="profile/divisi/bph" element={<BPH />} />
+              <Route path="profile/divisi/edukasi" element={<Edukasi />} />
+              <Route path="profile/divisi/eksternal" element={<Eksternal />} />
+              <Route path="profile/divisi/hrd" element={<HRD />} />       
+              <Route path="profile/divisi/internal" element={<Internal />} />   
+              <Route path="profile/divisi/medbrand" element={<Medbrand />} />   
+              <Route path="profile/divisi/ristek" element={<Ristek />} />  
+              <Route path="profile/divisi/entrepreneur" element={<Entrepreneur />} />       
             <Route path="/community" element={<Ilkomunity />} />
-            <Route path="/igallery" element={<IGallery />} />
             <Route path="/komnews" element={<Komnews />} />
-            <Route path="/research" element={<Riset />} />
-            <Route path="/syntax" element={<Syntax />} />
             <Route path="/*" element={<Notfound />} />
               <Route path="/community/AgriUX" element={<AgriUX />} />
               <Route path="/community/CSI" element={<CSI />} />
