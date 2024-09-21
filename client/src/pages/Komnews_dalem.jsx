@@ -1,6 +1,14 @@
-import berita from "../assets/komnews_berita.svg"
+import berita from "../assets/Komnews/komnews_berita.svg"
+import berita2 from "../assets/Komnews/komnews-icollabitb.jpeg"
+import berita3 from "../assets/Komnews/komnews-saungdesain23.webp"
+import berita4 from "../assets/Komnews/komnews-sample.svg"
 
 function Komnews_dalem(){
+
+    const pindah = (mylink) => () => {
+        window.location.href=mylink
+    }
+
     return (
         <div className="flex flex-col lg:flex-row">
             {/* Background */}
@@ -91,18 +99,41 @@ function Komnews_dalem(){
                 <div className="flex flex-col items-center gap-6 md:gap-16 py-8 overflow-auto w-auto no-scrollbar">
                     
                     {/* Cardnya */}
-                    <div className="flex flex-col items-center justify-center bg-komnews-card bg-[#efc166] bg-cover bg-no-repeat text-black border-[2px] border-solid border-[#111827] p-[11px] lg:p-[17px] w-[300px] md:w-[688px] lg:w-[250px] max-h-[517px] md:max-h-[517px] lg:max-h-[300px] relative cursor-pointer">
+                    <div onClick={pindah('/komnews/view/icollab-2024')} className="flex flex-col items-center justify-center bg-komnews-card bg-[#efc166] bg-cover bg-no-repeat text-black border-[2px] border-solid border-[#111827] p-[11px] lg:p-[17px] w-[300px] md:w-[688px] lg:w-[250px] max-h-[517px] md:max-h-[517px] lg:max-h-[300px] relative cursor-pointer">
                         
                         {/* Gambar */}
                         <div className="flex flex-col ">
-                            <img src={berita} alt="gambar" className="w-[250px] h-[254px] md:w-[633px] lg:w-[230px] md:h-[363px] lg:h-[150px] object-cover border-[2px] border-solid border-black shadow-[3px_3px_0_black]" />
+                            <img src={berita2} alt="gambar" className="w-[250px] h-[254px] md:w-[633px] lg:w-[230px] md:h-[363px] lg:h-[150px] object-cover border-[2px] border-solid border-black shadow-[3px_3px_0_black]" />
                         </div>
 
                         <div>
 
                             {/* Judul berita */}
                             <h1 className="text-[14px] md:text-[18px] lg:text-[14px] leading-[15px] md:leading-[18px] lg:leading-[15px] shade-color card-title font-changa text-white drop-shadow-[1px_1px_0_black] pt-[.94rem] w-[250px] md:w-[633px] lg:w-[230px] line-clamp-3">
-                                {"Student Portal IPB University Dukung Aktivitas Merdeka Belajar Kampus Merdeka (MBKM)"}
+                                {"Sinergi Himalkom IPB dan HMIF ITB Wujudkan Kolaborasi Inspiratif Melalui I-Collab 2024"}
+                            </h1>
+
+                            {/* Tanggal */}
+                            <p className="pt-2 font-monts text-[12px] leading-[16px] font-bold tracking-[.25px] text-black">
+                                {"03/03/2024"}
+                            </p>   
+
+                        </div>
+                    </div>
+
+                    {/* Cardnya */}
+                    <div className="flex flex-col items-center justify-center bg-komnews-card bg-[#efc166] bg-cover bg-no-repeat text-black border-[2px] border-solid border-[#111827] p-[11px] lg:p-[17px] w-[300px] md:w-[688px] lg:w-[250px] max-h-[517px] md:max-h-[517px] lg:max-h-[300px] relative cursor-pointer">
+                        
+                        {/* Gambar */}
+                        <div className="flex flex-col ">
+                            <img src={berita3} alt="gambar" className="w-[250px] h-[254px] md:w-[633px] lg:w-[230px] md:h-[363px] lg:h-[150px] object-cover border-[2px] border-solid border-black shadow-[3px_3px_0_black]" />
+                        </div>
+
+                        <div>
+
+                            {/* Judul berita */}
+                            <h1 className="text-[14px] md:text-[18px] lg:text-[14px] leading-[15px] md:leading-[18px] lg:leading-[15px] shade-color card-title font-changa text-white drop-shadow-[1px_1px_0_black] pt-[.94rem] w-[250px] md:w-[633px] lg:w-[230px] line-clamp-3">
+                                {"Menyusuri Jejak Inovasi: Saung Desain Menggali Potensi Karir Melalui Perpaduan UI/UX Design dan Kecerdasan Buatan"}
                             </h1>
 
                             {/* Tanggal */}
@@ -114,46 +145,23 @@ function Komnews_dalem(){
                     </div>
 
                     {/* Cardnya */}
-                    <div className="flex flex-col items-center justify-center bg-komnews-card bg-[#efc166] bg-cover bg-no-repeat text-black border-[2px] border-solid border-[#111827] p-[11px] lg:p-[17px] w-[300px] md:w-[688px] lg:w-[250px] max-h-[517px] md:max-h-[517px] lg:max-h-[300px] relative cursor-pointer">
+                    <div onClick={pindah('/komnews/view/rektor-ipb')} className="flex flex-col items-center justify-center bg-komnews-card bg-[#efc166] bg-cover bg-no-repeat text-black border-[2px] border-solid border-[#111827] p-[11px] lg:p-[17px] w-[300px] md:w-[688px] lg:w-[250px] max-h-[517px] md:max-h-[517px] lg:max-h-[300px] relative cursor-pointer">
                         
                         {/* Gambar */}
                         <div className="flex flex-col ">
-                            <img src={berita} alt="gambar" className="w-[250px] h-[254px] md:w-[633px] lg:w-[230px] md:h-[363px] lg:h-[150px] object-cover border-[2px] border-solid border-black shadow-[3px_3px_0_black]" />
+                            <img src={berita4} alt="gambar" className="w-[250px] h-[254px] md:w-[633px] lg:w-[230px] md:h-[363px] lg:h-[150px] object-cover border-[2px] border-solid border-black shadow-[3px_3px_0_black]" />
                         </div>
 
                         <div>
 
                             {/* Judul berita */}
                             <h1 className="text-[14px] md:text-[18px] lg:text-[14px] leading-[15px] md:leading-[18px] lg:leading-[15px] shade-color card-title font-changa text-white drop-shadow-[1px_1px_0_black] pt-[.94rem] w-[250px] md:w-[633px] lg:w-[230px] line-clamp-3">
-                                {"Student Portal IPB University Dukung Aktivitas Merdeka Belajar Kampus Merdeka (MBKM)"}
+                                {"Pelantikan Rektor IPB Periode 2023-2028"}
                             </h1>
 
                             {/* Tanggal */}
                             <p className="pt-2 font-monts text-[12px] leading-[16px] font-bold tracking-[.25px] text-black">
-                                {"21/01/2024"}
-                            </p>   
-
-                        </div>
-                    </div>
-
-                    {/* Cardnya */}
-                    <div className="flex flex-col items-center justify-center bg-komnews-card bg-[#efc166] bg-cover bg-no-repeat text-black border-[2px] border-solid border-[#111827] p-[11px] lg:p-[17px] w-[300px] md:w-[688px] lg:w-[250px] max-h-[517px] md:max-h-[517px] lg:max-h-[300px] relative cursor-pointer">
-                        
-                        {/* Gambar */}
-                        <div className="flex flex-col ">
-                            <img src={berita} alt="gambar" className="w-[250px] h-[254px] md:w-[633px] lg:w-[230px] md:h-[363px] lg:h-[150px] object-cover border-[2px] border-solid border-black shadow-[3px_3px_0_black]" />
-                        </div>
-
-                        <div>
-
-                            {/* Judul berita */}
-                            <h1 className="text-[14px] md:text-[18px] lg:text-[14px] leading-[15px] md:leading-[18px] lg:leading-[15px] shade-color card-title font-changa text-white drop-shadow-[1px_1px_0_black] pt-[.94rem] w-[250px] md:w-[633px] lg:w-[230px] line-clamp-3">
-                                {"Student Portal IPB University Dukung Aktivitas Merdeka Belajar Kampus Merdeka (MBKM)"}
-                            </h1>
-
-                            {/* Tanggal */}
-                            <p className="pt-2 font-monts text-[12px] leading-[16px] font-bold tracking-[.25px] text-black">
-                                {"21/01/2024"}
+                                {"18/01/2023"}
                             </p>   
 
                         </div>

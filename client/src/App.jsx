@@ -9,8 +9,15 @@ import Contact from './pages/Contact';
 import ProfileHimalkom from './pages/ProfileHimalkom';
 import ProfileDivisi from './pages/ProfileDivisi';
 import Ilkomunity from './pages/Ilkomunity';
+
+//Ini Komnews
 import Komnews from './pages/Komnews';
 import Komnews_dalem from './pages/Komnews_dalem';
+import Komnews_dalem2 from './pages/Komnews_dalem2';
+import Komnews_dalem3 from './pages/Komnews_dalem3';
+import Komnews_dalem4 from './pages/Komnews_dalem4';
+
+
 // import Syntax from './pages/Syntax';
 // import Riset from './pages/Riset';
 import IGallery from './pages/IGallery';
@@ -85,7 +92,6 @@ function AppContent() {
           <Route path="profile/divisi/ristek" element={<Ristek />} />
           <Route path="profile/divisi/entrepreneur" element={<Entrepreneur />} />
           <Route path="/community" element={<Ilkomunity />} />
-          <Route path="/komnews" element={<Komnews />} />
           <Route path="/*" element={<Notfound />} />
           <Route path="/community/AgriUX" element={<AgriUX />} />
           <Route path="/community/CSI" element={<CSI />} />
@@ -97,7 +103,10 @@ function AppContent() {
           <Route path="/community/MAD" element={<MAD />} />
           {/* <Route path="/igallery" element={<IGallery />} /> */}
           <Route path="/komnews" element={<Komnews />} />
-          <Route path="/komnews/view" element={<Komnews_dalem />} />
+          <Route path="/komnews/view/student-portal-ipb" element={<Komnews_dalem />} />
+          <Route path="/komnews/view/rektor-ipb" element={<Komnews_dalem2 />}/>
+          <Route path="/komnews/view/icollab-2024" element={<Komnews_dalem3 />}/>
+          <Route path='/komnews/view/saungdesain-2023' element={<Komnews_dalem4 />}/>
           {/* <Route path="/research" element={<Riset />} /> */}
           {/* <Route path="/syntax" element={<Syntax />} /> */}
           <Route path="/igallery" element={<IGallery />} />
